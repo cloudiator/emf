@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/cloudiator/src" modelPluginID="cloudiator" modelName="Cloudiator"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>cloudiator.ecore</foreignModel>
+  <genPackages prefix="Cloudiator" disposableProviderFactory="true" ecorePackage="cloudiator.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cloudiator.ecore#//CloudType">
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//CloudType/PUBLIC"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//CloudType/PRIVATE"/>
+    </genEnums>
+    <genClasses ecoreClass="cloudiator.ecore#//CloudiatorModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/nodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/images"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/hardwareList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/locations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/clouds"/>
+    </genClasses>
+    <genClasses ecoreClass="cloudiator.ecore#//Component">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Component/nodes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Component/name"/>
+    </genClasses>
+    <genClasses ecoreClass="cloudiator.ecore#//Node">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Node/cloud"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Node/image"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Node/hardware"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Node/location"/>
+    </genClasses>
+    <genClasses ecoreClass="cloudiator.ecore#//Image">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Image/name"/>
+    </genClasses>
+    <genClasses ecoreClass="cloudiator.ecore#//Hardware">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Hardware/cores"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Hardware/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Hardware/ram"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Hardware/disk"/>
+    </genClasses>
+    <genClasses ecoreClass="cloudiator.ecore#//Location">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Location/name"/>
+    </genClasses>
+    <genClasses ecoreClass="cloudiator.ecore#//Cloud">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Cloud/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/images"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/hardwareList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/locations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Cloud/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
