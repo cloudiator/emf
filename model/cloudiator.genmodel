@@ -9,12 +9,41 @@
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//CloudType/PUBLIC"/>
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//CloudType/PRIVATE"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cloudiator.ecore#//OSArchitecture">
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSArchitecture/AMD64"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSArchitecture/I368"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cloudiator.ecore#//OSFamily">
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/UNKNOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/AIX"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/ARCH"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/CENTOS"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/DARWIN"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/DEBIAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/ESX"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/FEDORA"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/FREEBSD"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/GENTOO"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/HPUX"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/COREOS"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/AMZN_LINUX"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/MANDRIVA"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/NETBSD"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/OEL"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/OPENBSD"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/RHEL"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/SCIENTIFIC"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/CEL"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/SLACKWARE"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/SOLARIS"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/SUSE"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/TURBOLINUX"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/CLOUD_LINUX"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/UBUNTU"/>
+    </genEnums>
     <genClasses ecoreClass="cloudiator.ecore#//CloudiatorModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/components"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/nodes"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/images"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/hardwareList"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/locations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/clouds"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Component">
@@ -26,25 +55,45 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Node/image"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Node/hardware"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Node/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/price"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Image">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Image/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Image/operatingSystem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Image/id"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cloudiator.ecore#//Image/cloud"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Hardware">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Hardware/cores"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Hardware/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Hardware/ram"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Hardware/disk"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Hardware/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Hardware/prices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Hardware/cloud"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Location">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Location/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Location/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Location/cloud"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Cloud">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Cloud/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/images"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/hardwareList"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/locations"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Cloud/name"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/locations"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/hardwareList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/images"/>
+    </genClasses>
+    <genClasses ecoreClass="cloudiator.ecore#//OperatingSystem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//OperatingSystem/family"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//OperatingSystem/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//OperatingSystem/architecture"/>
+    </genClasses>
+    <genClasses ecoreClass="cloudiator.ecore#//Price">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Price/price"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Price/hardware"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Price/location"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Price/image"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

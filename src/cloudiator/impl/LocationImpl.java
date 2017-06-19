@@ -2,13 +2,16 @@
  */
 package cloudiator.impl;
 
+import cloudiator.Cloud;
 import cloudiator.CloudiatorPackage;
 import cloudiator.Location;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -21,6 +24,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link cloudiator.impl.LocationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cloudiator.impl.LocationImpl#getId <em>Id</em>}</li>
+ *   <li>{@link cloudiator.impl.LocationImpl#getCloud <em>Cloud</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,6 +50,26 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,11 +116,90 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.LOCATION__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Cloud getCloud() {
+		if (eContainerFeatureID() != CloudiatorPackage.LOCATION__CLOUD) return null;
+		return (Cloud)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CloudiatorPackage.LOCATION__CLOUD:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return eBasicSetContainer(otherEnd, CloudiatorPackage.LOCATION__CLOUD, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CloudiatorPackage.LOCATION__CLOUD:
+				return eBasicSetContainer(null, CloudiatorPackage.LOCATION__CLOUD, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case CloudiatorPackage.LOCATION__CLOUD:
+				return eInternalContainer().eInverseRemove(this, CloudiatorPackage.CLOUD__LOCATIONS, Cloud.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CloudiatorPackage.LOCATION__NAME:
 				return getName();
+			case CloudiatorPackage.LOCATION__ID:
+				return getId();
+			case CloudiatorPackage.LOCATION__CLOUD:
+				return getCloud();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,6 +214,9 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 		switch (featureID) {
 			case CloudiatorPackage.LOCATION__NAME:
 				setName((String)newValue);
+				return;
+			case CloudiatorPackage.LOCATION__ID:
+				setId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,6 +233,9 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 			case CloudiatorPackage.LOCATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CloudiatorPackage.LOCATION__ID:
+				setId(ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -140,6 +250,10 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 		switch (featureID) {
 			case CloudiatorPackage.LOCATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CloudiatorPackage.LOCATION__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case CloudiatorPackage.LOCATION__CLOUD:
+				return getCloud() != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -156,6 +270,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

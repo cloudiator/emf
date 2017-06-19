@@ -64,6 +64,8 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 			case CloudiatorPackage.HARDWARE: return createHardware();
 			case CloudiatorPackage.LOCATION: return createLocation();
 			case CloudiatorPackage.CLOUD: return createCloud();
+			case CloudiatorPackage.OPERATING_SYSTEM: return createOperatingSystem();
+			case CloudiatorPackage.PRICE: return createPrice();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -79,6 +81,10 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 		switch (eDataType.getClassifierID()) {
 			case CloudiatorPackage.CLOUD_TYPE:
 				return createCloudTypeFromString(eDataType, initialValue);
+			case CloudiatorPackage.OS_ARCHITECTURE:
+				return createOSArchitectureFromString(eDataType, initialValue);
+			case CloudiatorPackage.OS_FAMILY:
+				return createOSFamilyFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -94,6 +100,10 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 		switch (eDataType.getClassifierID()) {
 			case CloudiatorPackage.CLOUD_TYPE:
 				return convertCloudTypeToString(eDataType, instanceValue);
+			case CloudiatorPackage.OS_ARCHITECTURE:
+				return convertOSArchitectureToString(eDataType, instanceValue);
+			case CloudiatorPackage.OS_FAMILY:
+				return convertOSFamilyToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -174,6 +184,26 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public OperatingSystem createOperatingSystem() {
+		OperatingSystemImpl operatingSystem = new OperatingSystemImpl();
+		return operatingSystem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Price createPrice() {
+		PriceImpl price = new PriceImpl();
+		return price;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CloudType createCloudTypeFromString(EDataType eDataType, String initialValue) {
 		CloudType result = CloudType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -186,6 +216,46 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 	 * @generated
 	 */
 	public String convertCloudTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OSArchitecture createOSArchitectureFromString(EDataType eDataType, String initialValue) {
+		OSArchitecture result = OSArchitecture.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertOSArchitectureToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OSFamily createOSFamilyFromString(EDataType eDataType, String initialValue) {
+		OSFamily result = OSFamily.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertOSFamilyToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

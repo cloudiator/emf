@@ -96,6 +96,14 @@ public class CloudiatorAdapterFactory extends AdapterFactoryImpl {
 				return createCloudAdapter();
 			}
 			@Override
+			public Adapter caseOperatingSystem(OperatingSystem object) {
+				return createOperatingSystemAdapter();
+			}
+			@Override
+			public Adapter casePrice(Price object) {
+				return createPriceAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -210,6 +218,34 @@ public class CloudiatorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCloudAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cloudiator.OperatingSystem <em>Operating System</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cloudiator.OperatingSystem
+	 * @generated
+	 */
+	public Adapter createOperatingSystemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cloudiator.Price <em>Price</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cloudiator.Price
+	 * @generated
+	 */
+	public Adapter createPriceAdapter() {
 		return null;
 	}
 

@@ -85,6 +85,24 @@ public interface CloudiatorFactory extends EFactory {
 	Cloud createCloud();
 
 	/**
+	 * Returns a new object of class '<em>Operating System</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Operating System</em>'.
+	 * @generated
+	 */
+	OperatingSystem createOperatingSystem();
+
+	/**
+	 * Returns a new object of class '<em>Price</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Price</em>'.
+	 * @generated
+	 */
+	Price createPrice();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

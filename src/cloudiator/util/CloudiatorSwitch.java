@@ -108,6 +108,18 @@ public class CloudiatorSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CloudiatorPackage.OPERATING_SYSTEM: {
+				OperatingSystem operatingSystem = (OperatingSystem)theEObject;
+				T result = caseOperatingSystem(operatingSystem);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CloudiatorPackage.PRICE: {
+				Price price = (Price)theEObject;
+				T result = casePrice(price);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -214,6 +226,36 @@ public class CloudiatorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCloud(Cloud object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Operating System</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Operating System</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOperatingSystem(OperatingSystem object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Price</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Price</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePrice(Price object) {
 		return null;
 	}
 

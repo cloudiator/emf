@@ -21,8 +21,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -34,10 +33,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link cloudiator.impl.CloudImpl#getType <em>Type</em>}</li>
- *   <li>{@link cloudiator.impl.CloudImpl#getImages <em>Images</em>}</li>
- *   <li>{@link cloudiator.impl.CloudImpl#getHardwareList <em>Hardware List</em>}</li>
- *   <li>{@link cloudiator.impl.CloudImpl#getLocations <em>Locations</em>}</li>
  *   <li>{@link cloudiator.impl.CloudImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cloudiator.impl.CloudImpl#getLocations <em>Locations</em>}</li>
+ *   <li>{@link cloudiator.impl.CloudImpl#getHardwareList <em>Hardware List</em>}</li>
+ *   <li>{@link cloudiator.impl.CloudImpl#getImages <em>Images</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,36 +63,6 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	protected CloudType type = TYPE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getImages() <em>Images</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImages()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Image> images;
-
-	/**
-	 * The cached value of the '{@link #getHardwareList() <em>Hardware List</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHardwareList()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Hardware> hardwareList;
-
-	/**
-	 * The cached value of the '{@link #getLocations() <em>Locations</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLocations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Location> locations;
-
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -112,6 +81,36 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLocations() <em>Locations</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocations()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Location> locations;
+
+	/**
+	 * The cached value of the '{@link #getHardwareList() <em>Hardware List</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHardwareList()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Hardware> hardwareList;
+
+	/**
+	 * The cached value of the '{@link #getImages() <em>Images</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImages()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Image> images;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -160,7 +159,7 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 */
 	public EList<Image> getImages() {
 		if (images == null) {
-			images = new EObjectContainmentEList<Image>(Image.class, this, CloudiatorPackage.CLOUD__IMAGES);
+			images = new EObjectContainmentWithInverseEList<Image>(Image.class, this, CloudiatorPackage.CLOUD__IMAGES, CloudiatorPackage.IMAGE__CLOUD);
 		}
 		return images;
 	}
@@ -170,9 +169,28 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CloudiatorPackage.CLOUD__LOCATIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLocations()).basicAdd(otherEnd, msgs);
+			case CloudiatorPackage.CLOUD__HARDWARE_LIST:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getHardwareList()).basicAdd(otherEnd, msgs);
+			case CloudiatorPackage.CLOUD__IMAGES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getImages()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Hardware> getHardwareList() {
 		if (hardwareList == null) {
-			hardwareList = new EObjectContainmentEList<Hardware>(Hardware.class, this, CloudiatorPackage.CLOUD__HARDWARE_LIST);
+			hardwareList = new EObjectContainmentWithInverseEList<Hardware>(Hardware.class, this, CloudiatorPackage.CLOUD__HARDWARE_LIST, CloudiatorPackage.HARDWARE__CLOUD);
 		}
 		return hardwareList;
 	}
@@ -184,7 +202,7 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 */
 	public EList<Location> getLocations() {
 		if (locations == null) {
-			locations = new EObjectContainmentEList<Location>(Location.class, this, CloudiatorPackage.CLOUD__LOCATIONS);
+			locations = new EObjectContainmentWithInverseEList<Location>(Location.class, this, CloudiatorPackage.CLOUD__LOCATIONS, CloudiatorPackage.LOCATION__CLOUD);
 		}
 		return locations;
 	}
@@ -218,12 +236,12 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CloudiatorPackage.CLOUD__IMAGES:
-				return ((InternalEList<?>)getImages()).basicRemove(otherEnd, msgs);
-			case CloudiatorPackage.CLOUD__HARDWARE_LIST:
-				return ((InternalEList<?>)getHardwareList()).basicRemove(otherEnd, msgs);
 			case CloudiatorPackage.CLOUD__LOCATIONS:
 				return ((InternalEList<?>)getLocations()).basicRemove(otherEnd, msgs);
+			case CloudiatorPackage.CLOUD__HARDWARE_LIST:
+				return ((InternalEList<?>)getHardwareList()).basicRemove(otherEnd, msgs);
+			case CloudiatorPackage.CLOUD__IMAGES:
+				return ((InternalEList<?>)getImages()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -238,14 +256,14 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 		switch (featureID) {
 			case CloudiatorPackage.CLOUD__TYPE:
 				return getType();
-			case CloudiatorPackage.CLOUD__IMAGES:
-				return getImages();
-			case CloudiatorPackage.CLOUD__HARDWARE_LIST:
-				return getHardwareList();
-			case CloudiatorPackage.CLOUD__LOCATIONS:
-				return getLocations();
 			case CloudiatorPackage.CLOUD__NAME:
 				return getName();
+			case CloudiatorPackage.CLOUD__LOCATIONS:
+				return getLocations();
+			case CloudiatorPackage.CLOUD__HARDWARE_LIST:
+				return getHardwareList();
+			case CloudiatorPackage.CLOUD__IMAGES:
+				return getImages();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -262,20 +280,20 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 			case CloudiatorPackage.CLOUD__TYPE:
 				setType((CloudType)newValue);
 				return;
-			case CloudiatorPackage.CLOUD__IMAGES:
-				getImages().clear();
-				getImages().addAll((Collection<? extends Image>)newValue);
-				return;
-			case CloudiatorPackage.CLOUD__HARDWARE_LIST:
-				getHardwareList().clear();
-				getHardwareList().addAll((Collection<? extends Hardware>)newValue);
+			case CloudiatorPackage.CLOUD__NAME:
+				setName((String)newValue);
 				return;
 			case CloudiatorPackage.CLOUD__LOCATIONS:
 				getLocations().clear();
 				getLocations().addAll((Collection<? extends Location>)newValue);
 				return;
-			case CloudiatorPackage.CLOUD__NAME:
-				setName((String)newValue);
+			case CloudiatorPackage.CLOUD__HARDWARE_LIST:
+				getHardwareList().clear();
+				getHardwareList().addAll((Collection<? extends Hardware>)newValue);
+				return;
+			case CloudiatorPackage.CLOUD__IMAGES:
+				getImages().clear();
+				getImages().addAll((Collection<? extends Image>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -292,17 +310,17 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 			case CloudiatorPackage.CLOUD__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
-			case CloudiatorPackage.CLOUD__IMAGES:
-				getImages().clear();
-				return;
-			case CloudiatorPackage.CLOUD__HARDWARE_LIST:
-				getHardwareList().clear();
+			case CloudiatorPackage.CLOUD__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 			case CloudiatorPackage.CLOUD__LOCATIONS:
 				getLocations().clear();
 				return;
-			case CloudiatorPackage.CLOUD__NAME:
-				setName(NAME_EDEFAULT);
+			case CloudiatorPackage.CLOUD__HARDWARE_LIST:
+				getHardwareList().clear();
+				return;
+			case CloudiatorPackage.CLOUD__IMAGES:
+				getImages().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -318,14 +336,14 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 		switch (featureID) {
 			case CloudiatorPackage.CLOUD__TYPE:
 				return type != TYPE_EDEFAULT;
-			case CloudiatorPackage.CLOUD__IMAGES:
-				return images != null && !images.isEmpty();
-			case CloudiatorPackage.CLOUD__HARDWARE_LIST:
-				return hardwareList != null && !hardwareList.isEmpty();
-			case CloudiatorPackage.CLOUD__LOCATIONS:
-				return locations != null && !locations.isEmpty();
 			case CloudiatorPackage.CLOUD__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CloudiatorPackage.CLOUD__LOCATIONS:
+				return locations != null && !locations.isEmpty();
+			case CloudiatorPackage.CLOUD__HARDWARE_LIST:
+				return hardwareList != null && !hardwareList.isEmpty();
+			case CloudiatorPackage.CLOUD__IMAGES:
+				return images != null && !images.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

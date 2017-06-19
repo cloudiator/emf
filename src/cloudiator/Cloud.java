@@ -16,10 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link cloudiator.Cloud#getType <em>Type</em>}</li>
- *   <li>{@link cloudiator.Cloud#getImages <em>Images</em>}</li>
- *   <li>{@link cloudiator.Cloud#getHardwareList <em>Hardware List</em>}</li>
- *   <li>{@link cloudiator.Cloud#getLocations <em>Locations</em>}</li>
  *   <li>{@link cloudiator.Cloud#getName <em>Name</em>}</li>
+ *   <li>{@link cloudiator.Cloud#getLocations <em>Locations</em>}</li>
+ *   <li>{@link cloudiator.Cloud#getHardwareList <em>Hardware List</em>}</li>
+ *   <li>{@link cloudiator.Cloud#getImages <em>Images</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getCloud()
@@ -59,6 +59,7 @@ public interface Cloud extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Images</b></em>' containment reference list.
 	 * The list contents are of type {@link cloudiator.Image}.
+	 * It is bidirectional and its opposite is '{@link cloudiator.Image#getCloud <em>Cloud</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Images</em>' containment reference list isn't clear,
@@ -67,7 +68,8 @@ public interface Cloud extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Images</em>' containment reference list.
 	 * @see cloudiator.CloudiatorPackage#getCloud_Images()
-	 * @model containment="true"
+	 * @see cloudiator.Image#getCloud
+	 * @model opposite="cloud" containment="true"
 	 * @generated
 	 */
 	EList<Image> getImages();
@@ -75,6 +77,7 @@ public interface Cloud extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Hardware List</b></em>' containment reference list.
 	 * The list contents are of type {@link cloudiator.Hardware}.
+	 * It is bidirectional and its opposite is '{@link cloudiator.Hardware#getCloud <em>Cloud</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Hardware List</em>' containment reference list isn't clear,
@@ -83,7 +86,8 @@ public interface Cloud extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Hardware List</em>' containment reference list.
 	 * @see cloudiator.CloudiatorPackage#getCloud_HardwareList()
-	 * @model containment="true"
+	 * @see cloudiator.Hardware#getCloud
+	 * @model opposite="cloud" containment="true"
 	 * @generated
 	 */
 	EList<Hardware> getHardwareList();
@@ -91,6 +95,7 @@ public interface Cloud extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Locations</b></em>' containment reference list.
 	 * The list contents are of type {@link cloudiator.Location}.
+	 * It is bidirectional and its opposite is '{@link cloudiator.Location#getCloud <em>Cloud</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Locations</em>' containment reference list isn't clear,
@@ -99,7 +104,8 @@ public interface Cloud extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Locations</em>' containment reference list.
 	 * @see cloudiator.CloudiatorPackage#getCloud_Locations()
-	 * @model containment="true"
+	 * @see cloudiator.Location#getCloud
+	 * @model opposite="cloud" containment="true"
 	 * @generated
 	 */
 	EList<Location> getLocations();

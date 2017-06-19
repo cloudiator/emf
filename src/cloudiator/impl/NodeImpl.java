@@ -12,6 +12,7 @@ import cloudiator.Node;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -29,6 +30,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.NodeImpl#getImage <em>Image</em>}</li>
  *   <li>{@link cloudiator.impl.NodeImpl#getHardware <em>Hardware</em>}</li>
  *   <li>{@link cloudiator.impl.NodeImpl#getLocation <em>Location</em>}</li>
+ *   <li>{@link cloudiator.impl.NodeImpl#getPrice <em>Price</em>}</li>
  * </ul>
  *
  * @generated
@@ -73,6 +75,16 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @ordered
 	 */
 	protected Location location;
+
+	/**
+	 * The cached setting delegate for the '{@link #getPrice() <em>Price</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrice()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate PRICE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)CloudiatorPackage.Literals.NODE__PRICE).getSettingDelegate();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -250,6 +262,24 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Double getPrice() {
+		return (Double)PRICE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPrice(Double newPrice) {
+		PRICE__ESETTING_DELEGATE.dynamicSet(this, null, 0, newPrice);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -265,6 +295,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 			case CloudiatorPackage.NODE__LOCATION:
 				if (resolve) return getLocation();
 				return basicGetLocation();
+			case CloudiatorPackage.NODE__PRICE:
+				return getPrice();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -288,6 +320,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return;
 			case CloudiatorPackage.NODE__LOCATION:
 				setLocation((Location)newValue);
+				return;
+			case CloudiatorPackage.NODE__PRICE:
+				setPrice((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -313,6 +348,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 			case CloudiatorPackage.NODE__LOCATION:
 				setLocation((Location)null);
 				return;
+			case CloudiatorPackage.NODE__PRICE:
+				PRICE__ESETTING_DELEGATE.dynamicUnset(this, null, 0);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -333,6 +371,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return hardware != null;
 			case CloudiatorPackage.NODE__LOCATION:
 				return location != null;
+			case CloudiatorPackage.NODE__PRICE:
+				return PRICE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 		}
 		return super.eIsSet(featureID);
 	}

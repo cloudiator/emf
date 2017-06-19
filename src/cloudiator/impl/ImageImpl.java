@@ -2,13 +2,17 @@
  */
 package cloudiator.impl;
 
+import cloudiator.Cloud;
 import cloudiator.CloudiatorPackage;
 import cloudiator.Image;
 
+import cloudiator.OperatingSystem;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -21,6 +25,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link cloudiator.impl.ImageImpl#getName <em>Name</em>}</li>
+ *   <li>{@link cloudiator.impl.ImageImpl#getOperatingSystem <em>Operating System</em>}</li>
+ *   <li>{@link cloudiator.impl.ImageImpl#getId <em>Id</em>}</li>
+ *   <li>{@link cloudiator.impl.ImageImpl#getCloud <em>Cloud</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,6 +52,36 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getOperatingSystem() <em>Operating System</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOperatingSystem()
+	 * @generated
+	 * @ordered
+	 */
+	protected OperatingSystem operatingSystem;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,11 +128,131 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public OperatingSystem getOperatingSystem() {
+		if (operatingSystem != null && operatingSystem.eIsProxy()) {
+			InternalEObject oldOperatingSystem = (InternalEObject)operatingSystem;
+			operatingSystem = (OperatingSystem)eResolveProxy(oldOperatingSystem);
+			if (operatingSystem != oldOperatingSystem) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CloudiatorPackage.IMAGE__OPERATING_SYSTEM, oldOperatingSystem, operatingSystem));
+			}
+		}
+		return operatingSystem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OperatingSystem basicGetOperatingSystem() {
+		return operatingSystem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOperatingSystem(OperatingSystem newOperatingSystem) {
+		OperatingSystem oldOperatingSystem = operatingSystem;
+		operatingSystem = newOperatingSystem;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.IMAGE__OPERATING_SYSTEM, oldOperatingSystem, operatingSystem));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.IMAGE__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Cloud getCloud() {
+		if (eContainerFeatureID() != CloudiatorPackage.IMAGE__CLOUD) return null;
+		return (Cloud)eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CloudiatorPackage.IMAGE__CLOUD:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return eBasicSetContainer(otherEnd, CloudiatorPackage.IMAGE__CLOUD, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CloudiatorPackage.IMAGE__CLOUD:
+				return eBasicSetContainer(null, CloudiatorPackage.IMAGE__CLOUD, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case CloudiatorPackage.IMAGE__CLOUD:
+				return eInternalContainer().eInverseRemove(this, CloudiatorPackage.CLOUD__IMAGES, Cloud.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CloudiatorPackage.IMAGE__NAME:
 				return getName();
+			case CloudiatorPackage.IMAGE__OPERATING_SYSTEM:
+				if (resolve) return getOperatingSystem();
+				return basicGetOperatingSystem();
+			case CloudiatorPackage.IMAGE__ID:
+				return getId();
+			case CloudiatorPackage.IMAGE__CLOUD:
+				return getCloud();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,6 +267,12 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 		switch (featureID) {
 			case CloudiatorPackage.IMAGE__NAME:
 				setName((String)newValue);
+				return;
+			case CloudiatorPackage.IMAGE__OPERATING_SYSTEM:
+				setOperatingSystem((OperatingSystem)newValue);
+				return;
+			case CloudiatorPackage.IMAGE__ID:
+				setId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,6 +289,12 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 			case CloudiatorPackage.IMAGE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
+			case CloudiatorPackage.IMAGE__OPERATING_SYSTEM:
+				setOperatingSystem((OperatingSystem)null);
+				return;
+			case CloudiatorPackage.IMAGE__ID:
+				setId(ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -140,6 +309,12 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 		switch (featureID) {
 			case CloudiatorPackage.IMAGE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case CloudiatorPackage.IMAGE__OPERATING_SYSTEM:
+				return operatingSystem != null;
+			case CloudiatorPackage.IMAGE__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case CloudiatorPackage.IMAGE__CLOUD:
+				return getCloud() != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -156,6 +331,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

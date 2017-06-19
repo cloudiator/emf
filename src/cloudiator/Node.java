@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Node#getImage <em>Image</em>}</li>
  *   <li>{@link cloudiator.Node#getHardware <em>Hardware</em>}</li>
  *   <li>{@link cloudiator.Node#getLocation <em>Location</em>}</li>
+ *   <li>{@link cloudiator.Node#getPrice <em>Price</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getNode()
@@ -127,5 +128,32 @@ public interface Node extends EObject {
 	 * @generated
 	 */
 	void setLocation(Location value);
+
+	/**
+	 * Returns the value of the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Price</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Price</em>' attribute.
+	 * @see #setPrice(Double)
+	 * @see cloudiator.CloudiatorPackage#getNode_Price()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.DoubleObject" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='hardware.prices->select(p | p.image = self.image and p.location = self.location)->first().price'"
+	 * @generated
+	 */
+	Double getPrice();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Node#getPrice <em>Price</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Price</em>' attribute.
+	 * @see #getPrice()
+	 * @generated
+	 */
+	void setPrice(Double value);
 
 } // Node
