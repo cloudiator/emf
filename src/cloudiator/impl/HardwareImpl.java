@@ -110,7 +110,7 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * @generated
 	 * @ordered
 	 */
-	protected static final BigInteger DISK_EDEFAULT = null;
+	protected static final Float DISK_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getDisk() <em>Disk</em>}' attribute.
@@ -120,7 +120,7 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * @generated
 	 * @ordered
 	 */
-	protected BigInteger disk = DISK_EDEFAULT;
+	protected Float disk = DISK_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -239,7 +239,7 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BigInteger getDisk() {
+	public Float getDisk() {
 		return disk;
 	}
 
@@ -248,8 +248,8 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDisk(BigInteger newDisk) {
-		BigInteger oldDisk = disk;
+	public void setDisk(Float newDisk) {
+		Float oldDisk = disk;
 		disk = newDisk;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.HARDWARE__DISK, oldDisk, disk));
@@ -392,7 +392,7 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 				setRam((BigInteger)newValue);
 				return;
 			case CloudiatorPackage.HARDWARE__DISK:
-				setDisk((BigInteger)newValue);
+				setDisk((Float)newValue);
 				return;
 			case CloudiatorPackage.HARDWARE__ID:
 				setId((String)newValue);

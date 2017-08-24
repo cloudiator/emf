@@ -117,12 +117,12 @@ public interface Hardware extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Disk</em>' attribute.
-	 * @see #setDisk(BigInteger)
+	 * @see #setDisk(Float)
 	 * @see cloudiator.CloudiatorPackage#getHardware_Disk()
-	 * @model required="true"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.FloatObject" required="true"
 	 * @generated
 	 */
-	BigInteger getDisk();
+	Float getDisk();
 
 	/**
 	 * Sets the value of the '{@link cloudiator.Hardware#getDisk <em>Disk</em>}' attribute.
@@ -132,7 +132,7 @@ public interface Hardware extends EObject {
 	 * @see #getDisk()
 	 * @generated
 	 */
-	void setDisk(BigInteger value);
+	void setDisk(Float value);
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.

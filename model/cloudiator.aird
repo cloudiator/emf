@@ -715,7 +715,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_krTowFEHEeeYP7iySQILdA" name="disk : EBigInteger" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_krTowFEHEeeYP7iySQILdA" name="disk : FloatObject" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="cloudiator.ecore#//Hardware/disk"/>
         <semanticElements xmi:type="ecore:EAttribute" href="cloudiator.ecore#//Hardware/disk"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_krTowVEHEeeYP7iySQILdA" labelAlignment="LEFT" description="_krRzkVEHEeeYP7iySQILdA">
