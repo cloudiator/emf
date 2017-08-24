@@ -481,6 +481,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getCloud_Id() {
+		return (EAttribute)cloudEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getCloud_HardwareList() {
 		return (EReference)cloudEClass.getEStructuralFeatures().get(3);
 	}
@@ -681,6 +690,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEReference(cloudEClass, CLOUD__LOCATIONS);
 		createEReference(cloudEClass, CLOUD__HARDWARE_LIST);
 		createEReference(cloudEClass, CLOUD__IMAGES);
+		createEAttribute(cloudEClass, CLOUD__ID);
 
 		operatingSystemEClass = createEClass(OPERATING_SYSTEM);
 		createEAttribute(operatingSystemEClass, OPERATING_SYSTEM__FAMILY);
@@ -774,6 +784,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEReference(getCloud_Locations(), this.getLocation(), this.getLocation_Cloud(), "locations", null, 0, -1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCloud_HardwareList(), this.getHardware(), this.getHardware_Cloud(), "hardwareList", null, 0, -1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCloud_Images(), this.getImage(), this.getImage_Cloud(), "images", null, 0, -1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCloud_Id(), ecorePackage.getEString(), "id", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operatingSystemEClass, OperatingSystem.class, "OperatingSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOperatingSystem_Family(), this.getOSFamily(), "family", null, 0, 1, OperatingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

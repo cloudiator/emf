@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Cloud#getLocations <em>Locations</em>}</li>
  *   <li>{@link cloudiator.Cloud#getHardwareList <em>Hardware List</em>}</li>
  *   <li>{@link cloudiator.Cloud#getImages <em>Images</em>}</li>
+ *   <li>{@link cloudiator.Cloud#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getCloud()
@@ -73,6 +74,32 @@ public interface Cloud extends EObject {
 	 * @generated
 	 */
 	EList<Image> getImages();
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see cloudiator.CloudiatorPackage#getCloud_Id()
+	 * @model
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Cloud#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Hardware List</b></em>' containment reference list.

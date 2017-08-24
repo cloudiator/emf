@@ -188,6 +188,10 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_ksPc4VEHEeeYP7iySQILdA" fontName=".SF NS Text" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_ksPc4lEHEeeYP7iySQILdA"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_rdY-0IilEeeO1_Y9YsMu1Q" type="3010" element="_rc0XEIilEeeO1_Y9YsMu1Q">
+              <styles xmi:type="notation:FontStyle" xmi:id="_rdY-0YilEeeO1_Y9YsMu1Q" fontColor="2697711" fontName="Ubuntu" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_rdY-0oilEeeO1_Y9YsMu1Q"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_ksHhEVEHEeeYP7iySQILdA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_ksHhElEHEeeYP7iySQILdA"/>
           </children>
@@ -755,7 +759,7 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_krB78FEHEeeYP7iySQILdA" name="Cloud" tooltipText="" incomingEdges="_krsqUFEHEeeYP7iySQILdA _krufgFEHEeeYP7iySQILdA _QHuKUFQEEeeYP7iySQILdA _emQQcFQEEeeYP7iySQILdA _fiEtkFQGEeeYP7iySQILdA" width="12" height="10">
       <target xmi:type="ecore:EClass" href="cloudiator.ecore#//Cloud"/>
       <semanticElements xmi:type="ecore:EClass" href="cloudiator.ecore#//Cloud"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_i8ewMFQMEeeYP7iySQILdA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_th2J4IilEeeO1_Y9YsMu1Q" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
@@ -771,6 +775,14 @@
         <target xmi:type="ecore:EAttribute" href="cloudiator.ecore#//Cloud/name"/>
         <semanticElements xmi:type="ecore:EAttribute" href="cloudiator.ecore#//Cloud/name"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_krWFAVEHEeeYP7iySQILdA" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_rc0XEIilEeeO1_Y9YsMu1Q" name="id : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="cloudiator.ecore#//Cloud/id"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="cloudiator.ecore#//Cloud/id"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_th5NMIilEeeO1_Y9YsMu1Q" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>

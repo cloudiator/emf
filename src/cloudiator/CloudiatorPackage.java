@@ -500,13 +500,22 @@ public interface CloudiatorPackage extends EPackage {
 	int CLOUD__IMAGES = 4;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD__ID = 5;
+
+	/**
 	 * The number of structural features of the '<em>Cloud</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD_FEATURE_COUNT = 5;
+	int CLOUD_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Cloud</em>' class.
@@ -1025,6 +1034,17 @@ public interface CloudiatorPackage extends EPackage {
 	EReference getCloud_Images();
 
 	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Cloud#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see cloudiator.Cloud#getId()
+	 * @see #getCloud()
+	 * @generated
+	 */
+	EAttribute getCloud_Id();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link cloudiator.Cloud#getHardwareList <em>Hardware List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1484,6 +1504,14 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CLOUD__IMAGES = eINSTANCE.getCloud_Images();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLOUD__ID = eINSTANCE.getCloud_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Hardware List</b></em>' containment reference list feature.

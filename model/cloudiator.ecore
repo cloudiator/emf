@@ -68,6 +68,7 @@
         eType="#//Hardware" containment="true" eOpposite="#//Hardware/cloud"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="images" upperBound="-1"
         eType="#//Image" containment="true" eOpposite="#//Image/cloud"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperatingSystem">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="family" eType="#//OSFamily"/>

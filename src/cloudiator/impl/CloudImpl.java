@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cloudiator.impl.CloudImpl#getLocations <em>Locations</em>}</li>
  *   <li>{@link cloudiator.impl.CloudImpl#getHardwareList <em>Hardware List</em>}</li>
  *   <li>{@link cloudiator.impl.CloudImpl#getImages <em>Images</em>}</li>
+ *   <li>{@link cloudiator.impl.CloudImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -113,6 +114,26 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	protected EList<Image> images;
 
 	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -162,6 +183,27 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 			images = new EObjectContainmentWithInverseEList<Image>(Image.class, this, CloudiatorPackage.CLOUD__IMAGES, CloudiatorPackage.IMAGE__CLOUD);
 		}
 		return images;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__ID, oldId, id));
 	}
 
 	/**
@@ -264,6 +306,8 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 				return getHardwareList();
 			case CloudiatorPackage.CLOUD__IMAGES:
 				return getImages();
+			case CloudiatorPackage.CLOUD__ID:
+				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -295,6 +339,9 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 				getImages().clear();
 				getImages().addAll((Collection<? extends Image>)newValue);
 				return;
+			case CloudiatorPackage.CLOUD__ID:
+				setId((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -322,6 +369,9 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 			case CloudiatorPackage.CLOUD__IMAGES:
 				getImages().clear();
 				return;
+			case CloudiatorPackage.CLOUD__ID:
+				setId(ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -344,6 +394,8 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 				return hardwareList != null && !hardwareList.isEmpty();
 			case CloudiatorPackage.CLOUD__IMAGES:
 				return images != null && !images.isEmpty();
+			case CloudiatorPackage.CLOUD__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -362,6 +414,8 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 		result.append(type);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

@@ -83,6 +83,7 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/locations"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/hardwareList"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/images"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Cloud/id"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//OperatingSystem">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//OperatingSystem/family"/>
