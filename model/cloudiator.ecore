@@ -41,23 +41,31 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cloud" lowerBound="1" eType="#//Cloud"
         changeable="false" eOpposite="#//Cloud/images"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="providerId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Hardware">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cores" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ram" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="disk" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//FloatObject"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prices" lowerBound="1"
         upperBound="-1" eType="#//Price" eOpposite="#//Price/hardware"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cloud" lowerBound="1" eType="#//Cloud"
         changeable="false" eOpposite="#//Cloud/hardwareList"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="providerId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Location">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cloud" lowerBound="1" eType="#//Cloud"
         changeable="false" eOpposite="#//Cloud/locations"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="providerId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="country" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="longitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Cloud">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//CloudType"/>
@@ -80,8 +88,9 @@
     <eLiterals name="PRIVATE" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="OSArchitecture">
-    <eLiterals name="AMD64"/>
-    <eLiterals name="I368" value="1"/>
+    <eLiterals name="AMD64" value="1"/>
+    <eLiterals name="I368" value="2"/>
+    <eLiterals name="UNKOWN"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="OSFamily">
     <eLiterals name="UNKNOWN"/>
@@ -110,6 +119,7 @@
     <eLiterals name="TURBOLINUX" value="23"/>
     <eLiterals name="CLOUD_LINUX" value="24"/>
     <eLiterals name="UBUNTU" value="25"/>
+    <eLiterals name="WINDOWS" value="26"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Price">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//DoubleObject"/>

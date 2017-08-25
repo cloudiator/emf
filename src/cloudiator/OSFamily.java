@@ -276,7 +276,15 @@ public enum OSFamily implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	UBUNTU(25, "UBUNTU", "UBUNTU");
+	UBUNTU(25, "UBUNTU", "UBUNTU"), /**
+	 * The '<em><b>WINDOWS</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #WINDOWS_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	WINDOWS(26, "WINDOWS", "WINDOWS");
 
 	/**
 	 * The '<em><b>UNKNOWN</b></em>' literal value.
@@ -669,6 +677,21 @@ public enum OSFamily implements Enumerator {
 	public static final int UBUNTU_VALUE = 25;
 
 	/**
+	 * The '<em><b>WINDOWS</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>WINDOWS</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #WINDOWS
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int WINDOWS_VALUE = 26;
+
+	/**
 	 * An array of all the '<em><b>OS Family</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -702,6 +725,7 @@ public enum OSFamily implements Enumerator {
 			TURBOLINUX,
 			CLOUD_LINUX,
 			UBUNTU,
+			WINDOWS,
 		};
 
 	/**
@@ -784,6 +808,7 @@ public enum OSFamily implements Enumerator {
 			case TURBOLINUX_VALUE: return TURBOLINUX;
 			case CLOUD_LINUX_VALUE: return CLOUD_LINUX;
 			case UBUNTU_VALUE: return UBUNTU;
+			case WINDOWS_VALUE: return WINDOWS;
 		}
 		return null;
 	}

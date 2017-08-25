@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.ImageImpl#getOperatingSystem <em>Operating System</em>}</li>
  *   <li>{@link cloudiator.impl.ImageImpl#getId <em>Id</em>}</li>
  *   <li>{@link cloudiator.impl.ImageImpl#getCloud <em>Cloud</em>}</li>
+ *   <li>{@link cloudiator.impl.ImageImpl#getProviderId <em>Provider Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,6 +83,26 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getProviderId() <em>Provider Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProviderId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PROVIDER_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getProviderId() <em>Provider Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProviderId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String providerId = PROVIDER_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -197,6 +218,27 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getProviderId() {
+		return providerId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProviderId(String newProviderId) {
+		String oldProviderId = providerId;
+		providerId = newProviderId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.IMAGE__PROVIDER_ID, oldProviderId, providerId));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -253,6 +295,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 				return getId();
 			case CloudiatorPackage.IMAGE__CLOUD:
 				return getCloud();
+			case CloudiatorPackage.IMAGE__PROVIDER_ID:
+				return getProviderId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -273,6 +317,9 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 				return;
 			case CloudiatorPackage.IMAGE__ID:
 				setId((String)newValue);
+				return;
+			case CloudiatorPackage.IMAGE__PROVIDER_ID:
+				setProviderId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -295,6 +342,9 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 			case CloudiatorPackage.IMAGE__ID:
 				setId(ID_EDEFAULT);
 				return;
+			case CloudiatorPackage.IMAGE__PROVIDER_ID:
+				setProviderId(PROVIDER_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -315,6 +365,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case CloudiatorPackage.IMAGE__CLOUD:
 				return getCloud() != null;
+			case CloudiatorPackage.IMAGE__PROVIDER_ID:
+				return PROVIDER_ID_EDEFAULT == null ? providerId != null : !PROVIDER_ID_EDEFAULT.equals(providerId);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -333,6 +385,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 		result.append(name);
 		result.append(", id: ");
 		result.append(id);
+		result.append(", providerId: ");
+		result.append(providerId);
 		result.append(')');
 		return result.toString();
 	}

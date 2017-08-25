@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Image#getOperatingSystem <em>Operating System</em>}</li>
  *   <li>{@link cloudiator.Image#getId <em>Id</em>}</li>
  *   <li>{@link cloudiator.Image#getCloud <em>Cloud</em>}</li>
+ *   <li>{@link cloudiator.Image#getProviderId <em>Provider Id</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getImage()
@@ -118,5 +119,31 @@ public interface Image extends EObject {
 	 * @generated
 	 */
 	Cloud getCloud();
+
+	/**
+	 * Returns the value of the '<em><b>Provider Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Provider Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Provider Id</em>' attribute.
+	 * @see #setProviderId(String)
+	 * @see cloudiator.CloudiatorPackage#getImage_ProviderId()
+	 * @model
+	 * @generated
+	 */
+	String getProviderId();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Image#getProviderId <em>Provider Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Provider Id</em>' attribute.
+	 * @see #getProviderId()
+	 * @generated
+	 */
+	void setProviderId(String value);
 
 } // Image

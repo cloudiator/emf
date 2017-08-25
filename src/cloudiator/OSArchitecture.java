@@ -26,7 +26,7 @@ public enum OSArchitecture implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	AMD64(0, "AMD64", "AMD64"),
+	AMD64(1, "AMD64", "AMD64"),
 
 	/**
 	 * The '<em><b>I368</b></em>' literal object.
@@ -36,7 +36,15 @@ public enum OSArchitecture implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	I368(1, "I368", "I368");
+	I368(2, "I368", "I368"), /**
+	 * The '<em><b>UNKOWN</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UNKOWN_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	UNKOWN(0, "UNKOWN", "UNKOWN");
 
 	/**
 	 * The '<em><b>AMD64</b></em>' literal value.
@@ -51,7 +59,7 @@ public enum OSArchitecture implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int AMD64_VALUE = 0;
+	public static final int AMD64_VALUE = 1;
 
 	/**
 	 * The '<em><b>I368</b></em>' literal value.
@@ -66,7 +74,22 @@ public enum OSArchitecture implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int I368_VALUE = 1;
+	public static final int I368_VALUE = 2;
+
+	/**
+	 * The '<em><b>UNKOWN</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>UNKOWN</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #UNKOWN
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int UNKOWN_VALUE = 0;
 
 	/**
 	 * An array of all the '<em><b>OS Architecture</b></em>' enumerators.
@@ -78,6 +101,7 @@ public enum OSArchitecture implements Enumerator {
 		new OSArchitecture[] {
 			AMD64,
 			I368,
+			UNKOWN,
 		};
 
 	/**
@@ -136,6 +160,7 @@ public enum OSArchitecture implements Enumerator {
 		switch (value) {
 			case AMD64_VALUE: return AMD64;
 			case I368_VALUE: return I368;
+			case UNKOWN_VALUE: return UNKOWN;
 		}
 		return null;
 	}

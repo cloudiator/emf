@@ -280,13 +280,22 @@ public interface CloudiatorPackage extends EPackage {
 	int IMAGE__CLOUD = 3;
 
 	/**
+	 * The feature id for the '<em><b>Provider Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__PROVIDER_ID = 4;
+
+	/**
 	 * The number of structural features of the '<em>Image</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_FEATURE_COUNT = 4;
+	int IMAGE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Image</em>' class.
@@ -371,13 +380,22 @@ public interface CloudiatorPackage extends EPackage {
 	int HARDWARE__CLOUD = 6;
 
 	/**
+	 * The feature id for the '<em><b>Provider Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HARDWARE__PROVIDER_ID = 7;
+
+	/**
 	 * The number of structural features of the '<em>Hardware</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_FEATURE_COUNT = 7;
+	int HARDWARE_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Hardware</em>' class.
@@ -426,13 +444,58 @@ public interface CloudiatorPackage extends EPackage {
 	int LOCATION__CLOUD = 2;
 
 	/**
+	 * The feature id for the '<em><b>Provider Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__PROVIDER_ID = 3;
+
+	/**
+	 * The feature id for the '<em><b>Country</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__COUNTRY = 4;
+
+	/**
+	 * The feature id for the '<em><b>City</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__CITY = 5;
+
+	/**
+	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__LONGITUDE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__LATITUDE = 7;
+
+	/**
 	 * The number of structural features of the '<em>Location</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_FEATURE_COUNT = 3;
+	int LOCATION_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Location</em>' class.
@@ -872,6 +935,17 @@ public interface CloudiatorPackage extends EPackage {
 	EReference getImage_Cloud();
 
 	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Image#getProviderId <em>Provider Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Provider Id</em>'.
+	 * @see cloudiator.Image#getProviderId()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EAttribute getImage_ProviderId();
+
+	/**
 	 * Returns the meta object for class '{@link cloudiator.Hardware <em>Hardware</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -959,6 +1033,17 @@ public interface CloudiatorPackage extends EPackage {
 	EReference getHardware_Cloud();
 
 	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Hardware#getProviderId <em>Provider Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Provider Id</em>'.
+	 * @see cloudiator.Hardware#getProviderId()
+	 * @see #getHardware()
+	 * @generated
+	 */
+	EAttribute getHardware_ProviderId();
+
+	/**
 	 * Returns the meta object for class '{@link cloudiator.Location <em>Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1000,6 +1085,61 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLocation_Cloud();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Location#getProviderId <em>Provider Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Provider Id</em>'.
+	 * @see cloudiator.Location#getProviderId()
+	 * @see #getLocation()
+	 * @generated
+	 */
+	EAttribute getLocation_ProviderId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Location#getCountry <em>Country</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Country</em>'.
+	 * @see cloudiator.Location#getCountry()
+	 * @see #getLocation()
+	 * @generated
+	 */
+	EAttribute getLocation_Country();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Location#getCity <em>City</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>City</em>'.
+	 * @see cloudiator.Location#getCity()
+	 * @see #getLocation()
+	 * @generated
+	 */
+	EAttribute getLocation_City();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Location#getLongitude <em>Longitude</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Longitude</em>'.
+	 * @see cloudiator.Location#getLongitude()
+	 * @see #getLocation()
+	 * @generated
+	 */
+	EAttribute getLocation_Longitude();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Location#getLatitude <em>Latitude</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Latitude</em>'.
+	 * @see cloudiator.Location#getLatitude()
+	 * @see #getLocation()
+	 * @generated
+	 */
+	EAttribute getLocation_Latitude();
 
 	/**
 	 * Returns the meta object for class '{@link cloudiator.Cloud <em>Cloud</em>}'.
@@ -1380,6 +1520,14 @@ public interface CloudiatorPackage extends EPackage {
 		EReference IMAGE__CLOUD = eINSTANCE.getImage_Cloud();
 
 		/**
+		 * The meta object literal for the '<em><b>Provider Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE__PROVIDER_ID = eINSTANCE.getImage_ProviderId();
+
+		/**
 		 * The meta object literal for the '{@link cloudiator.impl.HardwareImpl <em>Hardware</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1446,6 +1594,14 @@ public interface CloudiatorPackage extends EPackage {
 		EReference HARDWARE__CLOUD = eINSTANCE.getHardware_Cloud();
 
 		/**
+		 * The meta object literal for the '<em><b>Provider Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HARDWARE__PROVIDER_ID = eINSTANCE.getHardware_ProviderId();
+
+		/**
 		 * The meta object literal for the '{@link cloudiator.impl.LocationImpl <em>Location</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1478,6 +1634,46 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LOCATION__CLOUD = eINSTANCE.getLocation_Cloud();
+
+		/**
+		 * The meta object literal for the '<em><b>Provider Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOCATION__PROVIDER_ID = eINSTANCE.getLocation_ProviderId();
+
+		/**
+		 * The meta object literal for the '<em><b>Country</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOCATION__COUNTRY = eINSTANCE.getLocation_Country();
+
+		/**
+		 * The meta object literal for the '<em><b>City</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOCATION__CITY = eINSTANCE.getLocation_City();
+
+		/**
+		 * The meta object literal for the '<em><b>Longitude</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOCATION__LONGITUDE = eINSTANCE.getLocation_Longitude();
+
+		/**
+		 * The meta object literal for the '<em><b>Latitude</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOCATION__LATITUDE = eINSTANCE.getLocation_Latitude();
 
 		/**
 		 * The meta object literal for the '{@link cloudiator.impl.CloudImpl <em>Cloud</em>}' class.

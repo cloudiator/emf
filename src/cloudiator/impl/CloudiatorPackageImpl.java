@@ -346,6 +346,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getImage_ProviderId() {
+		return (EAttribute)imageEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getHardware() {
 		return hardwareEClass;
 	}
@@ -418,6 +427,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getHardware_ProviderId() {
+		return (EAttribute)hardwareEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLocation() {
 		return locationEClass;
 	}
@@ -447,6 +465,51 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 */
 	public EReference getLocation_Cloud() {
 		return (EReference)locationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLocation_ProviderId() {
+		return (EAttribute)locationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLocation_Country() {
+		return (EAttribute)locationEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLocation_City() {
+		return (EAttribute)locationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLocation_Longitude() {
+		return (EAttribute)locationEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLocation_Latitude() {
+		return (EAttribute)locationEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -669,6 +732,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEReference(imageEClass, IMAGE__OPERATING_SYSTEM);
 		createEAttribute(imageEClass, IMAGE__ID);
 		createEReference(imageEClass, IMAGE__CLOUD);
+		createEAttribute(imageEClass, IMAGE__PROVIDER_ID);
 
 		hardwareEClass = createEClass(HARDWARE);
 		createEAttribute(hardwareEClass, HARDWARE__CORES);
@@ -678,11 +742,17 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEAttribute(hardwareEClass, HARDWARE__ID);
 		createEReference(hardwareEClass, HARDWARE__PRICES);
 		createEReference(hardwareEClass, HARDWARE__CLOUD);
+		createEAttribute(hardwareEClass, HARDWARE__PROVIDER_ID);
 
 		locationEClass = createEClass(LOCATION);
 		createEAttribute(locationEClass, LOCATION__NAME);
 		createEAttribute(locationEClass, LOCATION__ID);
 		createEReference(locationEClass, LOCATION__CLOUD);
+		createEAttribute(locationEClass, LOCATION__PROVIDER_ID);
+		createEAttribute(locationEClass, LOCATION__COUNTRY);
+		createEAttribute(locationEClass, LOCATION__CITY);
+		createEAttribute(locationEClass, LOCATION__LONGITUDE);
+		createEAttribute(locationEClass, LOCATION__LATITUDE);
 
 		cloudEClass = createEClass(CLOUD);
 		createEAttribute(cloudEClass, CLOUD__TYPE);
@@ -763,20 +833,27 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEReference(getImage_OperatingSystem(), this.getOperatingSystem(), null, "operatingSystem", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImage_Id(), ecorePackage.getEString(), "id", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImage_Cloud(), this.getCloud(), this.getCloud_Images(), "cloud", null, 1, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImage_ProviderId(), ecorePackage.getEString(), "providerId", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hardwareEClass, Hardware.class, "Hardware", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHardware_Cores(), ecorePackage.getEBigInteger(), "cores", null, 1, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getHardware_Name(), ecorePackage.getEString(), "name", null, 0, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getHardware_Ram(), ecorePackage.getEBigInteger(), "ram", null, 1, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getHardware_Disk(), theXMLTypePackage.getFloatObject(), "disk", null, 1, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getHardware_Id(), ecorePackage.getEString(), "id", null, 0, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHardware_Id(), ecorePackage.getEString(), "id", null, 0, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getHardware_Prices(), this.getPrice(), this.getPrice_Hardware(), "prices", null, 1, -1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getHardware_Cloud(), this.getCloud(), this.getCloud_HardwareList(), "cloud", null, 1, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHardware_ProviderId(), ecorePackage.getEString(), "providerId", null, 0, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationEClass, Location.class, "Location", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLocation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLocation_Id(), ecorePackage.getEString(), "id", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLocation_Cloud(), this.getCloud(), this.getCloud_Locations(), "cloud", null, 1, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLocation_ProviderId(), ecorePackage.getEString(), "providerId", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLocation_Country(), ecorePackage.getEString(), "country", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLocation_City(), ecorePackage.getEString(), "city", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLocation_Longitude(), ecorePackage.getEDoubleObject(), "longitude", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLocation_Latitude(), ecorePackage.getEDoubleObject(), "latitude", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cloudEClass, Cloud.class, "Cloud", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCloud_Type(), this.getCloudType(), "type", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -805,6 +882,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEEnum(osArchitectureEEnum, OSArchitecture.class, "OSArchitecture");
 		addEEnumLiteral(osArchitectureEEnum, OSArchitecture.AMD64);
 		addEEnumLiteral(osArchitectureEEnum, OSArchitecture.I368);
+		addEEnumLiteral(osArchitectureEEnum, OSArchitecture.UNKOWN);
 
 		initEEnum(osFamilyEEnum, OSFamily.class, "OSFamily");
 		addEEnumLiteral(osFamilyEEnum, OSFamily.UNKNOWN);
@@ -833,6 +911,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		addEEnumLiteral(osFamilyEEnum, OSFamily.TURBOLINUX);
 		addEEnumLiteral(osFamilyEEnum, OSFamily.CLOUD_LINUX);
 		addEEnumLiteral(osFamilyEEnum, OSFamily.UBUNTU);
+		addEEnumLiteral(osFamilyEEnum, OSFamily.WINDOWS);
 
 		// Create resource
 		createResource(eNS_URI);

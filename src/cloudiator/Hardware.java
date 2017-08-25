@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Hardware#getId <em>Id</em>}</li>
  *   <li>{@link cloudiator.Hardware#getPrices <em>Prices</em>}</li>
  *   <li>{@link cloudiator.Hardware#getCloud <em>Cloud</em>}</li>
+ *   <li>{@link cloudiator.Hardware#getProviderId <em>Provider Id</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getHardware()
@@ -145,7 +146,7 @@ public interface Hardware extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see cloudiator.CloudiatorPackage#getHardware_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	String getId();
@@ -194,5 +195,31 @@ public interface Hardware extends EObject {
 	 * @generated
 	 */
 	Cloud getCloud();
+
+	/**
+	 * Returns the value of the '<em><b>Provider Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Provider Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Provider Id</em>' attribute.
+	 * @see #setProviderId(String)
+	 * @see cloudiator.CloudiatorPackage#getHardware_ProviderId()
+	 * @model
+	 * @generated
+	 */
+	String getProviderId();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Hardware#getProviderId <em>Provider Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Provider Id</em>' attribute.
+	 * @see #getProviderId()
+	 * @generated
+	 */
+	void setProviderId(String value);
 
 } // Hardware

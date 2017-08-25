@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cloudiator.impl.HardwareImpl#getId <em>Id</em>}</li>
  *   <li>{@link cloudiator.impl.HardwareImpl#getPrices <em>Prices</em>}</li>
  *   <li>{@link cloudiator.impl.HardwareImpl#getCloud <em>Cloud</em>}</li>
+ *   <li>{@link cloudiator.impl.HardwareImpl#getProviderId <em>Provider Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -151,6 +152,26 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * @ordered
 	 */
 	protected EList<Price> prices;
+
+	/**
+	 * The default value of the '{@link #getProviderId() <em>Provider Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProviderId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PROVIDER_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getProviderId() <em>Provider Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProviderId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String providerId = PROVIDER_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -303,6 +324,27 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getProviderId() {
+		return providerId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProviderId(String newProviderId) {
+		String oldProviderId = providerId;
+		providerId = newProviderId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.HARDWARE__PROVIDER_ID, oldProviderId, providerId));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -369,6 +411,8 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 				return getPrices();
 			case CloudiatorPackage.HARDWARE__CLOUD:
 				return getCloud();
+			case CloudiatorPackage.HARDWARE__PROVIDER_ID:
+				return getProviderId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -401,6 +445,9 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 				getPrices().clear();
 				getPrices().addAll((Collection<? extends Price>)newValue);
 				return;
+			case CloudiatorPackage.HARDWARE__PROVIDER_ID:
+				setProviderId((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -431,6 +478,9 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 			case CloudiatorPackage.HARDWARE__PRICES:
 				getPrices().clear();
 				return;
+			case CloudiatorPackage.HARDWARE__PROVIDER_ID:
+				setProviderId(PROVIDER_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -457,6 +507,8 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 				return prices != null && !prices.isEmpty();
 			case CloudiatorPackage.HARDWARE__CLOUD:
 				return getCloud() != null;
+			case CloudiatorPackage.HARDWARE__PROVIDER_ID:
+				return PROVIDER_ID_EDEFAULT == null ? providerId != null : !PROVIDER_ID_EDEFAULT.equals(providerId);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -481,6 +533,8 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 		result.append(disk);
 		result.append(", id: ");
 		result.append(id);
+		result.append(", providerId: ");
+		result.append(providerId);
 		result.append(')');
 		return result.toString();
 	}
