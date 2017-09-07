@@ -65,6 +65,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Image/id"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cloudiator.ecore#//Image/cloud"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Image/providerId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Image/location"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Hardware">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Hardware/cores"/>
@@ -75,6 +76,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Hardware/prices"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Hardware/cloud"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Hardware/providerId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Hardware/location"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Location">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Location/name"/>

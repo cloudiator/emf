@@ -355,6 +355,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getImage_Location() {
+		return (EReference)imageEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getHardware() {
 		return hardwareEClass;
 	}
@@ -429,6 +438,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 */
 	public EAttribute getHardware_ProviderId() {
 		return (EAttribute)hardwareEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHardware_Location() {
+		return (EReference)hardwareEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -733,6 +751,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEAttribute(imageEClass, IMAGE__ID);
 		createEReference(imageEClass, IMAGE__CLOUD);
 		createEAttribute(imageEClass, IMAGE__PROVIDER_ID);
+		createEReference(imageEClass, IMAGE__LOCATION);
 
 		hardwareEClass = createEClass(HARDWARE);
 		createEAttribute(hardwareEClass, HARDWARE__CORES);
@@ -743,6 +762,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEReference(hardwareEClass, HARDWARE__PRICES);
 		createEReference(hardwareEClass, HARDWARE__CLOUD);
 		createEAttribute(hardwareEClass, HARDWARE__PROVIDER_ID);
+		createEReference(hardwareEClass, HARDWARE__LOCATION);
 
 		locationEClass = createEClass(LOCATION);
 		createEAttribute(locationEClass, LOCATION__NAME);
@@ -834,6 +854,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEAttribute(getImage_Id(), ecorePackage.getEString(), "id", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImage_Cloud(), this.getCloud(), this.getCloud_Images(), "cloud", null, 1, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImage_ProviderId(), ecorePackage.getEString(), "providerId", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getImage_Location(), this.getLocation(), null, "location", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hardwareEClass, Hardware.class, "Hardware", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHardware_Cores(), ecorePackage.getEBigInteger(), "cores", null, 1, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -844,6 +865,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEReference(getHardware_Prices(), this.getPrice(), this.getPrice_Hardware(), "prices", null, 1, -1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getHardware_Cloud(), this.getCloud(), this.getCloud_HardwareList(), "cloud", null, 1, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getHardware_ProviderId(), ecorePackage.getEString(), "providerId", null, 0, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getHardware_Location(), this.getLocation(), null, "location", null, 0, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationEClass, Location.class, "Location", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLocation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

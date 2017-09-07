@@ -42,6 +42,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="cloud" lowerBound="1" eType="#//Cloud"
         changeable="false" eOpposite="#//Cloud/images"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="providerId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Hardware">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cores" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
@@ -55,6 +56,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="cloud" lowerBound="1" eType="#//Cloud"
         changeable="false" eOpposite="#//Cloud/hardwareList"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="providerId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Location">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

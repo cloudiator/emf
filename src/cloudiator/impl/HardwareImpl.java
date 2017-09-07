@@ -6,6 +6,7 @@ import cloudiator.Cloud;
 import cloudiator.CloudiatorPackage;
 import cloudiator.Hardware;
 
+import cloudiator.Location;
 import cloudiator.Price;
 import java.math.BigInteger;
 
@@ -38,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cloudiator.impl.HardwareImpl#getPrices <em>Prices</em>}</li>
  *   <li>{@link cloudiator.impl.HardwareImpl#getCloud <em>Cloud</em>}</li>
  *   <li>{@link cloudiator.impl.HardwareImpl#getProviderId <em>Provider Id</em>}</li>
+ *   <li>{@link cloudiator.impl.HardwareImpl#getLocation <em>Location</em>}</li>
  * </ul>
  *
  * @generated
@@ -172,6 +174,16 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * @ordered
 	 */
 	protected String providerId = PROVIDER_ID_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLocation() <em>Location</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocation()
+	 * @generated
+	 * @ordered
+	 */
+	protected Location location;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -345,6 +357,44 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Location getLocation() {
+		if (location != null && location.eIsProxy()) {
+			InternalEObject oldLocation = (InternalEObject)location;
+			location = (Location)eResolveProxy(oldLocation);
+			if (location != oldLocation) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CloudiatorPackage.HARDWARE__LOCATION, oldLocation, location));
+			}
+		}
+		return location;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Location basicGetLocation() {
+		return location;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLocation(Location newLocation) {
+		Location oldLocation = location;
+		location = newLocation;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.HARDWARE__LOCATION, oldLocation, location));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -413,6 +463,9 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 				return getCloud();
 			case CloudiatorPackage.HARDWARE__PROVIDER_ID:
 				return getProviderId();
+			case CloudiatorPackage.HARDWARE__LOCATION:
+				if (resolve) return getLocation();
+				return basicGetLocation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -448,6 +501,9 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 			case CloudiatorPackage.HARDWARE__PROVIDER_ID:
 				setProviderId((String)newValue);
 				return;
+			case CloudiatorPackage.HARDWARE__LOCATION:
+				setLocation((Location)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -481,6 +537,9 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 			case CloudiatorPackage.HARDWARE__PROVIDER_ID:
 				setProviderId(PROVIDER_ID_EDEFAULT);
 				return;
+			case CloudiatorPackage.HARDWARE__LOCATION:
+				setLocation((Location)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -509,6 +568,8 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 				return getCloud() != null;
 			case CloudiatorPackage.HARDWARE__PROVIDER_ID:
 				return PROVIDER_ID_EDEFAULT == null ? providerId != null : !PROVIDER_ID_EDEFAULT.equals(providerId);
+			case CloudiatorPackage.HARDWARE__LOCATION:
+				return location != null;
 		}
 		return super.eIsSet(featureID);
 	}

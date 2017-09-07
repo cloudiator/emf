@@ -6,6 +6,7 @@ import cloudiator.Cloud;
 import cloudiator.CloudiatorPackage;
 import cloudiator.Image;
 
+import cloudiator.Location;
 import cloudiator.OperatingSystem;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -29,6 +30,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.ImageImpl#getId <em>Id</em>}</li>
  *   <li>{@link cloudiator.impl.ImageImpl#getCloud <em>Cloud</em>}</li>
  *   <li>{@link cloudiator.impl.ImageImpl#getProviderId <em>Provider Id</em>}</li>
+ *   <li>{@link cloudiator.impl.ImageImpl#getLocation <em>Location</em>}</li>
  * </ul>
  *
  * @generated
@@ -103,6 +105,16 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	 * @ordered
 	 */
 	protected String providerId = PROVIDER_ID_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getLocation() <em>Location</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocation()
+	 * @generated
+	 * @ordered
+	 */
+	protected Location location;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -239,6 +251,44 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Location getLocation() {
+		if (location != null && location.eIsProxy()) {
+			InternalEObject oldLocation = (InternalEObject)location;
+			location = (Location)eResolveProxy(oldLocation);
+			if (location != oldLocation) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CloudiatorPackage.IMAGE__LOCATION, oldLocation, location));
+			}
+		}
+		return location;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Location basicGetLocation() {
+		return location;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLocation(Location newLocation) {
+		Location oldLocation = location;
+		location = newLocation;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.IMAGE__LOCATION, oldLocation, location));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -297,6 +347,9 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 				return getCloud();
 			case CloudiatorPackage.IMAGE__PROVIDER_ID:
 				return getProviderId();
+			case CloudiatorPackage.IMAGE__LOCATION:
+				if (resolve) return getLocation();
+				return basicGetLocation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -320,6 +373,9 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 				return;
 			case CloudiatorPackage.IMAGE__PROVIDER_ID:
 				setProviderId((String)newValue);
+				return;
+			case CloudiatorPackage.IMAGE__LOCATION:
+				setLocation((Location)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -345,6 +401,9 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 			case CloudiatorPackage.IMAGE__PROVIDER_ID:
 				setProviderId(PROVIDER_ID_EDEFAULT);
 				return;
+			case CloudiatorPackage.IMAGE__LOCATION:
+				setLocation((Location)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -367,6 +426,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 				return getCloud() != null;
 			case CloudiatorPackage.IMAGE__PROVIDER_ID:
 				return PROVIDER_ID_EDEFAULT == null ? providerId != null : !PROVIDER_ID_EDEFAULT.equals(providerId);
+			case CloudiatorPackage.IMAGE__LOCATION:
+				return location != null;
 		}
 		return super.eIsSet(featureID);
 	}
