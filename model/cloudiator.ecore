@@ -17,6 +17,8 @@
         eType="#//Node" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="clouds" upperBound="-1"
         eType="#//Cloud" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operatingsystem" upperBound="-1"
+        eType="#//OperatingSystem" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"

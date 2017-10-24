@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.CloudiatorModel#getComponents <em>Components</em>}</li>
  *   <li>{@link cloudiator.CloudiatorModel#getNodes <em>Nodes</em>}</li>
  *   <li>{@link cloudiator.CloudiatorModel#getClouds <em>Clouds</em>}</li>
+ *   <li>{@link cloudiator.CloudiatorModel#getOperatingsystem <em>Operatingsystem</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getCloudiatorModel()
@@ -72,5 +73,21 @@ public interface CloudiatorModel extends EObject {
 	 * @generated
 	 */
 	EList<Cloud> getClouds();
+
+	/**
+	 * Returns the value of the '<em><b>Operatingsystem</b></em>' containment reference list.
+	 * The list contents are of type {@link cloudiator.OperatingSystem}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Operatingsystem</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Operatingsystem</em>' containment reference list.
+	 * @see cloudiator.CloudiatorPackage#getCloudiatorModel_Operatingsystem()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<OperatingSystem> getOperatingsystem();
 
 } // CloudiatorModel

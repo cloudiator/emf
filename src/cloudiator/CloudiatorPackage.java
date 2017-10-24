@@ -97,13 +97,22 @@ public interface CloudiatorPackage extends EPackage {
 	int CLOUDIATOR_MODEL__CLOUDS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Operatingsystem</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUDIATOR_MODEL__OPERATINGSYSTEM = 3;
+
+	/**
 	 * The number of structural features of the '<em>Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUDIATOR_MODEL_FEATURE_COUNT = 3;
+	int CLOUDIATOR_MODEL_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Model</em>' class.
@@ -802,6 +811,17 @@ public interface CloudiatorPackage extends EPackage {
 	EReference getCloudiatorModel_Clouds();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link cloudiator.CloudiatorModel#getOperatingsystem <em>Operatingsystem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Operatingsystem</em>'.
+	 * @see cloudiator.CloudiatorModel#getOperatingsystem()
+	 * @see #getCloudiatorModel()
+	 * @generated
+	 */
+	EReference getCloudiatorModel_Operatingsystem();
+
+	/**
 	 * Returns the meta object for class '{@link cloudiator.Component <em>Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1440,6 +1460,14 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CLOUDIATOR_MODEL__CLOUDS = eINSTANCE.getCloudiatorModel_Clouds();
+
+		/**
+		 * The meta object literal for the '<em><b>Operatingsystem</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CLOUDIATOR_MODEL__OPERATINGSYSTEM = eINSTANCE.getCloudiatorModel_Operatingsystem();
 
 		/**
 		 * The meta object literal for the '{@link cloudiator.impl.ComponentImpl <em>Component</em>}' class.
