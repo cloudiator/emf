@@ -1005,7 +1005,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		  (getNode_Price(), 
 		   source, 
 		   new String[] {
-			 "derivation", "cloud.prices->select(p | p.image = self.image and p.location = self.location and p.hardware = self.hardware)->first().price"
+			 "derivation", "\n\t\t\tif (cloud.prices->select(p | p.image = self.image and p.location = self.location and p.hardware = self.hardware)->isEmpty()) then\n\t\t\t\tnull\n\t\t\telse\n\t\t\t\tcloud.prices->select(p | p.image = self.image and p.location = self.location and p.hardware = self.hardware)->first().price\n\t\t\tendif"
 		   });
 	}
 
