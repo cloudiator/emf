@@ -9,6 +9,7 @@ import cloudiator.Hardware;
 import cloudiator.Image;
 import cloudiator.Location;
 
+import cloudiator.Price;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -21,6 +22,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -38,6 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cloudiator.impl.CloudImpl#getHardwareList <em>Hardware List</em>}</li>
  *   <li>{@link cloudiator.impl.CloudImpl#getImages <em>Images</em>}</li>
  *   <li>{@link cloudiator.impl.CloudImpl#getId <em>Id</em>}</li>
+ *   <li>{@link cloudiator.impl.CloudImpl#getPrices <em>Prices</em>}</li>
  * </ul>
  *
  * @generated
@@ -134,6 +137,16 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	protected String id = ID_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getPrices() <em>Prices</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrices()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Price> prices;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -204,6 +217,18 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 		id = newId;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Price> getPrices() {
+		if (prices == null) {
+			prices = new EObjectContainmentEList<Price>(Price.class, this, CloudiatorPackage.CLOUD__PRICES);
+		}
+		return prices;
 	}
 
 	/**
@@ -284,6 +309,8 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 				return ((InternalEList<?>)getHardwareList()).basicRemove(otherEnd, msgs);
 			case CloudiatorPackage.CLOUD__IMAGES:
 				return ((InternalEList<?>)getImages()).basicRemove(otherEnd, msgs);
+			case CloudiatorPackage.CLOUD__PRICES:
+				return ((InternalEList<?>)getPrices()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -308,6 +335,8 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 				return getImages();
 			case CloudiatorPackage.CLOUD__ID:
 				return getId();
+			case CloudiatorPackage.CLOUD__PRICES:
+				return getPrices();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -342,6 +371,10 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 			case CloudiatorPackage.CLOUD__ID:
 				setId((String)newValue);
 				return;
+			case CloudiatorPackage.CLOUD__PRICES:
+				getPrices().clear();
+				getPrices().addAll((Collection<? extends Price>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -372,6 +405,9 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 			case CloudiatorPackage.CLOUD__ID:
 				setId(ID_EDEFAULT);
 				return;
+			case CloudiatorPackage.CLOUD__PRICES:
+				getPrices().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -396,6 +432,8 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 				return images != null && !images.isEmpty();
 			case CloudiatorPackage.CLOUD__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case CloudiatorPackage.CLOUD__PRICES:
+				return prices != null && !prices.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

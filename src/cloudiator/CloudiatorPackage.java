@@ -380,22 +380,13 @@ public interface CloudiatorPackage extends EPackage {
 	int HARDWARE__ID = 4;
 
 	/**
-	 * The feature id for the '<em><b>Prices</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HARDWARE__PRICES = 5;
-
-	/**
 	 * The feature id for the '<em><b>Cloud</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE__CLOUD = 6;
+	int HARDWARE__CLOUD = 5;
 
 	/**
 	 * The feature id for the '<em><b>Provider Id</b></em>' attribute.
@@ -404,7 +395,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE__PROVIDER_ID = 7;
+	int HARDWARE__PROVIDER_ID = 6;
 
 	/**
 	 * The feature id for the '<em><b>Location</b></em>' reference.
@@ -413,7 +404,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE__LOCATION = 8;
+	int HARDWARE__LOCATION = 7;
 
 	/**
 	 * The number of structural features of the '<em>Hardware</em>' class.
@@ -422,7 +413,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_FEATURE_COUNT = 9;
+	int HARDWARE_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Hardware</em>' class.
@@ -599,13 +590,22 @@ public interface CloudiatorPackage extends EPackage {
 	int CLOUD__ID = 5;
 
 	/**
+	 * The feature id for the '<em><b>Prices</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD__PRICES = 6;
+
+	/**
 	 * The number of structural features of the '<em>Cloud</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD_FEATURE_COUNT = 6;
+	int CLOUD_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Cloud</em>' class.
@@ -691,22 +691,13 @@ public interface CloudiatorPackage extends EPackage {
 	int PRICE__PRICE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Hardware</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRICE__HARDWARE = 1;
-
-	/**
 	 * The feature id for the '<em><b>Location</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRICE__LOCATION = 2;
+	int PRICE__LOCATION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Image</b></em>' reference.
@@ -715,7 +706,16 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRICE__IMAGE = 3;
+	int PRICE__IMAGE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Hardware</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRICE__HARDWARE = 3;
 
 	/**
 	 * The number of structural features of the '<em>Price</em>' class.
@@ -1060,17 +1060,6 @@ public interface CloudiatorPackage extends EPackage {
 	EAttribute getHardware_Id();
 
 	/**
-	 * Returns the meta object for the reference list '{@link cloudiator.Hardware#getPrices <em>Prices</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Prices</em>'.
-	 * @see cloudiator.Hardware#getPrices()
-	 * @see #getHardware()
-	 * @generated
-	 */
-	EReference getHardware_Prices();
-
-	/**
 	 * Returns the meta object for the container reference '{@link cloudiator.Hardware#getCloud <em>Cloud</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1243,6 +1232,17 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCloud_Id();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cloudiator.Cloud#getPrices <em>Prices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Prices</em>'.
+	 * @see cloudiator.Cloud#getPrices()
+	 * @see #getCloud()
+	 * @generated
+	 */
+	EReference getCloud_Prices();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link cloudiator.Cloud#getHardwareList <em>Hardware List</em>}'.
@@ -1654,14 +1654,6 @@ public interface CloudiatorPackage extends EPackage {
 		EAttribute HARDWARE__ID = eINSTANCE.getHardware_Id();
 
 		/**
-		 * The meta object literal for the '<em><b>Prices</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference HARDWARE__PRICES = eINSTANCE.getHardware_Prices();
-
-		/**
 		 * The meta object literal for the '<em><b>Cloud</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1792,6 +1784,14 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CLOUD__ID = eINSTANCE.getCloud_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Prices</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CLOUD__PRICES = eINSTANCE.getCloud_Prices();
 
 		/**
 		 * The meta object literal for the '<em><b>Hardware List</b></em>' containment reference list feature.

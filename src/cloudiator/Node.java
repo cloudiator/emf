@@ -141,7 +141,7 @@ public interface Node extends EObject {
 	 * @see #setPrice(Double)
 	 * @see cloudiator.CloudiatorPackage#getNode_Price()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.DoubleObject" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='hardware.prices->select(p | p.image = self.image and p.location = self.location)->first().price'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='cloud.prices->select(p | p.image = self.image and p.location = self.location and p.hardware = self.hardware)->first().price'"
 	 * @generated
 	 */
 	Double getPrice();

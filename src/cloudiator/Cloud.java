@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Cloud#getHardwareList <em>Hardware List</em>}</li>
  *   <li>{@link cloudiator.Cloud#getImages <em>Images</em>}</li>
  *   <li>{@link cloudiator.Cloud#getId <em>Id</em>}</li>
+ *   <li>{@link cloudiator.Cloud#getPrices <em>Prices</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getCloud()
@@ -100,6 +101,22 @@ public interface Cloud extends EObject {
 	 * @generated
 	 */
 	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Prices</b></em>' containment reference list.
+	 * The list contents are of type {@link cloudiator.Price}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Prices</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prices</em>' containment reference list.
+	 * @see cloudiator.CloudiatorPackage#getCloud_Prices()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Price> getPrices();
 
 	/**
 	 * Returns the value of the '<em><b>Hardware List</b></em>' containment reference list.

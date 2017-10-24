@@ -3,8 +3,6 @@
 package cloudiator;
 
 import java.math.BigInteger;
-
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -21,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Hardware#getRam <em>Ram</em>}</li>
  *   <li>{@link cloudiator.Hardware#getDisk <em>Disk</em>}</li>
  *   <li>{@link cloudiator.Hardware#getId <em>Id</em>}</li>
- *   <li>{@link cloudiator.Hardware#getPrices <em>Prices</em>}</li>
  *   <li>{@link cloudiator.Hardware#getCloud <em>Cloud</em>}</li>
  *   <li>{@link cloudiator.Hardware#getProviderId <em>Provider Id</em>}</li>
  *   <li>{@link cloudiator.Hardware#getLocation <em>Location</em>}</li>
@@ -161,24 +158,6 @@ public interface Hardware extends EObject {
 	 * @generated
 	 */
 	void setId(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Prices</b></em>' reference list.
-	 * The list contents are of type {@link cloudiator.Price}.
-	 * It is bidirectional and its opposite is '{@link cloudiator.Price#getHardware <em>Hardware</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Prices</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prices</em>' reference list.
-	 * @see cloudiator.CloudiatorPackage#getHardware_Prices()
-	 * @see cloudiator.Price#getHardware
-	 * @model opposite="hardware" required="true"
-	 * @generated
-	 */
-	EList<Price> getPrices();
 
 	/**
 	 * Returns the value of the '<em><b>Cloud</b></em>' container reference.

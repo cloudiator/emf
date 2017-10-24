@@ -7,21 +7,15 @@ import cloudiator.CloudiatorPackage;
 import cloudiator.Hardware;
 
 import cloudiator.Location;
-import cloudiator.Price;
 import java.math.BigInteger;
-
-import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,7 +30,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cloudiator.impl.HardwareImpl#getRam <em>Ram</em>}</li>
  *   <li>{@link cloudiator.impl.HardwareImpl#getDisk <em>Disk</em>}</li>
  *   <li>{@link cloudiator.impl.HardwareImpl#getId <em>Id</em>}</li>
- *   <li>{@link cloudiator.impl.HardwareImpl#getPrices <em>Prices</em>}</li>
  *   <li>{@link cloudiator.impl.HardwareImpl#getCloud <em>Cloud</em>}</li>
  *   <li>{@link cloudiator.impl.HardwareImpl#getProviderId <em>Provider Id</em>}</li>
  *   <li>{@link cloudiator.impl.HardwareImpl#getLocation <em>Location</em>}</li>
@@ -144,16 +137,6 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getPrices() <em>Prices</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrices()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Price> prices;
 
 	/**
 	 * The default value of the '{@link #getProviderId() <em>Provider Id</em>}' attribute.
@@ -314,18 +297,6 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Price> getPrices() {
-		if (prices == null) {
-			prices = new EObjectWithInverseResolvingEList<Price>(Price.class, this, CloudiatorPackage.HARDWARE__PRICES, CloudiatorPackage.PRICE__HARDWARE);
-		}
-		return prices;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Cloud getCloud() {
 		if (eContainerFeatureID() != CloudiatorPackage.HARDWARE__CLOUD) return null;
 		return (Cloud)eInternalContainer();
@@ -399,8 +370,6 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CloudiatorPackage.HARDWARE__PRICES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPrices()).basicAdd(otherEnd, msgs);
 			case CloudiatorPackage.HARDWARE__CLOUD:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -417,8 +386,6 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CloudiatorPackage.HARDWARE__PRICES:
-				return ((InternalEList<?>)getPrices()).basicRemove(otherEnd, msgs);
 			case CloudiatorPackage.HARDWARE__CLOUD:
 				return eBasicSetContainer(null, CloudiatorPackage.HARDWARE__CLOUD, msgs);
 		}
@@ -457,8 +424,6 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 				return getDisk();
 			case CloudiatorPackage.HARDWARE__ID:
 				return getId();
-			case CloudiatorPackage.HARDWARE__PRICES:
-				return getPrices();
 			case CloudiatorPackage.HARDWARE__CLOUD:
 				return getCloud();
 			case CloudiatorPackage.HARDWARE__PROVIDER_ID:
@@ -494,10 +459,6 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 			case CloudiatorPackage.HARDWARE__ID:
 				setId((String)newValue);
 				return;
-			case CloudiatorPackage.HARDWARE__PRICES:
-				getPrices().clear();
-				getPrices().addAll((Collection<? extends Price>)newValue);
-				return;
 			case CloudiatorPackage.HARDWARE__PROVIDER_ID:
 				setProviderId((String)newValue);
 				return;
@@ -531,9 +492,6 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 			case CloudiatorPackage.HARDWARE__ID:
 				setId(ID_EDEFAULT);
 				return;
-			case CloudiatorPackage.HARDWARE__PRICES:
-				getPrices().clear();
-				return;
 			case CloudiatorPackage.HARDWARE__PROVIDER_ID:
 				setProviderId(PROVIDER_ID_EDEFAULT);
 				return;
@@ -562,8 +520,6 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 				return DISK_EDEFAULT == null ? disk != null : !DISK_EDEFAULT.equals(disk);
 			case CloudiatorPackage.HARDWARE__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case CloudiatorPackage.HARDWARE__PRICES:
-				return prices != null && !prices.isEmpty();
 			case CloudiatorPackage.HARDWARE__CLOUD:
 				return getCloud() != null;
 			case CloudiatorPackage.HARDWARE__PROVIDER_ID:

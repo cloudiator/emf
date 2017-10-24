@@ -427,7 +427,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getHardware_Prices() {
+	public EReference getHardware_Cloud() {
 		return (EReference)hardwareEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -436,17 +436,8 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getHardware_Cloud() {
-		return (EReference)hardwareEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getHardware_ProviderId() {
-		return (EAttribute)hardwareEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)hardwareEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -455,7 +446,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * @generated
 	 */
 	public EReference getHardware_Location() {
-		return (EReference)hardwareEClass.getEStructuralFeatures().get(8);
+		return (EReference)hardwareEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -580,6 +571,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCloud_Prices() {
+		return (EReference)cloudEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getCloud_HardwareList() {
 		return (EReference)cloudEClass.getEStructuralFeatures().get(3);
 	}
@@ -662,7 +662,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * @generated
 	 */
 	public EReference getPrice_Hardware() {
-		return (EReference)priceEClass.getEStructuralFeatures().get(1);
+		return (EReference)priceEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -671,7 +671,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * @generated
 	 */
 	public EReference getPrice_Location() {
-		return (EReference)priceEClass.getEStructuralFeatures().get(2);
+		return (EReference)priceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -680,7 +680,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * @generated
 	 */
 	public EReference getPrice_Image() {
-		return (EReference)priceEClass.getEStructuralFeatures().get(3);
+		return (EReference)priceEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -769,7 +769,6 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEAttribute(hardwareEClass, HARDWARE__RAM);
 		createEAttribute(hardwareEClass, HARDWARE__DISK);
 		createEAttribute(hardwareEClass, HARDWARE__ID);
-		createEReference(hardwareEClass, HARDWARE__PRICES);
 		createEReference(hardwareEClass, HARDWARE__CLOUD);
 		createEAttribute(hardwareEClass, HARDWARE__PROVIDER_ID);
 		createEReference(hardwareEClass, HARDWARE__LOCATION);
@@ -791,6 +790,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEReference(cloudEClass, CLOUD__HARDWARE_LIST);
 		createEReference(cloudEClass, CLOUD__IMAGES);
 		createEAttribute(cloudEClass, CLOUD__ID);
+		createEReference(cloudEClass, CLOUD__PRICES);
 
 		operatingSystemEClass = createEClass(OPERATING_SYSTEM);
 		createEAttribute(operatingSystemEClass, OPERATING_SYSTEM__FAMILY);
@@ -799,9 +799,9 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 
 		priceEClass = createEClass(PRICE);
 		createEAttribute(priceEClass, PRICE__PRICE);
-		createEReference(priceEClass, PRICE__HARDWARE);
 		createEReference(priceEClass, PRICE__LOCATION);
 		createEReference(priceEClass, PRICE__IMAGE);
+		createEReference(priceEClass, PRICE__HARDWARE);
 
 		// Create enums
 		cloudTypeEEnum = createEEnum(CLOUD_TYPE);
@@ -873,7 +873,6 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEAttribute(getHardware_Ram(), ecorePackage.getEBigInteger(), "ram", null, 1, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getHardware_Disk(), theXMLTypePackage.getFloatObject(), "disk", null, 1, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getHardware_Id(), ecorePackage.getEString(), "id", null, 0, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getHardware_Prices(), this.getPrice(), this.getPrice_Hardware(), "prices", null, 1, -1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getHardware_Cloud(), this.getCloud(), this.getCloud_HardwareList(), "cloud", null, 1, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getHardware_ProviderId(), ecorePackage.getEString(), "providerId", null, 0, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getHardware_Location(), this.getLocation(), null, "location", null, 0, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -895,6 +894,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEReference(getCloud_HardwareList(), this.getHardware(), this.getHardware_Cloud(), "hardwareList", null, 0, -1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCloud_Images(), this.getImage(), this.getImage_Cloud(), "images", null, 0, -1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCloud_Id(), ecorePackage.getEString(), "id", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCloud_Prices(), this.getPrice(), null, "prices", null, 0, -1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operatingSystemEClass, OperatingSystem.class, "OperatingSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOperatingSystem_Family(), this.getOSFamily(), "family", null, 0, 1, OperatingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -903,9 +903,9 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 
 		initEClass(priceEClass, Price.class, "Price", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrice_Price(), theXMLTypePackage.getDoubleObject(), "price", null, 0, 1, Price.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPrice_Hardware(), this.getHardware(), this.getHardware_Prices(), "hardware", null, 1, 1, Price.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPrice_Location(), this.getLocation(), null, "location", null, 1, 1, Price.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPrice_Image(), this.getImage(), null, "image", null, 1, 1, Price.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPrice_Hardware(), this.getHardware(), null, "hardware", null, 1, 1, Price.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(cloudTypeEEnum, CloudType.class, "CloudType");
@@ -1005,7 +1005,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		  (getNode_Price(), 
 		   source, 
 		   new String[] {
-			 "derivation", "hardware.prices->select(p | p.image = self.image and p.location = self.location)->first().price"
+			 "derivation", "cloud.prices->select(p | p.image = self.image and p.location = self.location and p.hardware = self.hardware)->first().price"
 		   });
 	}
 

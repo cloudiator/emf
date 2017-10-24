@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link cloudiator.Price#getPrice <em>Price</em>}</li>
- *   <li>{@link cloudiator.Price#getHardware <em>Hardware</em>}</li>
  *   <li>{@link cloudiator.Price#getLocation <em>Location</em>}</li>
  *   <li>{@link cloudiator.Price#getImage <em>Image</em>}</li>
+ *   <li>{@link cloudiator.Price#getHardware <em>Hardware</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getPrice()
@@ -52,7 +52,6 @@ public interface Price extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Hardware</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link cloudiator.Hardware#getPrices <em>Prices</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Hardware</em>' reference isn't clear,
@@ -62,8 +61,7 @@ public interface Price extends EObject {
 	 * @return the value of the '<em>Hardware</em>' reference.
 	 * @see #setHardware(Hardware)
 	 * @see cloudiator.CloudiatorPackage#getPrice_Hardware()
-	 * @see cloudiator.Hardware#getPrices
-	 * @model opposite="prices" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	Hardware getHardware();

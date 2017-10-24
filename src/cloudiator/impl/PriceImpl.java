@@ -9,8 +9,6 @@ import cloudiator.Location;
 import cloudiator.Price;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -26,9 +24,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link cloudiator.impl.PriceImpl#getPrice <em>Price</em>}</li>
- *   <li>{@link cloudiator.impl.PriceImpl#getHardware <em>Hardware</em>}</li>
  *   <li>{@link cloudiator.impl.PriceImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link cloudiator.impl.PriceImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link cloudiator.impl.PriceImpl#getHardware <em>Hardware</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,16 +53,6 @@ public class PriceImpl extends MinimalEObjectImpl.Container implements Price {
 	protected Double price = PRICE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getHardware() <em>Hardware</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHardware()
-	 * @generated
-	 * @ordered
-	 */
-	protected Hardware hardware;
-
-	/**
 	 * The cached value of the '{@link #getLocation() <em>Location</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,6 +71,16 @@ public class PriceImpl extends MinimalEObjectImpl.Container implements Price {
 	 * @ordered
 	 */
 	protected Image image;
+
+	/**
+	 * The cached value of the '{@link #getHardware() <em>Hardware</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHardware()
+	 * @generated
+	 * @ordered
+	 */
+	protected Hardware hardware;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,33 +153,11 @@ public class PriceImpl extends MinimalEObjectImpl.Container implements Price {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetHardware(Hardware newHardware, NotificationChain msgs) {
+	public void setHardware(Hardware newHardware) {
 		Hardware oldHardware = hardware;
 		hardware = newHardware;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CloudiatorPackage.PRICE__HARDWARE, oldHardware, newHardware);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setHardware(Hardware newHardware) {
-		if (newHardware != hardware) {
-			NotificationChain msgs = null;
-			if (hardware != null)
-				msgs = ((InternalEObject)hardware).eInverseRemove(this, CloudiatorPackage.HARDWARE__PRICES, Hardware.class, msgs);
-			if (newHardware != null)
-				msgs = ((InternalEObject)newHardware).eInverseAdd(this, CloudiatorPackage.HARDWARE__PRICES, Hardware.class, msgs);
-			msgs = basicSetHardware(newHardware, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.PRICE__HARDWARE, newHardware, newHardware));
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.PRICE__HARDWARE, oldHardware, hardware));
 	}
 
 	/**
@@ -266,49 +242,19 @@ public class PriceImpl extends MinimalEObjectImpl.Container implements Price {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case CloudiatorPackage.PRICE__HARDWARE:
-				if (hardware != null)
-					msgs = ((InternalEObject)hardware).eInverseRemove(this, CloudiatorPackage.HARDWARE__PRICES, Hardware.class, msgs);
-				return basicSetHardware((Hardware)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case CloudiatorPackage.PRICE__HARDWARE:
-				return basicSetHardware(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case CloudiatorPackage.PRICE__PRICE:
 				return getPrice();
-			case CloudiatorPackage.PRICE__HARDWARE:
-				if (resolve) return getHardware();
-				return basicGetHardware();
 			case CloudiatorPackage.PRICE__LOCATION:
 				if (resolve) return getLocation();
 				return basicGetLocation();
 			case CloudiatorPackage.PRICE__IMAGE:
 				if (resolve) return getImage();
 				return basicGetImage();
+			case CloudiatorPackage.PRICE__HARDWARE:
+				if (resolve) return getHardware();
+				return basicGetHardware();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -324,14 +270,14 @@ public class PriceImpl extends MinimalEObjectImpl.Container implements Price {
 			case CloudiatorPackage.PRICE__PRICE:
 				setPrice((Double)newValue);
 				return;
-			case CloudiatorPackage.PRICE__HARDWARE:
-				setHardware((Hardware)newValue);
-				return;
 			case CloudiatorPackage.PRICE__LOCATION:
 				setLocation((Location)newValue);
 				return;
 			case CloudiatorPackage.PRICE__IMAGE:
 				setImage((Image)newValue);
+				return;
+			case CloudiatorPackage.PRICE__HARDWARE:
+				setHardware((Hardware)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -348,14 +294,14 @@ public class PriceImpl extends MinimalEObjectImpl.Container implements Price {
 			case CloudiatorPackage.PRICE__PRICE:
 				setPrice(PRICE_EDEFAULT);
 				return;
-			case CloudiatorPackage.PRICE__HARDWARE:
-				setHardware((Hardware)null);
-				return;
 			case CloudiatorPackage.PRICE__LOCATION:
 				setLocation((Location)null);
 				return;
 			case CloudiatorPackage.PRICE__IMAGE:
 				setImage((Image)null);
+				return;
+			case CloudiatorPackage.PRICE__HARDWARE:
+				setHardware((Hardware)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -371,12 +317,12 @@ public class PriceImpl extends MinimalEObjectImpl.Container implements Price {
 		switch (featureID) {
 			case CloudiatorPackage.PRICE__PRICE:
 				return PRICE_EDEFAULT == null ? price != null : !PRICE_EDEFAULT.equals(price);
-			case CloudiatorPackage.PRICE__HARDWARE:
-				return hardware != null;
 			case CloudiatorPackage.PRICE__LOCATION:
 				return location != null;
 			case CloudiatorPackage.PRICE__IMAGE:
 				return image != null;
+			case CloudiatorPackage.PRICE__HARDWARE:
+				return hardware != null;
 		}
 		return super.eIsSet(featureID);
 	}
