@@ -144,7 +144,7 @@ public interface Hardware extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see cloudiator.CloudiatorPackage#getHardware_Id()
-	 * @model id="true"
+	 * @model
 	 * @generated
 	 */
 	String getId();
