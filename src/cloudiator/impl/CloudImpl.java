@@ -2,7 +2,10 @@
  */
 package cloudiator.impl;
 
+import cloudiator.Api;
 import cloudiator.Cloud;
+import cloudiator.CloudConfiguration;
+import cloudiator.CloudCredential;
 import cloudiator.CloudType;
 import cloudiator.CloudiatorPackage;
 import cloudiator.Hardware;
@@ -35,12 +38,15 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link cloudiator.impl.CloudImpl#getType <em>Type</em>}</li>
- *   <li>{@link cloudiator.impl.CloudImpl#getName <em>Name</em>}</li>
  *   <li>{@link cloudiator.impl.CloudImpl#getLocations <em>Locations</em>}</li>
  *   <li>{@link cloudiator.impl.CloudImpl#getHardwareList <em>Hardware List</em>}</li>
  *   <li>{@link cloudiator.impl.CloudImpl#getImages <em>Images</em>}</li>
  *   <li>{@link cloudiator.impl.CloudImpl#getId <em>Id</em>}</li>
  *   <li>{@link cloudiator.impl.CloudImpl#getPrices <em>Prices</em>}</li>
+ *   <li>{@link cloudiator.impl.CloudImpl#getEndpoint <em>Endpoint</em>}</li>
+ *   <li>{@link cloudiator.impl.CloudImpl#getApi <em>Api</em>}</li>
+ *   <li>{@link cloudiator.impl.CloudImpl#getCloudcredential <em>Cloudcredential</em>}</li>
+ *   <li>{@link cloudiator.impl.CloudImpl#getConfiguration <em>Configuration</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,26 +71,6 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * @ordered
 	 */
 	protected CloudType type = TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getLocations() <em>Locations</em>}' containment reference list.
@@ -145,6 +131,56 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * @ordered
 	 */
 	protected EList<Price> prices;
+
+	/**
+	 * The default value of the '{@link #getEndpoint() <em>Endpoint</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEndpoint()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ENDPOINT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getEndpoint() <em>Endpoint</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEndpoint()
+	 * @generated
+	 * @ordered
+	 */
+	protected String endpoint = ENDPOINT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getApi() <em>Api</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getApi()
+	 * @generated
+	 * @ordered
+	 */
+	protected Api api;
+
+	/**
+	 * The cached value of the '{@link #getCloudcredential() <em>Cloudcredential</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCloudcredential()
+	 * @generated
+	 * @ordered
+	 */
+	protected CloudCredential cloudcredential;
+
+	/**
+	 * The cached value of the '{@link #getConfiguration() <em>Configuration</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConfiguration()
+	 * @generated
+	 * @ordered
+	 */
+	protected CloudConfiguration configuration;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -236,6 +272,141 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getEndpoint() {
+		return endpoint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEndpoint(String newEndpoint) {
+		String oldEndpoint = endpoint;
+		endpoint = newEndpoint;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__ENDPOINT, oldEndpoint, endpoint));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Api getApi() {
+		if (api != null && api.eIsProxy()) {
+			InternalEObject oldApi = (InternalEObject)api;
+			api = (Api)eResolveProxy(oldApi);
+			if (api != oldApi) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CloudiatorPackage.CLOUD__API, oldApi, api));
+			}
+		}
+		return api;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Api basicGetApi() {
+		return api;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setApi(Api newApi) {
+		Api oldApi = api;
+		api = newApi;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__API, oldApi, api));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CloudCredential getCloudcredential() {
+		if (cloudcredential != null && cloudcredential.eIsProxy()) {
+			InternalEObject oldCloudcredential = (InternalEObject)cloudcredential;
+			cloudcredential = (CloudCredential)eResolveProxy(oldCloudcredential);
+			if (cloudcredential != oldCloudcredential) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CloudiatorPackage.CLOUD__CLOUDCREDENTIAL, oldCloudcredential, cloudcredential));
+			}
+		}
+		return cloudcredential;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CloudCredential basicGetCloudcredential() {
+		return cloudcredential;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCloudcredential(CloudCredential newCloudcredential) {
+		CloudCredential oldCloudcredential = cloudcredential;
+		cloudcredential = newCloudcredential;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__CLOUDCREDENTIAL, oldCloudcredential, cloudcredential));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CloudConfiguration getConfiguration() {
+		if (configuration != null && configuration.eIsProxy()) {
+			InternalEObject oldConfiguration = (InternalEObject)configuration;
+			configuration = (CloudConfiguration)eResolveProxy(oldConfiguration);
+			if (configuration != oldConfiguration) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CloudiatorPackage.CLOUD__CONFIGURATION, oldConfiguration, configuration));
+			}
+		}
+		return configuration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CloudConfiguration basicGetConfiguration() {
+		return configuration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setConfiguration(CloudConfiguration newConfiguration) {
+		CloudConfiguration oldConfiguration = configuration;
+		configuration = newConfiguration;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__CONFIGURATION, oldConfiguration, configuration));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -279,27 +450,6 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -325,8 +475,6 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 		switch (featureID) {
 			case CloudiatorPackage.CLOUD__TYPE:
 				return getType();
-			case CloudiatorPackage.CLOUD__NAME:
-				return getName();
 			case CloudiatorPackage.CLOUD__LOCATIONS:
 				return getLocations();
 			case CloudiatorPackage.CLOUD__HARDWARE_LIST:
@@ -337,6 +485,17 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 				return getId();
 			case CloudiatorPackage.CLOUD__PRICES:
 				return getPrices();
+			case CloudiatorPackage.CLOUD__ENDPOINT:
+				return getEndpoint();
+			case CloudiatorPackage.CLOUD__API:
+				if (resolve) return getApi();
+				return basicGetApi();
+			case CloudiatorPackage.CLOUD__CLOUDCREDENTIAL:
+				if (resolve) return getCloudcredential();
+				return basicGetCloudcredential();
+			case CloudiatorPackage.CLOUD__CONFIGURATION:
+				if (resolve) return getConfiguration();
+				return basicGetConfiguration();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -352,9 +511,6 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 		switch (featureID) {
 			case CloudiatorPackage.CLOUD__TYPE:
 				setType((CloudType)newValue);
-				return;
-			case CloudiatorPackage.CLOUD__NAME:
-				setName((String)newValue);
 				return;
 			case CloudiatorPackage.CLOUD__LOCATIONS:
 				getLocations().clear();
@@ -375,6 +531,18 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 				getPrices().clear();
 				getPrices().addAll((Collection<? extends Price>)newValue);
 				return;
+			case CloudiatorPackage.CLOUD__ENDPOINT:
+				setEndpoint((String)newValue);
+				return;
+			case CloudiatorPackage.CLOUD__API:
+				setApi((Api)newValue);
+				return;
+			case CloudiatorPackage.CLOUD__CLOUDCREDENTIAL:
+				setCloudcredential((CloudCredential)newValue);
+				return;
+			case CloudiatorPackage.CLOUD__CONFIGURATION:
+				setConfiguration((CloudConfiguration)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -389,9 +557,6 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 		switch (featureID) {
 			case CloudiatorPackage.CLOUD__TYPE:
 				setType(TYPE_EDEFAULT);
-				return;
-			case CloudiatorPackage.CLOUD__NAME:
-				setName(NAME_EDEFAULT);
 				return;
 			case CloudiatorPackage.CLOUD__LOCATIONS:
 				getLocations().clear();
@@ -408,6 +573,18 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 			case CloudiatorPackage.CLOUD__PRICES:
 				getPrices().clear();
 				return;
+			case CloudiatorPackage.CLOUD__ENDPOINT:
+				setEndpoint(ENDPOINT_EDEFAULT);
+				return;
+			case CloudiatorPackage.CLOUD__API:
+				setApi((Api)null);
+				return;
+			case CloudiatorPackage.CLOUD__CLOUDCREDENTIAL:
+				setCloudcredential((CloudCredential)null);
+				return;
+			case CloudiatorPackage.CLOUD__CONFIGURATION:
+				setConfiguration((CloudConfiguration)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -422,8 +599,6 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 		switch (featureID) {
 			case CloudiatorPackage.CLOUD__TYPE:
 				return type != TYPE_EDEFAULT;
-			case CloudiatorPackage.CLOUD__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case CloudiatorPackage.CLOUD__LOCATIONS:
 				return locations != null && !locations.isEmpty();
 			case CloudiatorPackage.CLOUD__HARDWARE_LIST:
@@ -434,6 +609,14 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case CloudiatorPackage.CLOUD__PRICES:
 				return prices != null && !prices.isEmpty();
+			case CloudiatorPackage.CLOUD__ENDPOINT:
+				return ENDPOINT_EDEFAULT == null ? endpoint != null : !ENDPOINT_EDEFAULT.equals(endpoint);
+			case CloudiatorPackage.CLOUD__API:
+				return api != null;
+			case CloudiatorPackage.CLOUD__CLOUDCREDENTIAL:
+				return cloudcredential != null;
+			case CloudiatorPackage.CLOUD__CONFIGURATION:
+				return configuration != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -450,10 +633,10 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (type: ");
 		result.append(type);
-		result.append(", name: ");
-		result.append(name);
 		result.append(", id: ");
 		result.append(id);
+		result.append(", endpoint: ");
+		result.append(endpoint);
 		result.append(')');
 		return result.toString();
 	}

@@ -104,6 +104,22 @@ public class CloudiatorAdapterFactory extends AdapterFactoryImpl {
 				return createPriceAdapter();
 			}
 			@Override
+			public Adapter caseApi(Api object) {
+				return createApiAdapter();
+			}
+			@Override
+			public Adapter caseCloudCredential(CloudCredential object) {
+				return createCloudCredentialAdapter();
+			}
+			@Override
+			public Adapter caseCloudConfiguration(CloudConfiguration object) {
+				return createCloudConfigurationAdapter();
+			}
+			@Override
+			public Adapter caseProperty(Property object) {
+				return createPropertyAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -246,6 +262,62 @@ public class CloudiatorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPriceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cloudiator.Api <em>Api</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cloudiator.Api
+	 * @generated
+	 */
+	public Adapter createApiAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cloudiator.CloudCredential <em>Cloud Credential</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cloudiator.CloudCredential
+	 * @generated
+	 */
+	public Adapter createCloudCredentialAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cloudiator.CloudConfiguration <em>Cloud Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cloudiator.CloudConfiguration
+	 * @generated
+	 */
+	public Adapter createCloudConfigurationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cloudiator.Property <em>Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cloudiator.Property
+	 * @generated
+	 */
+	public Adapter createPropertyAdapter() {
 		return null;
 	}
 

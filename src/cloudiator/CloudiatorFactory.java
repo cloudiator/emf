@@ -103,6 +103,42 @@ public interface CloudiatorFactory extends EFactory {
 	Price createPrice();
 
 	/**
+	 * Returns a new object of class '<em>Api</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Api</em>'.
+	 * @generated
+	 */
+	Api createApi();
+
+	/**
+	 * Returns a new object of class '<em>Cloud Credential</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cloud Credential</em>'.
+	 * @generated
+	 */
+	CloudCredential createCloudCredential();
+
+	/**
+	 * Returns a new object of class '<em>Cloud Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Cloud Configuration</em>'.
+	 * @generated
+	 */
+	CloudConfiguration createCloudConfiguration();
+
+	/**
+	 * Returns a new object of class '<em>Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Property</em>'.
+	 * @generated
+	 */
+	Property createProperty();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

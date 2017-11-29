@@ -16,12 +16,15 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link cloudiator.Cloud#getType <em>Type</em>}</li>
- *   <li>{@link cloudiator.Cloud#getName <em>Name</em>}</li>
  *   <li>{@link cloudiator.Cloud#getLocations <em>Locations</em>}</li>
  *   <li>{@link cloudiator.Cloud#getHardwareList <em>Hardware List</em>}</li>
  *   <li>{@link cloudiator.Cloud#getImages <em>Images</em>}</li>
  *   <li>{@link cloudiator.Cloud#getId <em>Id</em>}</li>
  *   <li>{@link cloudiator.Cloud#getPrices <em>Prices</em>}</li>
+ *   <li>{@link cloudiator.Cloud#getEndpoint <em>Endpoint</em>}</li>
+ *   <li>{@link cloudiator.Cloud#getApi <em>Api</em>}</li>
+ *   <li>{@link cloudiator.Cloud#getCloudcredential <em>Cloudcredential</em>}</li>
+ *   <li>{@link cloudiator.Cloud#getConfiguration <em>Configuration</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getCloud()
@@ -119,6 +122,110 @@ public interface Cloud extends EObject {
 	EList<Price> getPrices();
 
 	/**
+	 * Returns the value of the '<em><b>Endpoint</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Endpoint</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Endpoint</em>' attribute.
+	 * @see #setEndpoint(String)
+	 * @see cloudiator.CloudiatorPackage#getCloud_Endpoint()
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @generated
+	 */
+	String getEndpoint();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Cloud#getEndpoint <em>Endpoint</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Endpoint</em>' attribute.
+	 * @see #getEndpoint()
+	 * @generated
+	 */
+	void setEndpoint(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Api</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Api</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Api</em>' reference.
+	 * @see #setApi(Api)
+	 * @see cloudiator.CloudiatorPackage#getCloud_Api()
+	 * @model
+	 * @generated
+	 */
+	Api getApi();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Cloud#getApi <em>Api</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Api</em>' reference.
+	 * @see #getApi()
+	 * @generated
+	 */
+	void setApi(Api value);
+
+	/**
+	 * Returns the value of the '<em><b>Cloudcredential</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cloudcredential</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cloudcredential</em>' reference.
+	 * @see #setCloudcredential(CloudCredential)
+	 * @see cloudiator.CloudiatorPackage#getCloud_Cloudcredential()
+	 * @model
+	 * @generated
+	 */
+	CloudCredential getCloudcredential();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Cloud#getCloudcredential <em>Cloudcredential</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cloudcredential</em>' reference.
+	 * @see #getCloudcredential()
+	 * @generated
+	 */
+	void setCloudcredential(CloudCredential value);
+
+	/**
+	 * Returns the value of the '<em><b>Configuration</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Configuration</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Configuration</em>' reference.
+	 * @see #setConfiguration(CloudConfiguration)
+	 * @see cloudiator.CloudiatorPackage#getCloud_Configuration()
+	 * @model
+	 * @generated
+	 */
+	CloudConfiguration getConfiguration();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Cloud#getConfiguration <em>Configuration</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Configuration</em>' reference.
+	 * @see #getConfiguration()
+	 * @generated
+	 */
+	void setConfiguration(CloudConfiguration value);
+
+	/**
 	 * Returns the value of the '<em><b>Hardware List</b></em>' containment reference list.
 	 * The list contents are of type {@link cloudiator.Hardware}.
 	 * It is bidirectional and its opposite is '{@link cloudiator.Hardware#getCloud <em>Cloud</em>}'.
@@ -153,31 +260,5 @@ public interface Cloud extends EObject {
 	 * @generated
 	 */
 	EList<Location> getLocations();
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see cloudiator.CloudiatorPackage#getCloud_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link cloudiator.Cloud#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 } // Cloud

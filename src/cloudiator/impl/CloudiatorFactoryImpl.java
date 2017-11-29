@@ -66,6 +66,10 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 			case CloudiatorPackage.CLOUD: return createCloud();
 			case CloudiatorPackage.OPERATING_SYSTEM: return createOperatingSystem();
 			case CloudiatorPackage.PRICE: return createPrice();
+			case CloudiatorPackage.API: return createApi();
+			case CloudiatorPackage.CLOUD_CREDENTIAL: return createCloudCredential();
+			case CloudiatorPackage.CLOUD_CONFIGURATION: return createCloudConfiguration();
+			case CloudiatorPackage.PROPERTY: return createProperty();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -197,6 +201,46 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 	public Price createPrice() {
 		PriceImpl price = new PriceImpl();
 		return price;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Api createApi() {
+		ApiImpl api = new ApiImpl();
+		return api;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CloudCredential createCloudCredential() {
+		CloudCredentialImpl cloudCredential = new CloudCredentialImpl();
+		return cloudCredential;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CloudConfiguration createCloudConfiguration() {
+		CloudConfigurationImpl cloudConfiguration = new CloudConfigurationImpl();
+		return cloudConfiguration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Property createProperty() {
+		PropertyImpl property = new PropertyImpl();
+		return property;
 	}
 
 	/**

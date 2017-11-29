@@ -545,22 +545,13 @@ public interface CloudiatorPackage extends EPackage {
 	int CLOUD__TYPE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLOUD__NAME = 1;
-
-	/**
 	 * The feature id for the '<em><b>Locations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD__LOCATIONS = 2;
+	int CLOUD__LOCATIONS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Hardware List</b></em>' containment reference list.
@@ -569,7 +560,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD__HARDWARE_LIST = 3;
+	int CLOUD__HARDWARE_LIST = 2;
 
 	/**
 	 * The feature id for the '<em><b>Images</b></em>' containment reference list.
@@ -578,7 +569,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD__IMAGES = 4;
+	int CLOUD__IMAGES = 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -587,7 +578,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD__ID = 5;
+	int CLOUD__ID = 4;
 
 	/**
 	 * The feature id for the '<em><b>Prices</b></em>' containment reference list.
@@ -596,7 +587,43 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD__PRICES = 6;
+	int CLOUD__PRICES = 5;
+
+	/**
+	 * The feature id for the '<em><b>Endpoint</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD__ENDPOINT = 6;
+
+	/**
+	 * The feature id for the '<em><b>Api</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD__API = 7;
+
+	/**
+	 * The feature id for the '<em><b>Cloudcredential</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD__CLOUDCREDENTIAL = 8;
+
+	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD__CONFIGURATION = 9;
 
 	/**
 	 * The number of structural features of the '<em>Cloud</em>' class.
@@ -605,7 +632,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD_FEATURE_COUNT = 7;
+	int CLOUD_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Cloud</em>' class.
@@ -736,6 +763,181 @@ public interface CloudiatorPackage extends EPackage {
 	int PRICE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link cloudiator.impl.ApiImpl <em>Api</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cloudiator.impl.ApiImpl
+	 * @see cloudiator.impl.CloudiatorPackageImpl#getApi()
+	 * @generated
+	 */
+	int API = 9;
+
+	/**
+	 * The feature id for the '<em><b>Provider Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int API__PROVIDER_NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Api</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int API_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Api</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int API_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link cloudiator.impl.CloudCredentialImpl <em>Cloud Credential</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cloudiator.impl.CloudCredentialImpl
+	 * @see cloudiator.impl.CloudiatorPackageImpl#getCloudCredential()
+	 * @generated
+	 */
+	int CLOUD_CREDENTIAL = 10;
+
+	/**
+	 * The feature id for the '<em><b>User</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_CREDENTIAL__USER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Secret</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_CREDENTIAL__SECRET = 1;
+
+	/**
+	 * The number of structural features of the '<em>Cloud Credential</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_CREDENTIAL_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Cloud Credential</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_CREDENTIAL_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link cloudiator.impl.CloudConfigurationImpl <em>Cloud Configuration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cloudiator.impl.CloudConfigurationImpl
+	 * @see cloudiator.impl.CloudiatorPackageImpl#getCloudConfiguration()
+	 * @generated
+	 */
+	int CLOUD_CONFIGURATION = 11;
+
+	/**
+	 * The feature id for the '<em><b>Node Group</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_CONFIGURATION__NODE_GROUP = 0;
+
+	/**
+	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_CONFIGURATION__PROPERTIES = 1;
+
+	/**
+	 * The number of structural features of the '<em>Cloud Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_CONFIGURATION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Cloud Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD_CONFIGURATION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link cloudiator.impl.PropertyImpl <em>Property</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cloudiator.impl.PropertyImpl
+	 * @see cloudiator.impl.CloudiatorPackageImpl#getProperty()
+	 * @generated
+	 */
+	int PROPERTY = 12;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY__KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link cloudiator.CloudType <em>Cloud Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -743,7 +945,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @see cloudiator.impl.CloudiatorPackageImpl#getCloudType()
 	 * @generated
 	 */
-	int CLOUD_TYPE = 9;
+	int CLOUD_TYPE = 13;
 
 
 	/**
@@ -754,7 +956,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @see cloudiator.impl.CloudiatorPackageImpl#getOSArchitecture()
 	 * @generated
 	 */
-	int OS_ARCHITECTURE = 10;
+	int OS_ARCHITECTURE = 14;
 
 	/**
 	 * The meta object id for the '{@link cloudiator.OSFamily <em>OS Family</em>}' enum.
@@ -764,7 +966,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @see cloudiator.impl.CloudiatorPackageImpl#getOSFamily()
 	 * @generated
 	 */
-	int OS_FAMILY = 11;
+	int OS_FAMILY = 15;
 
 
 	/**
@@ -1245,6 +1447,50 @@ public interface CloudiatorPackage extends EPackage {
 	EReference getCloud_Prices();
 
 	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Cloud#getEndpoint <em>Endpoint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Endpoint</em>'.
+	 * @see cloudiator.Cloud#getEndpoint()
+	 * @see #getCloud()
+	 * @generated
+	 */
+	EAttribute getCloud_Endpoint();
+
+	/**
+	 * Returns the meta object for the reference '{@link cloudiator.Cloud#getApi <em>Api</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Api</em>'.
+	 * @see cloudiator.Cloud#getApi()
+	 * @see #getCloud()
+	 * @generated
+	 */
+	EReference getCloud_Api();
+
+	/**
+	 * Returns the meta object for the reference '{@link cloudiator.Cloud#getCloudcredential <em>Cloudcredential</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Cloudcredential</em>'.
+	 * @see cloudiator.Cloud#getCloudcredential()
+	 * @see #getCloud()
+	 * @generated
+	 */
+	EReference getCloud_Cloudcredential();
+
+	/**
+	 * Returns the meta object for the reference '{@link cloudiator.Cloud#getConfiguration <em>Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Configuration</em>'.
+	 * @see cloudiator.Cloud#getConfiguration()
+	 * @see #getCloud()
+	 * @generated
+	 */
+	EReference getCloud_Configuration();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link cloudiator.Cloud#getHardwareList <em>Hardware List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1265,17 +1511,6 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCloud_Locations();
-
-	/**
-	 * Returns the meta object for the attribute '{@link cloudiator.Cloud#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see cloudiator.Cloud#getName()
-	 * @see #getCloud()
-	 * @generated
-	 */
-	EAttribute getCloud_Name();
 
 	/**
 	 * Returns the meta object for class '{@link cloudiator.OperatingSystem <em>Operating System</em>}'.
@@ -1351,6 +1586,123 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPrice_Hardware();
+
+	/**
+	 * Returns the meta object for class '{@link cloudiator.Api <em>Api</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Api</em>'.
+	 * @see cloudiator.Api
+	 * @generated
+	 */
+	EClass getApi();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Api#getProviderName <em>Provider Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Provider Name</em>'.
+	 * @see cloudiator.Api#getProviderName()
+	 * @see #getApi()
+	 * @generated
+	 */
+	EAttribute getApi_ProviderName();
+
+	/**
+	 * Returns the meta object for class '{@link cloudiator.CloudCredential <em>Cloud Credential</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cloud Credential</em>'.
+	 * @see cloudiator.CloudCredential
+	 * @generated
+	 */
+	EClass getCloudCredential();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.CloudCredential#getUser <em>User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User</em>'.
+	 * @see cloudiator.CloudCredential#getUser()
+	 * @see #getCloudCredential()
+	 * @generated
+	 */
+	EAttribute getCloudCredential_User();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.CloudCredential#getSecret <em>Secret</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Secret</em>'.
+	 * @see cloudiator.CloudCredential#getSecret()
+	 * @see #getCloudCredential()
+	 * @generated
+	 */
+	EAttribute getCloudCredential_Secret();
+
+	/**
+	 * Returns the meta object for class '{@link cloudiator.CloudConfiguration <em>Cloud Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Cloud Configuration</em>'.
+	 * @see cloudiator.CloudConfiguration
+	 * @generated
+	 */
+	EClass getCloudConfiguration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.CloudConfiguration#getNodeGroup <em>Node Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Node Group</em>'.
+	 * @see cloudiator.CloudConfiguration#getNodeGroup()
+	 * @see #getCloudConfiguration()
+	 * @generated
+	 */
+	EAttribute getCloudConfiguration_NodeGroup();
+
+	/**
+	 * Returns the meta object for the reference list '{@link cloudiator.CloudConfiguration#getProperties <em>Properties</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Properties</em>'.
+	 * @see cloudiator.CloudConfiguration#getProperties()
+	 * @see #getCloudConfiguration()
+	 * @generated
+	 */
+	EReference getCloudConfiguration_Properties();
+
+	/**
+	 * Returns the meta object for class '{@link cloudiator.Property <em>Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Property</em>'.
+	 * @see cloudiator.Property
+	 * @generated
+	 */
+	EClass getProperty();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Property#getKey <em>Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Key</em>'.
+	 * @see cloudiator.Property#getKey()
+	 * @see #getProperty()
+	 * @generated
+	 */
+	EAttribute getProperty_Key();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Property#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see cloudiator.Property#getValue()
+	 * @see #getProperty()
+	 * @generated
+	 */
+	EAttribute getProperty_Value();
 
 	/**
 	 * Returns the meta object for the reference '{@link cloudiator.Price#getLocation <em>Location</em>}'.
@@ -1794,6 +2146,38 @@ public interface CloudiatorPackage extends EPackage {
 		EReference CLOUD__PRICES = eINSTANCE.getCloud_Prices();
 
 		/**
+		 * The meta object literal for the '<em><b>Endpoint</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLOUD__ENDPOINT = eINSTANCE.getCloud_Endpoint();
+
+		/**
+		 * The meta object literal for the '<em><b>Api</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CLOUD__API = eINSTANCE.getCloud_Api();
+
+		/**
+		 * The meta object literal for the '<em><b>Cloudcredential</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CLOUD__CLOUDCREDENTIAL = eINSTANCE.getCloud_Cloudcredential();
+
+		/**
+		 * The meta object literal for the '<em><b>Configuration</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CLOUD__CONFIGURATION = eINSTANCE.getCloud_Configuration();
+
+		/**
 		 * The meta object literal for the '<em><b>Hardware List</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1808,14 +2192,6 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CLOUD__LOCATIONS = eINSTANCE.getCloud_Locations();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CLOUD__NAME = eINSTANCE.getCloud_Name();
 
 		/**
 		 * The meta object literal for the '{@link cloudiator.impl.OperatingSystemImpl <em>Operating System</em>}' class.
@@ -1876,6 +2252,102 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PRICE__HARDWARE = eINSTANCE.getPrice_Hardware();
+
+		/**
+		 * The meta object literal for the '{@link cloudiator.impl.ApiImpl <em>Api</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cloudiator.impl.ApiImpl
+		 * @see cloudiator.impl.CloudiatorPackageImpl#getApi()
+		 * @generated
+		 */
+		EClass API = eINSTANCE.getApi();
+
+		/**
+		 * The meta object literal for the '<em><b>Provider Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute API__PROVIDER_NAME = eINSTANCE.getApi_ProviderName();
+
+		/**
+		 * The meta object literal for the '{@link cloudiator.impl.CloudCredentialImpl <em>Cloud Credential</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cloudiator.impl.CloudCredentialImpl
+		 * @see cloudiator.impl.CloudiatorPackageImpl#getCloudCredential()
+		 * @generated
+		 */
+		EClass CLOUD_CREDENTIAL = eINSTANCE.getCloudCredential();
+
+		/**
+		 * The meta object literal for the '<em><b>User</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLOUD_CREDENTIAL__USER = eINSTANCE.getCloudCredential_User();
+
+		/**
+		 * The meta object literal for the '<em><b>Secret</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLOUD_CREDENTIAL__SECRET = eINSTANCE.getCloudCredential_Secret();
+
+		/**
+		 * The meta object literal for the '{@link cloudiator.impl.CloudConfigurationImpl <em>Cloud Configuration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cloudiator.impl.CloudConfigurationImpl
+		 * @see cloudiator.impl.CloudiatorPackageImpl#getCloudConfiguration()
+		 * @generated
+		 */
+		EClass CLOUD_CONFIGURATION = eINSTANCE.getCloudConfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Node Group</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLOUD_CONFIGURATION__NODE_GROUP = eINSTANCE.getCloudConfiguration_NodeGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CLOUD_CONFIGURATION__PROPERTIES = eINSTANCE.getCloudConfiguration_Properties();
+
+		/**
+		 * The meta object literal for the '{@link cloudiator.impl.PropertyImpl <em>Property</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cloudiator.impl.PropertyImpl
+		 * @see cloudiator.impl.CloudiatorPackageImpl#getProperty()
+		 * @generated
+		 */
+		EClass PROPERTY = eINSTANCE.getProperty();
+
+		/**
+		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROPERTY__KEY = eINSTANCE.getProperty_Key();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROPERTY__VALUE = eINSTANCE.getProperty_Value();
 
 		/**
 		 * The meta object literal for the '<em><b>Location</b></em>' reference feature.
