@@ -148,78 +148,78 @@ public interface Cloud extends EObject {
 	void setEndpoint(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Api</b></em>' reference.
+	 * Returns the value of the '<em><b>Api</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Api</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Api</em>' reference.
+	 * @return the value of the '<em>Api</em>' containment reference.
 	 * @see #setApi(Api)
 	 * @see cloudiator.CloudiatorPackage#getCloud_Api()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	Api getApi();
 
 	/**
-	 * Sets the value of the '{@link cloudiator.Cloud#getApi <em>Api</em>}' reference.
+	 * Sets the value of the '{@link cloudiator.Cloud#getApi <em>Api</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Api</em>' reference.
+	 * @param value the new value of the '<em>Api</em>' containment reference.
 	 * @see #getApi()
 	 * @generated
 	 */
 	void setApi(Api value);
 
 	/**
-	 * Returns the value of the '<em><b>Cloudcredential</b></em>' reference.
+	 * Returns the value of the '<em><b>Cloudcredential</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Cloudcredential</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cloudcredential</em>' reference.
+	 * @return the value of the '<em>Cloudcredential</em>' containment reference.
 	 * @see #setCloudcredential(CloudCredential)
 	 * @see cloudiator.CloudiatorPackage#getCloud_Cloudcredential()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	CloudCredential getCloudcredential();
 
 	/**
-	 * Sets the value of the '{@link cloudiator.Cloud#getCloudcredential <em>Cloudcredential</em>}' reference.
+	 * Sets the value of the '{@link cloudiator.Cloud#getCloudcredential <em>Cloudcredential</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cloudcredential</em>' reference.
+	 * @param value the new value of the '<em>Cloudcredential</em>' containment reference.
 	 * @see #getCloudcredential()
 	 * @generated
 	 */
 	void setCloudcredential(CloudCredential value);
 
 	/**
-	 * Returns the value of the '<em><b>Configuration</b></em>' reference.
+	 * Returns the value of the '<em><b>Configuration</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Configuration</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Configuration</em>' reference.
+	 * @return the value of the '<em>Configuration</em>' containment reference.
 	 * @see #setConfiguration(CloudConfiguration)
 	 * @see cloudiator.CloudiatorPackage#getCloud_Configuration()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	CloudConfiguration getConfiguration();
 
 	/**
-	 * Sets the value of the '{@link cloudiator.Cloud#getConfiguration <em>Configuration</em>}' reference.
+	 * Sets the value of the '{@link cloudiator.Cloud#getConfiguration <em>Configuration</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Configuration</em>' reference.
+	 * @param value the new value of the '<em>Configuration</em>' containment reference.
 	 * @see #getConfiguration()
 	 * @generated
 	 */

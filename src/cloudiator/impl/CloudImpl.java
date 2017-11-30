@@ -153,7 +153,7 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	protected String endpoint = ENDPOINT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getApi() <em>Api</em>}' reference.
+	 * The cached value of the '{@link #getApi() <em>Api</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getApi()
@@ -163,7 +163,7 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	protected Api api;
 
 	/**
-	 * The cached value of the '{@link #getCloudcredential() <em>Cloudcredential</em>}' reference.
+	 * The cached value of the '{@link #getCloudcredential() <em>Cloudcredential</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCloudcredential()
@@ -173,7 +173,7 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	protected CloudCredential cloudcredential;
 
 	/**
-	 * The cached value of the '{@link #getConfiguration() <em>Configuration</em>}' reference.
+	 * The cached value of the '{@link #getConfiguration() <em>Configuration</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConfiguration()
@@ -294,14 +294,6 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * @generated
 	 */
 	public Api getApi() {
-		if (api != null && api.eIsProxy()) {
-			InternalEObject oldApi = (InternalEObject)api;
-			api = (Api)eResolveProxy(oldApi);
-			if (api != oldApi) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CloudiatorPackage.CLOUD__API, oldApi, api));
-			}
-		}
 		return api;
 	}
 
@@ -310,8 +302,14 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Api basicGetApi() {
-		return api;
+	public NotificationChain basicSetApi(Api newApi, NotificationChain msgs) {
+		Api oldApi = api;
+		api = newApi;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__API, oldApi, newApi);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -320,10 +318,17 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * @generated
 	 */
 	public void setApi(Api newApi) {
-		Api oldApi = api;
-		api = newApi;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__API, oldApi, api));
+		if (newApi != api) {
+			NotificationChain msgs = null;
+			if (api != null)
+				msgs = ((InternalEObject)api).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CloudiatorPackage.CLOUD__API, null, msgs);
+			if (newApi != null)
+				msgs = ((InternalEObject)newApi).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CloudiatorPackage.CLOUD__API, null, msgs);
+			msgs = basicSetApi(newApi, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__API, newApi, newApi));
 	}
 
 	/**
@@ -332,14 +337,6 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * @generated
 	 */
 	public CloudCredential getCloudcredential() {
-		if (cloudcredential != null && cloudcredential.eIsProxy()) {
-			InternalEObject oldCloudcredential = (InternalEObject)cloudcredential;
-			cloudcredential = (CloudCredential)eResolveProxy(oldCloudcredential);
-			if (cloudcredential != oldCloudcredential) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CloudiatorPackage.CLOUD__CLOUDCREDENTIAL, oldCloudcredential, cloudcredential));
-			}
-		}
 		return cloudcredential;
 	}
 
@@ -348,8 +345,14 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CloudCredential basicGetCloudcredential() {
-		return cloudcredential;
+	public NotificationChain basicSetCloudcredential(CloudCredential newCloudcredential, NotificationChain msgs) {
+		CloudCredential oldCloudcredential = cloudcredential;
+		cloudcredential = newCloudcredential;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__CLOUDCREDENTIAL, oldCloudcredential, newCloudcredential);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -358,10 +361,17 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * @generated
 	 */
 	public void setCloudcredential(CloudCredential newCloudcredential) {
-		CloudCredential oldCloudcredential = cloudcredential;
-		cloudcredential = newCloudcredential;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__CLOUDCREDENTIAL, oldCloudcredential, cloudcredential));
+		if (newCloudcredential != cloudcredential) {
+			NotificationChain msgs = null;
+			if (cloudcredential != null)
+				msgs = ((InternalEObject)cloudcredential).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CloudiatorPackage.CLOUD__CLOUDCREDENTIAL, null, msgs);
+			if (newCloudcredential != null)
+				msgs = ((InternalEObject)newCloudcredential).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CloudiatorPackage.CLOUD__CLOUDCREDENTIAL, null, msgs);
+			msgs = basicSetCloudcredential(newCloudcredential, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__CLOUDCREDENTIAL, newCloudcredential, newCloudcredential));
 	}
 
 	/**
@@ -370,14 +380,6 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * @generated
 	 */
 	public CloudConfiguration getConfiguration() {
-		if (configuration != null && configuration.eIsProxy()) {
-			InternalEObject oldConfiguration = (InternalEObject)configuration;
-			configuration = (CloudConfiguration)eResolveProxy(oldConfiguration);
-			if (configuration != oldConfiguration) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CloudiatorPackage.CLOUD__CONFIGURATION, oldConfiguration, configuration));
-			}
-		}
 		return configuration;
 	}
 
@@ -386,8 +388,14 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CloudConfiguration basicGetConfiguration() {
-		return configuration;
+	public NotificationChain basicSetConfiguration(CloudConfiguration newConfiguration, NotificationChain msgs) {
+		CloudConfiguration oldConfiguration = configuration;
+		configuration = newConfiguration;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__CONFIGURATION, oldConfiguration, newConfiguration);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -396,10 +404,17 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * @generated
 	 */
 	public void setConfiguration(CloudConfiguration newConfiguration) {
-		CloudConfiguration oldConfiguration = configuration;
-		configuration = newConfiguration;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__CONFIGURATION, oldConfiguration, configuration));
+		if (newConfiguration != configuration) {
+			NotificationChain msgs = null;
+			if (configuration != null)
+				msgs = ((InternalEObject)configuration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CloudiatorPackage.CLOUD__CONFIGURATION, null, msgs);
+			if (newConfiguration != null)
+				msgs = ((InternalEObject)newConfiguration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CloudiatorPackage.CLOUD__CONFIGURATION, null, msgs);
+			msgs = basicSetConfiguration(newConfiguration, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__CONFIGURATION, newConfiguration, newConfiguration));
 	}
 
 	/**
@@ -461,6 +476,12 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 				return ((InternalEList<?>)getImages()).basicRemove(otherEnd, msgs);
 			case CloudiatorPackage.CLOUD__PRICES:
 				return ((InternalEList<?>)getPrices()).basicRemove(otherEnd, msgs);
+			case CloudiatorPackage.CLOUD__API:
+				return basicSetApi(null, msgs);
+			case CloudiatorPackage.CLOUD__CLOUDCREDENTIAL:
+				return basicSetCloudcredential(null, msgs);
+			case CloudiatorPackage.CLOUD__CONFIGURATION:
+				return basicSetConfiguration(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -488,14 +509,11 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 			case CloudiatorPackage.CLOUD__ENDPOINT:
 				return getEndpoint();
 			case CloudiatorPackage.CLOUD__API:
-				if (resolve) return getApi();
-				return basicGetApi();
+				return getApi();
 			case CloudiatorPackage.CLOUD__CLOUDCREDENTIAL:
-				if (resolve) return getCloudcredential();
-				return basicGetCloudcredential();
+				return getCloudcredential();
 			case CloudiatorPackage.CLOUD__CONFIGURATION:
-				if (resolve) return getConfiguration();
-				return basicGetConfiguration();
+				return getConfiguration();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

@@ -599,7 +599,7 @@ public interface CloudiatorPackage extends EPackage {
 	int CLOUD__ENDPOINT = 6;
 
 	/**
-	 * The feature id for the '<em><b>Api</b></em>' reference.
+	 * The feature id for the '<em><b>Api</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -608,7 +608,7 @@ public interface CloudiatorPackage extends EPackage {
 	int CLOUD__API = 7;
 
 	/**
-	 * The feature id for the '<em><b>Cloudcredential</b></em>' reference.
+	 * The feature id for the '<em><b>Cloudcredential</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -617,7 +617,7 @@ public interface CloudiatorPackage extends EPackage {
 	int CLOUD__CLOUDCREDENTIAL = 8;
 
 	/**
-	 * The feature id for the '<em><b>Configuration</b></em>' reference.
+	 * The feature id for the '<em><b>Configuration</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -865,7 +865,7 @@ public interface CloudiatorPackage extends EPackage {
 	int CLOUD_CONFIGURATION__NODE_GROUP = 0;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' reference list.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1458,10 +1458,10 @@ public interface CloudiatorPackage extends EPackage {
 	EAttribute getCloud_Endpoint();
 
 	/**
-	 * Returns the meta object for the reference '{@link cloudiator.Cloud#getApi <em>Api</em>}'.
+	 * Returns the meta object for the containment reference '{@link cloudiator.Cloud#getApi <em>Api</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Api</em>'.
+	 * @return the meta object for the containment reference '<em>Api</em>'.
 	 * @see cloudiator.Cloud#getApi()
 	 * @see #getCloud()
 	 * @generated
@@ -1469,10 +1469,10 @@ public interface CloudiatorPackage extends EPackage {
 	EReference getCloud_Api();
 
 	/**
-	 * Returns the meta object for the reference '{@link cloudiator.Cloud#getCloudcredential <em>Cloudcredential</em>}'.
+	 * Returns the meta object for the containment reference '{@link cloudiator.Cloud#getCloudcredential <em>Cloudcredential</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Cloudcredential</em>'.
+	 * @return the meta object for the containment reference '<em>Cloudcredential</em>'.
 	 * @see cloudiator.Cloud#getCloudcredential()
 	 * @see #getCloud()
 	 * @generated
@@ -1480,10 +1480,10 @@ public interface CloudiatorPackage extends EPackage {
 	EReference getCloud_Cloudcredential();
 
 	/**
-	 * Returns the meta object for the reference '{@link cloudiator.Cloud#getConfiguration <em>Configuration</em>}'.
+	 * Returns the meta object for the containment reference '{@link cloudiator.Cloud#getConfiguration <em>Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Configuration</em>'.
+	 * @return the meta object for the containment reference '<em>Configuration</em>'.
 	 * @see cloudiator.Cloud#getConfiguration()
 	 * @see #getCloud()
 	 * @generated
@@ -1662,10 +1662,10 @@ public interface CloudiatorPackage extends EPackage {
 	EAttribute getCloudConfiguration_NodeGroup();
 
 	/**
-	 * Returns the meta object for the reference list '{@link cloudiator.CloudConfiguration#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link cloudiator.CloudConfiguration#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Properties</em>'.
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
 	 * @see cloudiator.CloudConfiguration#getProperties()
 	 * @see #getCloudConfiguration()
 	 * @generated
@@ -2154,7 +2154,7 @@ public interface CloudiatorPackage extends EPackage {
 		EAttribute CLOUD__ENDPOINT = eINSTANCE.getCloud_Endpoint();
 
 		/**
-		 * The meta object literal for the '<em><b>Api</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Api</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2162,7 +2162,7 @@ public interface CloudiatorPackage extends EPackage {
 		EReference CLOUD__API = eINSTANCE.getCloud_Api();
 
 		/**
-		 * The meta object literal for the '<em><b>Cloudcredential</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Cloudcredential</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2170,7 +2170,7 @@ public interface CloudiatorPackage extends EPackage {
 		EReference CLOUD__CLOUDCREDENTIAL = eINSTANCE.getCloud_Cloudcredential();
 
 		/**
-		 * The meta object literal for the '<em><b>Configuration</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Configuration</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2316,7 +2316,7 @@ public interface CloudiatorPackage extends EPackage {
 		EAttribute CLOUD_CONFIGURATION__NODE_GROUP = eINSTANCE.getCloudConfiguration_NodeGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

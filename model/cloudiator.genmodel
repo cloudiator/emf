@@ -96,9 +96,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Cloud/id"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/prices"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Cloud/endpoint"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/api"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/cloudcredential"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/configuration"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/api"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/cloudcredential"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/configuration"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//OperatingSystem">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//OperatingSystem/family"/>
@@ -120,7 +120,7 @@
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//CloudConfiguration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//CloudConfiguration/nodeGroup"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudConfiguration/properties"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudConfiguration/properties"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Property">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Property/key"/>

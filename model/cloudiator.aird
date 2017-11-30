@@ -1728,56 +1728,36 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_XJNC8NUPEeesEZ4PXfP4kA" name="[0..1] api" sourceNode="_krB78FEHEeeYP7iySQILdA" targetNode="_ZDiF0NUIEeesEZ4PXfP4kA">
       <target xmi:type="ecore:EReference" href="cloudiator.ecore#//Cloud/api"/>
       <semanticElements xmi:type="ecore:EReference" href="cloudiator.ecore#//Cloud/api"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_XJORENUPEeesEZ4PXfP4kA" routingStyle="manhattan" strokeColor="0,0,0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_XJOREdUPEeesEZ4PXfP4kA" showIcon="false">
-          <customFeatures>labelSize</customFeatures>
-        </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_XJOREtUPEeesEZ4PXfP4kA" showIcon="false" labelColor="39,76,114">
-          <customFeatures>labelSize</customFeatures>
-        </endLabelStyle>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_pnC2MNXeEeeknvEGN8Z2MA" description="_kroY4FEHEeeYP7iySQILdA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_pnC2MdXeEeeknvEGN8Z2MA" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_pnC2MtXeEeeknvEGN8Z2MA" labelSize="6" showIcon="false" labelColor="39,76,114"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Zanr8NUPEeesEZ4PXfP4kA" name="[0..1] cloudcredential" sourceNode="_krB78FEHEeeYP7iySQILdA" targetNode="_baEfYNUIEeesEZ4PXfP4kA">
       <target xmi:type="ecore:EReference" href="cloudiator.ecore#//Cloud/cloudcredential"/>
       <semanticElements xmi:type="ecore:EReference" href="cloudiator.ecore#//Cloud/cloudcredential"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_ZaoTANUPEeesEZ4PXfP4kA" routingStyle="manhattan" strokeColor="0,0,0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_ZaoTAdUPEeesEZ4PXfP4kA" showIcon="false">
-          <customFeatures>labelSize</customFeatures>
-        </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_ZaoTAtUPEeesEZ4PXfP4kA" showIcon="false" labelColor="39,76,114">
-          <customFeatures>labelSize</customFeatures>
-        </endLabelStyle>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_qppisNXeEeeknvEGN8Z2MA" description="_kroY4FEHEeeYP7iySQILdA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_qppisdXeEeeknvEGN8Z2MA" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_qppistXeEeeknvEGN8Z2MA" labelSize="6" showIcon="false" labelColor="39,76,114"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_aESUANUPEeesEZ4PXfP4kA" name="[0..1] configuration" sourceNode="_krB78FEHEeeYP7iySQILdA" targetNode="_fJ3x8NUIEeesEZ4PXfP4kA">
       <target xmi:type="ecore:EReference" href="cloudiator.ecore#//Cloud/configuration"/>
       <semanticElements xmi:type="ecore:EReference" href="cloudiator.ecore#//Cloud/configuration"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_aESUAdUPEeesEZ4PXfP4kA" routingStyle="manhattan" strokeColor="0,0,0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_aESUAtUPEeesEZ4PXfP4kA" showIcon="false">
-          <customFeatures>labelSize</customFeatures>
-        </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_aESUA9UPEeesEZ4PXfP4kA" showIcon="false" labelColor="39,76,114">
-          <customFeatures>labelSize</customFeatures>
-        </endLabelStyle>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_rha4MNXeEeeknvEGN8Z2MA" description="_kroY4FEHEeeYP7iySQILdA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_rha4MdXeEeeknvEGN8Z2MA" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_rha4MtXeEeeknvEGN8Z2MA" labelSize="6" showIcon="false" labelColor="39,76,114"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_a0FZQNUPEeesEZ4PXfP4kA" name="[0..*] properties" sourceNode="_fJ3x8NUIEeesEZ4PXfP4kA" targetNode="_k4jMANUIEeesEZ4PXfP4kA">
       <target xmi:type="ecore:EReference" href="cloudiator.ecore#//CloudConfiguration/properties"/>
       <semanticElements xmi:type="ecore:EReference" href="cloudiator.ecore#//CloudConfiguration/properties"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_a0FZQdUPEeesEZ4PXfP4kA" routingStyle="manhattan" strokeColor="0,0,0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_a0FZQtUPEeesEZ4PXfP4kA" showIcon="false">
-          <customFeatures>labelSize</customFeatures>
-        </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_a0FZQ9UPEeesEZ4PXfP4kA" showIcon="false" labelColor="39,76,114">
-          <customFeatures>labelSize</customFeatures>
-        </endLabelStyle>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_se3-8NXeEeeknvEGN8Z2MA" description="_kroY4FEHEeeYP7iySQILdA" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_se3-8dXeEeeknvEGN8Z2MA" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_se3-8tXeEeeknvEGN8Z2MA" labelSize="6" showIcon="false" labelColor="39,76,114"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
