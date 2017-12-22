@@ -36,7 +36,7 @@ public interface OperatingSystem extends EObject {
 	 * @see cloudiator.OSFamily
 	 * @see #setFamily(OSFamily)
 	 * @see cloudiator.CloudiatorPackage#getOperatingSystem_Family()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	OSFamily getFamily();
@@ -63,7 +63,7 @@ public interface OperatingSystem extends EObject {
 	 * @return the value of the '<em>Version</em>' attribute.
 	 * @see #setVersion(String)
 	 * @see cloudiator.CloudiatorPackage#getOperatingSystem_Version()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getVersion();
@@ -91,7 +91,7 @@ public interface OperatingSystem extends EObject {
 	 * @see cloudiator.OSArchitecture
 	 * @see #setArchitecture(OSArchitecture)
 	 * @see cloudiator.CloudiatorPackage#getOperatingSystem_Architecture()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	OSArchitecture getArchitecture();

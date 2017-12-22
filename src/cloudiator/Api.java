@@ -32,7 +32,7 @@ public interface Api extends EObject {
 	 * @return the value of the '<em>Provider Name</em>' attribute.
 	 * @see #setProviderName(String)
 	 * @see cloudiator.CloudiatorPackage#getApi_ProviderName()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getProviderName();

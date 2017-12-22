@@ -17,10 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Location#getId <em>Id</em>}</li>
  *   <li>{@link cloudiator.Location#getCloud <em>Cloud</em>}</li>
  *   <li>{@link cloudiator.Location#getProviderId <em>Provider Id</em>}</li>
- *   <li>{@link cloudiator.Location#getCountry <em>Country</em>}</li>
- *   <li>{@link cloudiator.Location#getCity <em>City</em>}</li>
- *   <li>{@link cloudiator.Location#getLongitude <em>Longitude</em>}</li>
- *   <li>{@link cloudiator.Location#getLatitude <em>Latitude</em>}</li>
+ *   <li>{@link cloudiator.Location#getGeoLocation <em>Geo Location</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getLocation()
@@ -39,7 +36,7 @@ public interface Location extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see cloudiator.CloudiatorPackage#getLocation_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -65,7 +62,7 @@ public interface Location extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see cloudiator.CloudiatorPackage#getLocation_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	String getId();
@@ -108,7 +105,7 @@ public interface Location extends EObject {
 	 * @return the value of the '<em>Provider Id</em>' attribute.
 	 * @see #setProviderId(String)
 	 * @see cloudiator.CloudiatorPackage#getLocation_ProviderId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getProviderId();
@@ -124,107 +121,29 @@ public interface Location extends EObject {
 	void setProviderId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Country</b></em>' attribute.
+	 * Returns the value of the '<em><b>Geo Location</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Country</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Geo Location</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Country</em>' attribute.
-	 * @see #setCountry(String)
-	 * @see cloudiator.CloudiatorPackage#getLocation_Country()
-	 * @model
+	 * @return the value of the '<em>Geo Location</em>' containment reference.
+	 * @see #setGeoLocation(GeoLocation)
+	 * @see cloudiator.CloudiatorPackage#getLocation_GeoLocation()
+	 * @model containment="true"
 	 * @generated
 	 */
-	String getCountry();
+	GeoLocation getGeoLocation();
 
 	/**
-	 * Sets the value of the '{@link cloudiator.Location#getCountry <em>Country</em>}' attribute.
+	 * Sets the value of the '{@link cloudiator.Location#getGeoLocation <em>Geo Location</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Country</em>' attribute.
-	 * @see #getCountry()
+	 * @param value the new value of the '<em>Geo Location</em>' containment reference.
+	 * @see #getGeoLocation()
 	 * @generated
 	 */
-	void setCountry(String value);
-
-	/**
-	 * Returns the value of the '<em><b>City</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>City</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>City</em>' attribute.
-	 * @see #setCity(String)
-	 * @see cloudiator.CloudiatorPackage#getLocation_City()
-	 * @model
-	 * @generated
-	 */
-	String getCity();
-
-	/**
-	 * Sets the value of the '{@link cloudiator.Location#getCity <em>City</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>City</em>' attribute.
-	 * @see #getCity()
-	 * @generated
-	 */
-	void setCity(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Longitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Longitude</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Longitude</em>' attribute.
-	 * @see #setLongitude(Double)
-	 * @see cloudiator.CloudiatorPackage#getLocation_Longitude()
-	 * @model
-	 * @generated
-	 */
-	Double getLongitude();
-
-	/**
-	 * Sets the value of the '{@link cloudiator.Location#getLongitude <em>Longitude</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Longitude</em>' attribute.
-	 * @see #getLongitude()
-	 * @generated
-	 */
-	void setLongitude(Double value);
-
-	/**
-	 * Returns the value of the '<em><b>Latitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Latitude</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Latitude</em>' attribute.
-	 * @see #setLatitude(Double)
-	 * @see cloudiator.CloudiatorPackage#getLocation_Latitude()
-	 * @model
-	 * @generated
-	 */
-	Double getLatitude();
-
-	/**
-	 * Sets the value of the '{@link cloudiator.Location#getLatitude <em>Latitude</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Latitude</em>' attribute.
-	 * @see #getLatitude()
-	 * @generated
-	 */
-	void setLatitude(Double value);
+	void setGeoLocation(GeoLocation value);
 
 } // Location

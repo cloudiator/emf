@@ -45,7 +45,7 @@ public interface Cloud extends EObject {
 	 * @see cloudiator.CloudType
 	 * @see #setType(CloudType)
 	 * @see cloudiator.CloudiatorPackage#getCloud_Type()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	CloudType getType();
@@ -90,7 +90,7 @@ public interface Cloud extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see cloudiator.CloudiatorPackage#getCloud_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	String getId();
@@ -132,7 +132,7 @@ public interface Cloud extends EObject {
 	 * @return the value of the '<em>Endpoint</em>' attribute.
 	 * @see #setEndpoint(String)
 	 * @see cloudiator.CloudiatorPackage#getCloud_Endpoint()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getEndpoint();

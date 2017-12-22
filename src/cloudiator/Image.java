@@ -37,7 +37,7 @@ public interface Image extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see cloudiator.CloudiatorPackage#getImage_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -89,7 +89,7 @@ public interface Image extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see cloudiator.CloudiatorPackage#getImage_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	String getId();
@@ -132,7 +132,7 @@ public interface Image extends EObject {
 	 * @return the value of the '<em>Provider Id</em>' attribute.
 	 * @see #setProviderId(String)
 	 * @see cloudiator.CloudiatorPackage#getImage_ProviderId()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getProviderId();

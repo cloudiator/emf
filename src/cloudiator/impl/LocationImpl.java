@@ -4,6 +4,7 @@ package cloudiator.impl;
 
 import cloudiator.Cloud;
 import cloudiator.CloudiatorPackage;
+import cloudiator.GeoLocation;
 import cloudiator.Location;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -27,10 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.LocationImpl#getId <em>Id</em>}</li>
  *   <li>{@link cloudiator.impl.LocationImpl#getCloud <em>Cloud</em>}</li>
  *   <li>{@link cloudiator.impl.LocationImpl#getProviderId <em>Provider Id</em>}</li>
- *   <li>{@link cloudiator.impl.LocationImpl#getCountry <em>Country</em>}</li>
- *   <li>{@link cloudiator.impl.LocationImpl#getCity <em>City</em>}</li>
- *   <li>{@link cloudiator.impl.LocationImpl#getLongitude <em>Longitude</em>}</li>
- *   <li>{@link cloudiator.impl.LocationImpl#getLatitude <em>Latitude</em>}</li>
+ *   <li>{@link cloudiator.impl.LocationImpl#getGeoLocation <em>Geo Location</em>}</li>
  * </ul>
  *
  * @generated
@@ -97,84 +95,14 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	protected String providerId = PROVIDER_ID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCountry() <em>Country</em>}' attribute.
+	 * The cached value of the '{@link #getGeoLocation() <em>Geo Location</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCountry()
+	 * @see #getGeoLocation()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String COUNTRY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCountry() <em>Country</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCountry()
-	 * @generated
-	 * @ordered
-	 */
-	protected String country = COUNTRY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getCity() <em>City</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCity()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CITY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCity() <em>City</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCity()
-	 * @generated
-	 * @ordered
-	 */
-	protected String city = CITY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLongitude() <em>Longitude</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLongitude()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Double LONGITUDE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLongitude() <em>Longitude</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLongitude()
-	 * @generated
-	 * @ordered
-	 */
-	protected Double longitude = LONGITUDE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLatitude() <em>Latitude</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLatitude()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Double LATITUDE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLatitude() <em>Latitude</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLatitude()
-	 * @generated
-	 * @ordered
-	 */
-	protected Double latitude = LATITUDE_EDEFAULT;
+	protected GeoLocation geoLocation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -273,8 +201,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCountry() {
-		return country;
+	public GeoLocation getGeoLocation() {
+		return geoLocation;
 	}
 
 	/**
@@ -282,11 +210,14 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCountry(String newCountry) {
-		String oldCountry = country;
-		country = newCountry;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.LOCATION__COUNTRY, oldCountry, country));
+	public NotificationChain basicSetGeoLocation(GeoLocation newGeoLocation, NotificationChain msgs) {
+		GeoLocation oldGeoLocation = geoLocation;
+		geoLocation = newGeoLocation;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CloudiatorPackage.LOCATION__GEO_LOCATION, oldGeoLocation, newGeoLocation);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -294,62 +225,18 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCity() {
-		return city;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCity(String newCity) {
-		String oldCity = city;
-		city = newCity;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.LOCATION__CITY, oldCity, city));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Double getLongitude() {
-		return longitude;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLongitude(Double newLongitude) {
-		Double oldLongitude = longitude;
-		longitude = newLongitude;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.LOCATION__LONGITUDE, oldLongitude, longitude));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Double getLatitude() {
-		return latitude;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLatitude(Double newLatitude) {
-		Double oldLatitude = latitude;
-		latitude = newLatitude;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.LOCATION__LATITUDE, oldLatitude, latitude));
+	public void setGeoLocation(GeoLocation newGeoLocation) {
+		if (newGeoLocation != geoLocation) {
+			NotificationChain msgs = null;
+			if (geoLocation != null)
+				msgs = ((InternalEObject)geoLocation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CloudiatorPackage.LOCATION__GEO_LOCATION, null, msgs);
+			if (newGeoLocation != null)
+				msgs = ((InternalEObject)newGeoLocation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CloudiatorPackage.LOCATION__GEO_LOCATION, null, msgs);
+			msgs = basicSetGeoLocation(newGeoLocation, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.LOCATION__GEO_LOCATION, newGeoLocation, newGeoLocation));
 	}
 
 	/**
@@ -378,6 +265,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 		switch (featureID) {
 			case CloudiatorPackage.LOCATION__CLOUD:
 				return eBasicSetContainer(null, CloudiatorPackage.LOCATION__CLOUD, msgs);
+			case CloudiatorPackage.LOCATION__GEO_LOCATION:
+				return basicSetGeoLocation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -412,14 +301,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return getCloud();
 			case CloudiatorPackage.LOCATION__PROVIDER_ID:
 				return getProviderId();
-			case CloudiatorPackage.LOCATION__COUNTRY:
-				return getCountry();
-			case CloudiatorPackage.LOCATION__CITY:
-				return getCity();
-			case CloudiatorPackage.LOCATION__LONGITUDE:
-				return getLongitude();
-			case CloudiatorPackage.LOCATION__LATITUDE:
-				return getLatitude();
+			case CloudiatorPackage.LOCATION__GEO_LOCATION:
+				return getGeoLocation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -441,17 +324,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 			case CloudiatorPackage.LOCATION__PROVIDER_ID:
 				setProviderId((String)newValue);
 				return;
-			case CloudiatorPackage.LOCATION__COUNTRY:
-				setCountry((String)newValue);
-				return;
-			case CloudiatorPackage.LOCATION__CITY:
-				setCity((String)newValue);
-				return;
-			case CloudiatorPackage.LOCATION__LONGITUDE:
-				setLongitude((Double)newValue);
-				return;
-			case CloudiatorPackage.LOCATION__LATITUDE:
-				setLatitude((Double)newValue);
+			case CloudiatorPackage.LOCATION__GEO_LOCATION:
+				setGeoLocation((GeoLocation)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -474,17 +348,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 			case CloudiatorPackage.LOCATION__PROVIDER_ID:
 				setProviderId(PROVIDER_ID_EDEFAULT);
 				return;
-			case CloudiatorPackage.LOCATION__COUNTRY:
-				setCountry(COUNTRY_EDEFAULT);
-				return;
-			case CloudiatorPackage.LOCATION__CITY:
-				setCity(CITY_EDEFAULT);
-				return;
-			case CloudiatorPackage.LOCATION__LONGITUDE:
-				setLongitude(LONGITUDE_EDEFAULT);
-				return;
-			case CloudiatorPackage.LOCATION__LATITUDE:
-				setLatitude(LATITUDE_EDEFAULT);
+			case CloudiatorPackage.LOCATION__GEO_LOCATION:
+				setGeoLocation((GeoLocation)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -506,14 +371,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return getCloud() != null;
 			case CloudiatorPackage.LOCATION__PROVIDER_ID:
 				return PROVIDER_ID_EDEFAULT == null ? providerId != null : !PROVIDER_ID_EDEFAULT.equals(providerId);
-			case CloudiatorPackage.LOCATION__COUNTRY:
-				return COUNTRY_EDEFAULT == null ? country != null : !COUNTRY_EDEFAULT.equals(country);
-			case CloudiatorPackage.LOCATION__CITY:
-				return CITY_EDEFAULT == null ? city != null : !CITY_EDEFAULT.equals(city);
-			case CloudiatorPackage.LOCATION__LONGITUDE:
-				return LONGITUDE_EDEFAULT == null ? longitude != null : !LONGITUDE_EDEFAULT.equals(longitude);
-			case CloudiatorPackage.LOCATION__LATITUDE:
-				return LATITUDE_EDEFAULT == null ? latitude != null : !LATITUDE_EDEFAULT.equals(latitude);
+			case CloudiatorPackage.LOCATION__GEO_LOCATION:
+				return geoLocation != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -534,14 +393,6 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 		result.append(id);
 		result.append(", providerId: ");
 		result.append(providerId);
-		result.append(", country: ");
-		result.append(country);
-		result.append(", city: ");
-		result.append(city);
-		result.append(", longitude: ");
-		result.append(longitude);
-		result.append(", latitude: ");
-		result.append(latitude);
 		result.append(')');
 		return result.toString();
 	}

@@ -35,7 +35,7 @@ public interface Price extends EObject {
 	 * @return the value of the '<em>Price</em>' attribute.
 	 * @see #setPrice(Double)
 	 * @see cloudiator.CloudiatorPackage#getPrice_Price()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.DoubleObject"
+	 * @model unique="false"
 	 * @generated
 	 */
 	Double getPrice();

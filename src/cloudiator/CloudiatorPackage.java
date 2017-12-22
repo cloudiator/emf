@@ -97,13 +97,13 @@ public interface CloudiatorPackage extends EPackage {
 	int CLOUDIATOR_MODEL__CLOUDS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Operatingsystem</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Operatingsystems</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUDIATOR_MODEL__OPERATINGSYSTEM = 3;
+	int CLOUDIATOR_MODEL__OPERATINGSYSTEMS = 3;
 
 	/**
 	 * The number of structural features of the '<em>Model</em>' class.
@@ -471,40 +471,13 @@ public interface CloudiatorPackage extends EPackage {
 	int LOCATION__PROVIDER_ID = 3;
 
 	/**
-	 * The feature id for the '<em><b>Country</b></em>' attribute.
+	 * The feature id for the '<em><b>Geo Location</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION__COUNTRY = 4;
-
-	/**
-	 * The feature id for the '<em><b>City</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION__CITY = 5;
-
-	/**
-	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION__LONGITUDE = 6;
-
-	/**
-	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION__LATITUDE = 7;
+	int LOCATION__GEO_LOCATION = 4;
 
 	/**
 	 * The number of structural features of the '<em>Location</em>' class.
@@ -513,7 +486,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_FEATURE_COUNT = 8;
+	int LOCATION_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Location</em>' class.
@@ -938,6 +911,70 @@ public interface CloudiatorPackage extends EPackage {
 	int PROPERTY_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link cloudiator.impl.GeoLocationImpl <em>Geo Location</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cloudiator.impl.GeoLocationImpl
+	 * @see cloudiator.impl.CloudiatorPackageImpl#getGeoLocation()
+	 * @generated
+	 */
+	int GEO_LOCATION = 13;
+
+	/**
+	 * The feature id for the '<em><b>Country</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_LOCATION__COUNTRY = 0;
+
+	/**
+	 * The feature id for the '<em><b>City</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_LOCATION__CITY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Longitude</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_LOCATION__LONGITUDE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Latitude</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_LOCATION__LATITUDE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Geo Location</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_LOCATION_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Geo Location</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEO_LOCATION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link cloudiator.CloudType <em>Cloud Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -945,7 +982,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @see cloudiator.impl.CloudiatorPackageImpl#getCloudType()
 	 * @generated
 	 */
-	int CLOUD_TYPE = 13;
+	int CLOUD_TYPE = 14;
 
 
 	/**
@@ -956,7 +993,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @see cloudiator.impl.CloudiatorPackageImpl#getOSArchitecture()
 	 * @generated
 	 */
-	int OS_ARCHITECTURE = 14;
+	int OS_ARCHITECTURE = 15;
 
 	/**
 	 * The meta object id for the '{@link cloudiator.OSFamily <em>OS Family</em>}' enum.
@@ -966,7 +1003,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @see cloudiator.impl.CloudiatorPackageImpl#getOSFamily()
 	 * @generated
 	 */
-	int OS_FAMILY = 15;
+	int OS_FAMILY = 16;
 
 
 	/**
@@ -1013,15 +1050,15 @@ public interface CloudiatorPackage extends EPackage {
 	EReference getCloudiatorModel_Clouds();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link cloudiator.CloudiatorModel#getOperatingsystem <em>Operatingsystem</em>}'.
+	 * Returns the meta object for the containment reference list '{@link cloudiator.CloudiatorModel#getOperatingsystems <em>Operatingsystems</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Operatingsystem</em>'.
-	 * @see cloudiator.CloudiatorModel#getOperatingsystem()
+	 * @return the meta object for the containment reference list '<em>Operatingsystems</em>'.
+	 * @see cloudiator.CloudiatorModel#getOperatingsystems()
 	 * @see #getCloudiatorModel()
 	 * @generated
 	 */
-	EReference getCloudiatorModel_Operatingsystem();
+	EReference getCloudiatorModel_Operatingsystems();
 
 	/**
 	 * Returns the meta object for class '{@link cloudiator.Component <em>Component</em>}'.
@@ -1349,48 +1386,15 @@ public interface CloudiatorPackage extends EPackage {
 	EAttribute getLocation_ProviderId();
 
 	/**
-	 * Returns the meta object for the attribute '{@link cloudiator.Location#getCountry <em>Country</em>}'.
+	 * Returns the meta object for the containment reference '{@link cloudiator.Location#getGeoLocation <em>Geo Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Country</em>'.
-	 * @see cloudiator.Location#getCountry()
+	 * @return the meta object for the containment reference '<em>Geo Location</em>'.
+	 * @see cloudiator.Location#getGeoLocation()
 	 * @see #getLocation()
 	 * @generated
 	 */
-	EAttribute getLocation_Country();
-
-	/**
-	 * Returns the meta object for the attribute '{@link cloudiator.Location#getCity <em>City</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>City</em>'.
-	 * @see cloudiator.Location#getCity()
-	 * @see #getLocation()
-	 * @generated
-	 */
-	EAttribute getLocation_City();
-
-	/**
-	 * Returns the meta object for the attribute '{@link cloudiator.Location#getLongitude <em>Longitude</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Longitude</em>'.
-	 * @see cloudiator.Location#getLongitude()
-	 * @see #getLocation()
-	 * @generated
-	 */
-	EAttribute getLocation_Longitude();
-
-	/**
-	 * Returns the meta object for the attribute '{@link cloudiator.Location#getLatitude <em>Latitude</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Latitude</em>'.
-	 * @see cloudiator.Location#getLatitude()
-	 * @see #getLocation()
-	 * @generated
-	 */
-	EAttribute getLocation_Latitude();
+	EReference getLocation_GeoLocation();
 
 	/**
 	 * Returns the meta object for class '{@link cloudiator.Cloud <em>Cloud</em>}'.
@@ -1705,6 +1709,60 @@ public interface CloudiatorPackage extends EPackage {
 	EAttribute getProperty_Value();
 
 	/**
+	 * Returns the meta object for class '{@link cloudiator.GeoLocation <em>Geo Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Geo Location</em>'.
+	 * @see cloudiator.GeoLocation
+	 * @generated
+	 */
+	EClass getGeoLocation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.GeoLocation#getCountry <em>Country</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Country</em>'.
+	 * @see cloudiator.GeoLocation#getCountry()
+	 * @see #getGeoLocation()
+	 * @generated
+	 */
+	EAttribute getGeoLocation_Country();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.GeoLocation#getCity <em>City</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>City</em>'.
+	 * @see cloudiator.GeoLocation#getCity()
+	 * @see #getGeoLocation()
+	 * @generated
+	 */
+	EAttribute getGeoLocation_City();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.GeoLocation#getLongitude <em>Longitude</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Longitude</em>'.
+	 * @see cloudiator.GeoLocation#getLongitude()
+	 * @see #getGeoLocation()
+	 * @generated
+	 */
+	EAttribute getGeoLocation_Longitude();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.GeoLocation#getLatitude <em>Latitude</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Latitude</em>'.
+	 * @see cloudiator.GeoLocation#getLatitude()
+	 * @see #getGeoLocation()
+	 * @generated
+	 */
+	EAttribute getGeoLocation_Latitude();
+
+	/**
 	 * Returns the meta object for the reference '{@link cloudiator.Price#getLocation <em>Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1814,12 +1872,12 @@ public interface CloudiatorPackage extends EPackage {
 		EReference CLOUDIATOR_MODEL__CLOUDS = eINSTANCE.getCloudiatorModel_Clouds();
 
 		/**
-		 * The meta object literal for the '<em><b>Operatingsystem</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Operatingsystems</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CLOUDIATOR_MODEL__OPERATINGSYSTEM = eINSTANCE.getCloudiatorModel_Operatingsystem();
+		EReference CLOUDIATOR_MODEL__OPERATINGSYSTEMS = eINSTANCE.getCloudiatorModel_Operatingsystems();
 
 		/**
 		 * The meta object literal for the '{@link cloudiator.impl.ComponentImpl <em>Component</em>}' class.
@@ -2072,36 +2130,12 @@ public interface CloudiatorPackage extends EPackage {
 		EAttribute LOCATION__PROVIDER_ID = eINSTANCE.getLocation_ProviderId();
 
 		/**
-		 * The meta object literal for the '<em><b>Country</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Geo Location</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LOCATION__COUNTRY = eINSTANCE.getLocation_Country();
-
-		/**
-		 * The meta object literal for the '<em><b>City</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LOCATION__CITY = eINSTANCE.getLocation_City();
-
-		/**
-		 * The meta object literal for the '<em><b>Longitude</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LOCATION__LONGITUDE = eINSTANCE.getLocation_Longitude();
-
-		/**
-		 * The meta object literal for the '<em><b>Latitude</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LOCATION__LATITUDE = eINSTANCE.getLocation_Latitude();
+		EReference LOCATION__GEO_LOCATION = eINSTANCE.getLocation_GeoLocation();
 
 		/**
 		 * The meta object literal for the '{@link cloudiator.impl.CloudImpl <em>Cloud</em>}' class.
@@ -2348,6 +2382,48 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PROPERTY__VALUE = eINSTANCE.getProperty_Value();
+
+		/**
+		 * The meta object literal for the '{@link cloudiator.impl.GeoLocationImpl <em>Geo Location</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cloudiator.impl.GeoLocationImpl
+		 * @see cloudiator.impl.CloudiatorPackageImpl#getGeoLocation()
+		 * @generated
+		 */
+		EClass GEO_LOCATION = eINSTANCE.getGeoLocation();
+
+		/**
+		 * The meta object literal for the '<em><b>Country</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GEO_LOCATION__COUNTRY = eINSTANCE.getGeoLocation_Country();
+
+		/**
+		 * The meta object literal for the '<em><b>City</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GEO_LOCATION__CITY = eINSTANCE.getGeoLocation_City();
+
+		/**
+		 * The meta object literal for the '<em><b>Longitude</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GEO_LOCATION__LONGITUDE = eINSTANCE.getGeoLocation_Longitude();
+
+		/**
+		 * The meta object literal for the '<em><b>Latitude</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GEO_LOCATION__LATITUDE = eINSTANCE.getGeoLocation_Latitude();
 
 		/**
 		 * The meta object literal for the '<em><b>Location</b></em>' reference feature.

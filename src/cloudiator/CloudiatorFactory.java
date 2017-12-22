@@ -139,6 +139,15 @@ public interface CloudiatorFactory extends EFactory {
 	Property createProperty();
 
 	/**
+	 * Returns a new object of class '<em>Geo Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Geo Location</em>'.
+	 * @generated
+	 */
+	GeoLocation createGeoLocation();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

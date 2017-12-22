@@ -7,7 +7,6 @@ import cloudiator.CloudiatorPackage;
 import cloudiator.Hardware;
 
 import cloudiator.Location;
-import java.math.BigInteger;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -46,7 +45,7 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * @generated
 	 * @ordered
 	 */
-	protected static final BigInteger CORES_EDEFAULT = null;
+	protected static final Integer CORES_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCores() <em>Cores</em>}' attribute.
@@ -56,7 +55,7 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * @generated
 	 * @ordered
 	 */
-	protected BigInteger cores = CORES_EDEFAULT;
+	protected Integer cores = CORES_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -86,7 +85,7 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * @generated
 	 * @ordered
 	 */
-	protected static final BigInteger RAM_EDEFAULT = null;
+	protected static final Integer RAM_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getRam() <em>Ram</em>}' attribute.
@@ -96,7 +95,7 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * @generated
 	 * @ordered
 	 */
-	protected BigInteger ram = RAM_EDEFAULT;
+	protected Integer ram = RAM_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDisk() <em>Disk</em>}' attribute.
@@ -106,7 +105,7 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Float DISK_EDEFAULT = null;
+	protected static final Double DISK_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getDisk() <em>Disk</em>}' attribute.
@@ -116,7 +115,7 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * @generated
 	 * @ordered
 	 */
-	protected Float disk = DISK_EDEFAULT;
+	protected Double disk = DISK_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -192,7 +191,7 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BigInteger getCores() {
+	public Integer getCores() {
 		return cores;
 	}
 
@@ -201,8 +200,8 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCores(BigInteger newCores) {
-		BigInteger oldCores = cores;
+	public void setCores(Integer newCores) {
+		Integer oldCores = cores;
 		cores = newCores;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.HARDWARE__CORES, oldCores, cores));
@@ -234,7 +233,7 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BigInteger getRam() {
+	public Integer getRam() {
 		return ram;
 	}
 
@@ -243,8 +242,8 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRam(BigInteger newRam) {
-		BigInteger oldRam = ram;
+	public void setRam(Integer newRam) {
+		Integer oldRam = ram;
 		ram = newRam;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.HARDWARE__RAM, oldRam, ram));
@@ -255,7 +254,7 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Float getDisk() {
+	public Double getDisk() {
 		return disk;
 	}
 
@@ -264,8 +263,8 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDisk(Float newDisk) {
-		Float oldDisk = disk;
+	public void setDisk(Double newDisk) {
+		Double oldDisk = disk;
 		disk = newDisk;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.HARDWARE__DISK, oldDisk, disk));
@@ -445,16 +444,16 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CloudiatorPackage.HARDWARE__CORES:
-				setCores((BigInteger)newValue);
+				setCores((Integer)newValue);
 				return;
 			case CloudiatorPackage.HARDWARE__NAME:
 				setName((String)newValue);
 				return;
 			case CloudiatorPackage.HARDWARE__RAM:
-				setRam((BigInteger)newValue);
+				setRam((Integer)newValue);
 				return;
 			case CloudiatorPackage.HARDWARE__DISK:
-				setDisk((Float)newValue);
+				setDisk((Double)newValue);
 				return;
 			case CloudiatorPackage.HARDWARE__ID:
 				setId((String)newValue);

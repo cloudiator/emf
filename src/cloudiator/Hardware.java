@@ -2,7 +2,6 @@
  */
 package cloudiator;
 
-import java.math.BigInteger;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -38,12 +37,12 @@ public interface Hardware extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cores</em>' attribute.
-	 * @see #setCores(BigInteger)
+	 * @see #setCores(Integer)
 	 * @see cloudiator.CloudiatorPackage#getHardware_Cores()
-	 * @model required="true"
+	 * @model unique="false" required="true"
 	 * @generated
 	 */
-	BigInteger getCores();
+	Integer getCores();
 
 	/**
 	 * Sets the value of the '{@link cloudiator.Hardware#getCores <em>Cores</em>}' attribute.
@@ -53,7 +52,7 @@ public interface Hardware extends EObject {
 	 * @see #getCores()
 	 * @generated
 	 */
-	void setCores(BigInteger value);
+	void setCores(Integer value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -66,7 +65,7 @@ public interface Hardware extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see cloudiator.CloudiatorPackage#getHardware_Name()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getName();
@@ -90,12 +89,12 @@ public interface Hardware extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ram</em>' attribute.
-	 * @see #setRam(BigInteger)
+	 * @see #setRam(Integer)
 	 * @see cloudiator.CloudiatorPackage#getHardware_Ram()
-	 * @model required="true"
+	 * @model unique="false" required="true"
 	 * @generated
 	 */
-	BigInteger getRam();
+	Integer getRam();
 
 	/**
 	 * Sets the value of the '{@link cloudiator.Hardware#getRam <em>Ram</em>}' attribute.
@@ -105,7 +104,7 @@ public interface Hardware extends EObject {
 	 * @see #getRam()
 	 * @generated
 	 */
-	void setRam(BigInteger value);
+	void setRam(Integer value);
 
 	/**
 	 * Returns the value of the '<em><b>Disk</b></em>' attribute.
@@ -116,12 +115,12 @@ public interface Hardware extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Disk</em>' attribute.
-	 * @see #setDisk(Float)
+	 * @see #setDisk(Double)
 	 * @see cloudiator.CloudiatorPackage#getHardware_Disk()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.FloatObject" required="true"
+	 * @model unique="false" required="true"
 	 * @generated
 	 */
-	Float getDisk();
+	Double getDisk();
 
 	/**
 	 * Sets the value of the '{@link cloudiator.Hardware#getDisk <em>Disk</em>}' attribute.
@@ -131,7 +130,7 @@ public interface Hardware extends EObject {
 	 * @see #getDisk()
 	 * @generated
 	 */
-	void setDisk(Float value);
+	void setDisk(Double value);
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
@@ -144,7 +143,7 @@ public interface Hardware extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see cloudiator.CloudiatorPackage#getHardware_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	String getId();

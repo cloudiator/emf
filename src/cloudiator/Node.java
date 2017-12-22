@@ -140,8 +140,7 @@ public interface Node extends EObject {
 	 * @return the value of the '<em>Price</em>' attribute.
 	 * @see #setPrice(Double)
 	 * @see cloudiator.CloudiatorPackage#getNode_Price()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.DoubleObject" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='\n\t\t\tif (cloud.prices->select(p | p.image = self.image and p.location = self.location and p.hardware = self.hardware)->isEmpty()) then\n\t\t\t\tnull\n\t\t\telse\n\t\t\t\tcloud.prices->select(p | p.image = self.image and p.location = self.location and p.hardware = self.hardware)->first().price\n\t\t\tendif'"
+	 * @model unique="false"
 	 * @generated
 	 */
 	Double getPrice();

@@ -35,7 +35,7 @@ public interface CloudConfiguration extends EObject {
 	 * @return the value of the '<em>Node Group</em>' attribute.
 	 * @see #setNodeGroup(String)
 	 * @see cloudiator.CloudiatorPackage#getCloudConfiguration_NodeGroup()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getNodeGroup();

@@ -33,7 +33,7 @@ public interface Property extends EObject {
 	 * @return the value of the '<em>Key</em>' attribute.
 	 * @see #setKey(String)
 	 * @see cloudiator.CloudiatorPackage#getProperty_Key()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getKey();
@@ -59,7 +59,7 @@ public interface Property extends EObject {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
 	 * @see cloudiator.CloudiatorPackage#getProperty_Value()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getValue();

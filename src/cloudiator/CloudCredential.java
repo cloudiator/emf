@@ -33,7 +33,7 @@ public interface CloudCredential extends EObject {
 	 * @return the value of the '<em>User</em>' attribute.
 	 * @see #setUser(String)
 	 * @see cloudiator.CloudiatorPackage#getCloudCredential_User()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getUser();
@@ -59,7 +59,7 @@ public interface CloudCredential extends EObject {
 	 * @return the value of the '<em>Secret</em>' attribute.
 	 * @see #setSecret(String)
 	 * @see cloudiator.CloudiatorPackage#getCloudCredential_Secret()
-	 * @model
+	 * @model unique="false"
 	 * @generated
 	 */
 	String getSecret();

@@ -12,7 +12,6 @@ import cloudiator.Node;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -77,14 +76,24 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	protected Location location;
 
 	/**
-	 * The cached setting delegate for the '{@link #getPrice() <em>Price</em>}' attribute.
+	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPrice()
 	 * @generated
 	 * @ordered
 	 */
-	protected EStructuralFeature.Internal.SettingDelegate PRICE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)CloudiatorPackage.Literals.NODE__PRICE).getSettingDelegate();
+	protected static final Double PRICE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPrice() <em>Price</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrice()
+	 * @generated
+	 * @ordered
+	 */
+	protected Double price = PRICE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -263,7 +272,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @generated
 	 */
 	public Double getPrice() {
-		return (Double)PRICE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+		return price;
 	}
 
 	/**
@@ -272,7 +281,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @generated
 	 */
 	public void setPrice(Double newPrice) {
-		PRICE__ESETTING_DELEGATE.dynamicSet(this, null, 0, newPrice);
+		Double oldPrice = price;
+		price = newPrice;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.NODE__PRICE, oldPrice, price));
 	}
 
 	/**
@@ -349,7 +361,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				setLocation((Location)null);
 				return;
 			case CloudiatorPackage.NODE__PRICE:
-				PRICE__ESETTING_DELEGATE.dynamicUnset(this, null, 0);
+				setPrice(PRICE_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -372,9 +384,25 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 			case CloudiatorPackage.NODE__LOCATION:
 				return location != null;
 			case CloudiatorPackage.NODE__PRICE:
-				return PRICE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+				return PRICE_EDEFAULT == null ? price != null : !PRICE_EDEFAULT.equals(price);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (price: ");
+		result.append(price);
+		result.append(')');
+		return result.toString();
 	}
 
 } //NodeImpl

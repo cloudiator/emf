@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cloudiator.impl.CloudiatorModelImpl#getComponents <em>Components</em>}</li>
  *   <li>{@link cloudiator.impl.CloudiatorModelImpl#getNodes <em>Nodes</em>}</li>
  *   <li>{@link cloudiator.impl.CloudiatorModelImpl#getClouds <em>Clouds</em>}</li>
- *   <li>{@link cloudiator.impl.CloudiatorModelImpl#getOperatingsystem <em>Operatingsystem</em>}</li>
+ *   <li>{@link cloudiator.impl.CloudiatorModelImpl#getOperatingsystems <em>Operatingsystems</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,14 +71,14 @@ public class CloudiatorModelImpl extends MinimalEObjectImpl.Container implements
 	protected EList<Cloud> clouds;
 
 	/**
-	 * The cached value of the '{@link #getOperatingsystem() <em>Operatingsystem</em>}' containment reference list.
+	 * The cached value of the '{@link #getOperatingsystems() <em>Operatingsystems</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOperatingsystem()
+	 * @see #getOperatingsystems()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<OperatingSystem> operatingsystem;
+	protected EList<OperatingSystem> operatingsystems;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,11 +140,11 @@ public class CloudiatorModelImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<OperatingSystem> getOperatingsystem() {
-		if (operatingsystem == null) {
-			operatingsystem = new EObjectContainmentEList<OperatingSystem>(OperatingSystem.class, this, CloudiatorPackage.CLOUDIATOR_MODEL__OPERATINGSYSTEM);
+	public EList<OperatingSystem> getOperatingsystems() {
+		if (operatingsystems == null) {
+			operatingsystems = new EObjectContainmentEList<OperatingSystem>(OperatingSystem.class, this, CloudiatorPackage.CLOUDIATOR_MODEL__OPERATINGSYSTEMS);
 		}
-		return operatingsystem;
+		return operatingsystems;
 	}
 
 	/**
@@ -161,8 +161,8 @@ public class CloudiatorModelImpl extends MinimalEObjectImpl.Container implements
 				return ((InternalEList<?>)getNodes()).basicRemove(otherEnd, msgs);
 			case CloudiatorPackage.CLOUDIATOR_MODEL__CLOUDS:
 				return ((InternalEList<?>)getClouds()).basicRemove(otherEnd, msgs);
-			case CloudiatorPackage.CLOUDIATOR_MODEL__OPERATINGSYSTEM:
-				return ((InternalEList<?>)getOperatingsystem()).basicRemove(otherEnd, msgs);
+			case CloudiatorPackage.CLOUDIATOR_MODEL__OPERATINGSYSTEMS:
+				return ((InternalEList<?>)getOperatingsystems()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -181,8 +181,8 @@ public class CloudiatorModelImpl extends MinimalEObjectImpl.Container implements
 				return getNodes();
 			case CloudiatorPackage.CLOUDIATOR_MODEL__CLOUDS:
 				return getClouds();
-			case CloudiatorPackage.CLOUDIATOR_MODEL__OPERATINGSYSTEM:
-				return getOperatingsystem();
+			case CloudiatorPackage.CLOUDIATOR_MODEL__OPERATINGSYSTEMS:
+				return getOperatingsystems();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -208,9 +208,9 @@ public class CloudiatorModelImpl extends MinimalEObjectImpl.Container implements
 				getClouds().clear();
 				getClouds().addAll((Collection<? extends Cloud>)newValue);
 				return;
-			case CloudiatorPackage.CLOUDIATOR_MODEL__OPERATINGSYSTEM:
-				getOperatingsystem().clear();
-				getOperatingsystem().addAll((Collection<? extends OperatingSystem>)newValue);
+			case CloudiatorPackage.CLOUDIATOR_MODEL__OPERATINGSYSTEMS:
+				getOperatingsystems().clear();
+				getOperatingsystems().addAll((Collection<? extends OperatingSystem>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -233,8 +233,8 @@ public class CloudiatorModelImpl extends MinimalEObjectImpl.Container implements
 			case CloudiatorPackage.CLOUDIATOR_MODEL__CLOUDS:
 				getClouds().clear();
 				return;
-			case CloudiatorPackage.CLOUDIATOR_MODEL__OPERATINGSYSTEM:
-				getOperatingsystem().clear();
+			case CloudiatorPackage.CLOUDIATOR_MODEL__OPERATINGSYSTEMS:
+				getOperatingsystems().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -254,8 +254,8 @@ public class CloudiatorModelImpl extends MinimalEObjectImpl.Container implements
 				return nodes != null && !nodes.isEmpty();
 			case CloudiatorPackage.CLOUDIATOR_MODEL__CLOUDS:
 				return clouds != null && !clouds.isEmpty();
-			case CloudiatorPackage.CLOUDIATOR_MODEL__OPERATINGSYSTEM:
-				return operatingsystem != null && !operatingsystem.isEmpty();
+			case CloudiatorPackage.CLOUDIATOR_MODEL__OPERATINGSYSTEMS:
+				return operatingsystems != null && !operatingsystems.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -70,6 +70,7 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 			case CloudiatorPackage.CLOUD_CREDENTIAL: return createCloudCredential();
 			case CloudiatorPackage.CLOUD_CONFIGURATION: return createCloudConfiguration();
 			case CloudiatorPackage.PROPERTY: return createProperty();
+			case CloudiatorPackage.GEO_LOCATION: return createGeoLocation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -241,6 +242,16 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 	public Property createProperty() {
 		PropertyImpl property = new PropertyImpl();
 		return property;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GeoLocation createGeoLocation() {
+		GeoLocationImpl geoLocation = new GeoLocationImpl();
+		return geoLocation;
 	}
 
 	/**

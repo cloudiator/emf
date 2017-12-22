@@ -47,7 +47,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/components"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/nodes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/clouds"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/operatingsystem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/operatingsystems"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Component">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Component/nodes"/>
@@ -83,10 +83,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Location/id"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Location/cloud"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Location/providerId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Location/country"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Location/city"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Location/longitude"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Location/latitude"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Location/geoLocation"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Cloud">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Cloud/type"/>
@@ -125,6 +122,12 @@
     <genClasses ecoreClass="cloudiator.ecore#//Property">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Property/key"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Property/value"/>
+    </genClasses>
+    <genClasses ecoreClass="cloudiator.ecore#//GeoLocation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//GeoLocation/country"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//GeoLocation/city"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//GeoLocation/longitude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//GeoLocation/latitude"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
