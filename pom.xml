@@ -27,17 +27,21 @@
     </repositories>
 	
 	<build>
-		<sourceDirectory>src</sourceDirectory>
-		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
-				<configuration>
-					<source />
-					<target />
-				</configuration>
-			</plugin>
-		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+                	<groupId>org.apache.maven.plugins</groupId>
+                	<artifactId>maven-checkstyle-plugin</artifactId>
+	                <version>${checkstyle-plugin.version}</version>
+	                <executions>
+	                    <execution>
+	                        <id>validate</id>
+	                        <phase>none</phase>
+	                    </execution>
+	                </executions>
+                </plugin>
+            </plugins>
+		</pluginManagement>
 	</build>
 	
 	<dependencies>
