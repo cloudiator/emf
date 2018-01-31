@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Location#getCloud <em>Cloud</em>}</li>
  *   <li>{@link cloudiator.Location#getProviderId <em>Provider Id</em>}</li>
  *   <li>{@link cloudiator.Location#getGeoLocation <em>Geo Location</em>}</li>
+ *   <li>{@link cloudiator.Location#isAssignable <em>Assignable</em>}</li>
+ *   <li>{@link cloudiator.Location#getParent <em>Parent</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getLocation()
@@ -145,5 +147,57 @@ public interface Location extends EObject {
 	 * @generated
 	 */
 	void setGeoLocation(GeoLocation value);
+
+	/**
+	 * Returns the value of the '<em><b>Assignable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Assignable</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Assignable</em>' attribute.
+	 * @see #setAssignable(boolean)
+	 * @see cloudiator.CloudiatorPackage#getLocation_Assignable()
+	 * @model unique="false"
+	 * @generated
+	 */
+	boolean isAssignable();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Location#isAssignable <em>Assignable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Assignable</em>' attribute.
+	 * @see #isAssignable()
+	 * @generated
+	 */
+	void setAssignable(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parent</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parent</em>' reference.
+	 * @see #setParent(Location)
+	 * @see cloudiator.CloudiatorPackage#getLocation_Parent()
+	 * @model
+	 * @generated
+	 */
+	Location getParent();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Location#getParent <em>Parent</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Parent</em>' reference.
+	 * @see #getParent()
+	 * @generated
+	 */
+	void setParent(Location value);
 
 } // Location

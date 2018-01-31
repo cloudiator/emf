@@ -29,6 +29,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.LocationImpl#getCloud <em>Cloud</em>}</li>
  *   <li>{@link cloudiator.impl.LocationImpl#getProviderId <em>Provider Id</em>}</li>
  *   <li>{@link cloudiator.impl.LocationImpl#getGeoLocation <em>Geo Location</em>}</li>
+ *   <li>{@link cloudiator.impl.LocationImpl#isAssignable <em>Assignable</em>}</li>
+ *   <li>{@link cloudiator.impl.LocationImpl#getParent <em>Parent</em>}</li>
  * </ul>
  *
  * @generated
@@ -103,6 +105,36 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * @ordered
 	 */
 	protected GeoLocation geoLocation;
+
+	/**
+	 * The default value of the '{@link #isAssignable() <em>Assignable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAssignable()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ASSIGNABLE_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isAssignable() <em>Assignable</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isAssignable()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean assignable = ASSIGNABLE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParent()
+	 * @generated
+	 * @ordered
+	 */
+	protected Location parent;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -244,6 +276,65 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isAssignable() {
+		return assignable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAssignable(boolean newAssignable) {
+		boolean oldAssignable = assignable;
+		assignable = newAssignable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.LOCATION__ASSIGNABLE, oldAssignable, assignable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Location getParent() {
+		if (parent != null && parent.eIsProxy()) {
+			InternalEObject oldParent = (InternalEObject)parent;
+			parent = (Location)eResolveProxy(oldParent);
+			if (parent != oldParent) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CloudiatorPackage.LOCATION__PARENT, oldParent, parent));
+			}
+		}
+		return parent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Location basicGetParent() {
+		return parent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParent(Location newParent) {
+		Location oldParent = parent;
+		parent = newParent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.LOCATION__PARENT, oldParent, parent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -303,6 +394,11 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return getProviderId();
 			case CloudiatorPackage.LOCATION__GEO_LOCATION:
 				return getGeoLocation();
+			case CloudiatorPackage.LOCATION__ASSIGNABLE:
+				return isAssignable();
+			case CloudiatorPackage.LOCATION__PARENT:
+				if (resolve) return getParent();
+				return basicGetParent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -326,6 +422,12 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return;
 			case CloudiatorPackage.LOCATION__GEO_LOCATION:
 				setGeoLocation((GeoLocation)newValue);
+				return;
+			case CloudiatorPackage.LOCATION__ASSIGNABLE:
+				setAssignable((Boolean)newValue);
+				return;
+			case CloudiatorPackage.LOCATION__PARENT:
+				setParent((Location)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -351,6 +453,12 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 			case CloudiatorPackage.LOCATION__GEO_LOCATION:
 				setGeoLocation((GeoLocation)null);
 				return;
+			case CloudiatorPackage.LOCATION__ASSIGNABLE:
+				setAssignable(ASSIGNABLE_EDEFAULT);
+				return;
+			case CloudiatorPackage.LOCATION__PARENT:
+				setParent((Location)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -373,6 +481,10 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return PROVIDER_ID_EDEFAULT == null ? providerId != null : !PROVIDER_ID_EDEFAULT.equals(providerId);
 			case CloudiatorPackage.LOCATION__GEO_LOCATION:
 				return geoLocation != null;
+			case CloudiatorPackage.LOCATION__ASSIGNABLE:
+				return assignable != ASSIGNABLE_EDEFAULT;
+			case CloudiatorPackage.LOCATION__PARENT:
+				return parent != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -393,6 +505,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 		result.append(id);
 		result.append(", providerId: ");
 		result.append(providerId);
+		result.append(", assignable: ");
+		result.append(assignable);
 		result.append(')');
 		return result.toString();
 	}

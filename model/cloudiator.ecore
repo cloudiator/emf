@@ -71,6 +71,10 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="geoLocation" eType="#//GeoLocation"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="assignable" unique="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" unique="false"
+        eType="#//Location"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Cloud">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" unique="false" eType="#//CloudType"/>

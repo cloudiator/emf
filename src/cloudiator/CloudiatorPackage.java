@@ -480,13 +480,31 @@ public interface CloudiatorPackage extends EPackage {
 	int LOCATION__GEO_LOCATION = 4;
 
 	/**
+	 * The feature id for the '<em><b>Assignable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__ASSIGNABLE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__PARENT = 6;
+
+	/**
 	 * The number of structural features of the '<em>Location</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_FEATURE_COUNT = 5;
+	int LOCATION_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Location</em>' class.
@@ -1397,6 +1415,28 @@ public interface CloudiatorPackage extends EPackage {
 	EReference getLocation_GeoLocation();
 
 	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Location#isAssignable <em>Assignable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Assignable</em>'.
+	 * @see cloudiator.Location#isAssignable()
+	 * @see #getLocation()
+	 * @generated
+	 */
+	EAttribute getLocation_Assignable();
+
+	/**
+	 * Returns the meta object for the reference '{@link cloudiator.Location#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parent</em>'.
+	 * @see cloudiator.Location#getParent()
+	 * @see #getLocation()
+	 * @generated
+	 */
+	EReference getLocation_Parent();
+
+	/**
 	 * Returns the meta object for class '{@link cloudiator.Cloud <em>Cloud</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2136,6 +2176,22 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LOCATION__GEO_LOCATION = eINSTANCE.getLocation_GeoLocation();
+
+		/**
+		 * The meta object literal for the '<em><b>Assignable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOCATION__ASSIGNABLE = eINSTANCE.getLocation_Assignable();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOCATION__PARENT = eINSTANCE.getLocation_Parent();
 
 		/**
 		 * The meta object literal for the '{@link cloudiator.impl.CloudImpl <em>Cloud</em>}' class.
