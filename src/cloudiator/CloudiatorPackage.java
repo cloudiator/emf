@@ -498,13 +498,22 @@ public interface CloudiatorPackage extends EPackage {
 	int LOCATION__PARENT = 6;
 
 	/**
+	 * The feature id for the '<em><b>Location Scope</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__LOCATION_SCOPE = 7;
+
+	/**
 	 * The number of structural features of the '<em>Location</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_FEATURE_COUNT = 7;
+	int LOCATION_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Location</em>' class.
@@ -1025,6 +1034,17 @@ public interface CloudiatorPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link cloudiator.LocationScope <em>Location Scope</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cloudiator.LocationScope
+	 * @see cloudiator.impl.CloudiatorPackageImpl#getLocationScope()
+	 * @generated
+	 */
+	int LOCATION_SCOPE = 17;
+
+
+	/**
 	 * Returns the meta object for class '{@link cloudiator.CloudiatorModel <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1435,6 +1455,17 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLocation_Parent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Location#getLocationScope <em>Location Scope</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Location Scope</em>'.
+	 * @see cloudiator.Location#getLocationScope()
+	 * @see #getLocation()
+	 * @generated
+	 */
+	EAttribute getLocation_LocationScope();
 
 	/**
 	 * Returns the meta object for class '{@link cloudiator.Cloud <em>Cloud</em>}'.
@@ -1855,6 +1886,16 @@ public interface CloudiatorPackage extends EPackage {
 	EEnum getOSFamily();
 
 	/**
+	 * Returns the meta object for enum '{@link cloudiator.LocationScope <em>Location Scope</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Location Scope</em>'.
+	 * @see cloudiator.LocationScope
+	 * @generated
+	 */
+	EEnum getLocationScope();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2194,6 +2235,14 @@ public interface CloudiatorPackage extends EPackage {
 		EReference LOCATION__PARENT = eINSTANCE.getLocation_Parent();
 
 		/**
+		 * The meta object literal for the '<em><b>Location Scope</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOCATION__LOCATION_SCOPE = eINSTANCE.getLocation_LocationScope();
+
+		/**
 		 * The meta object literal for the '{@link cloudiator.impl.CloudImpl <em>Cloud</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2526,6 +2575,16 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum OS_FAMILY = eINSTANCE.getOSFamily();
+
+		/**
+		 * The meta object literal for the '{@link cloudiator.LocationScope <em>Location Scope</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cloudiator.LocationScope
+		 * @see cloudiator.impl.CloudiatorPackageImpl#getLocationScope()
+		 * @generated
+		 */
+		EEnum LOCATION_SCOPE = eINSTANCE.getLocationScope();
 
 	}
 

@@ -90,6 +90,8 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 				return createOSArchitectureFromString(eDataType, initialValue);
 			case CloudiatorPackage.OS_FAMILY:
 				return createOSFamilyFromString(eDataType, initialValue);
+			case CloudiatorPackage.LOCATION_SCOPE:
+				return createLocationScopeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -109,6 +111,8 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 				return convertOSArchitectureToString(eDataType, instanceValue);
 			case CloudiatorPackage.OS_FAMILY:
 				return convertOSFamilyToString(eDataType, instanceValue);
+			case CloudiatorPackage.LOCATION_SCOPE:
+				return convertLocationScopeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -311,6 +315,26 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 	 * @generated
 	 */
 	public String convertOSFamilyToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LocationScope createLocationScopeFromString(EDataType eDataType, String initialValue) {
+		LocationScope result = LocationScope.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertLocationScopeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

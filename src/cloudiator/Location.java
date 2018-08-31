@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Location#getGeoLocation <em>Geo Location</em>}</li>
  *   <li>{@link cloudiator.Location#isAssignable <em>Assignable</em>}</li>
  *   <li>{@link cloudiator.Location#getParent <em>Parent</em>}</li>
+ *   <li>{@link cloudiator.Location#getLocationScope <em>Location Scope</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getLocation()
@@ -199,5 +200,35 @@ public interface Location extends EObject {
 	 * @generated
 	 */
 	void setParent(Location value);
+
+	/**
+	 * Returns the value of the '<em><b>Location Scope</b></em>' attribute.
+	 * The default value is <code>"UNKOWN"</code>.
+	 * The literals are from the enumeration {@link cloudiator.LocationScope}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Location Scope</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Location Scope</em>' attribute.
+	 * @see cloudiator.LocationScope
+	 * @see #setLocationScope(LocationScope)
+	 * @see cloudiator.CloudiatorPackage#getLocation_LocationScope()
+	 * @model default="UNKOWN"
+	 * @generated
+	 */
+	LocationScope getLocationScope();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Location#getLocationScope <em>Location Scope</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Location Scope</em>' attribute.
+	 * @see cloudiator.LocationScope
+	 * @see #getLocationScope()
+	 * @generated
+	 */
+	void setLocationScope(LocationScope value);
 
 } // Location

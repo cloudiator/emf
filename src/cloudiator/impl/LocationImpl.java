@@ -7,6 +7,7 @@ import cloudiator.CloudiatorPackage;
 import cloudiator.GeoLocation;
 import cloudiator.Location;
 
+import cloudiator.LocationScope;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.LocationImpl#getGeoLocation <em>Geo Location</em>}</li>
  *   <li>{@link cloudiator.impl.LocationImpl#isAssignable <em>Assignable</em>}</li>
  *   <li>{@link cloudiator.impl.LocationImpl#getParent <em>Parent</em>}</li>
+ *   <li>{@link cloudiator.impl.LocationImpl#getLocationScope <em>Location Scope</em>}</li>
  * </ul>
  *
  * @generated
@@ -135,6 +137,26 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * @ordered
 	 */
 	protected Location parent;
+
+	/**
+	 * The default value of the '{@link #getLocationScope() <em>Location Scope</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocationScope()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final LocationScope LOCATION_SCOPE_EDEFAULT = LocationScope.UNKOWN;
+
+	/**
+	 * The cached value of the '{@link #getLocationScope() <em>Location Scope</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLocationScope()
+	 * @generated
+	 * @ordered
+	 */
+	protected LocationScope locationScope = LOCATION_SCOPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -335,6 +357,27 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public LocationScope getLocationScope() {
+		return locationScope;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLocationScope(LocationScope newLocationScope) {
+		LocationScope oldLocationScope = locationScope;
+		locationScope = newLocationScope == null ? LOCATION_SCOPE_EDEFAULT : newLocationScope;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.LOCATION__LOCATION_SCOPE, oldLocationScope, locationScope));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -399,6 +442,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 			case CloudiatorPackage.LOCATION__PARENT:
 				if (resolve) return getParent();
 				return basicGetParent();
+			case CloudiatorPackage.LOCATION__LOCATION_SCOPE:
+				return getLocationScope();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -428,6 +473,9 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return;
 			case CloudiatorPackage.LOCATION__PARENT:
 				setParent((Location)newValue);
+				return;
+			case CloudiatorPackage.LOCATION__LOCATION_SCOPE:
+				setLocationScope((LocationScope)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -459,6 +507,9 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 			case CloudiatorPackage.LOCATION__PARENT:
 				setParent((Location)null);
 				return;
+			case CloudiatorPackage.LOCATION__LOCATION_SCOPE:
+				setLocationScope(LOCATION_SCOPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -485,6 +536,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return assignable != ASSIGNABLE_EDEFAULT;
 			case CloudiatorPackage.LOCATION__PARENT:
 				return parent != null;
+			case CloudiatorPackage.LOCATION__LOCATION_SCOPE:
+				return locationScope != LOCATION_SCOPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -507,6 +560,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 		result.append(providerId);
 		result.append(", assignable: ");
 		result.append(assignable);
+		result.append(", locationScope: ");
+		result.append(locationScope);
 		result.append(')');
 		return result.toString();
 	}

@@ -43,6 +43,13 @@
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/UBUNTU"/>
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/WINDOWS"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cloudiator.ecore#//LocationScope">
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//LocationScope/HOST"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//LocationScope/ZONE"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//LocationScope/REGION"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//LocationScope/PROVIDER"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//LocationScope/UNKOWN"/>
+    </genEnums>
     <genClasses ecoreClass="cloudiator.ecore#//CloudiatorModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/components"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/nodes"/>
@@ -86,6 +93,7 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Location/geoLocation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Location/assignable"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Location/parent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Location/locationScope"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Cloud">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Cloud/type"/>

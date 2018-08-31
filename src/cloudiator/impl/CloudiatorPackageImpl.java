@@ -15,6 +15,7 @@ import cloudiator.GeoLocation;
 import cloudiator.Hardware;
 import cloudiator.Image;
 import cloudiator.Location;
+import cloudiator.LocationScope;
 import cloudiator.Node;
 import cloudiator.OSArchitecture;
 import cloudiator.OSFamily;
@@ -153,6 +154,13 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * @generated
 	 */
 	private EEnum osFamilyEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum locationScopeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -562,6 +570,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getLocation_LocationScope() {
+		return (EAttribute)locationEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCloud() {
 		return cloudEClass;
 	}
@@ -913,6 +930,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getLocationScope() {
+		return locationScopeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CloudiatorFactory getCloudiatorFactory() {
 		return (CloudiatorFactory)getEFactoryInstance();
 	}
@@ -979,6 +1005,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEReference(locationEClass, LOCATION__GEO_LOCATION);
 		createEAttribute(locationEClass, LOCATION__ASSIGNABLE);
 		createEReference(locationEClass, LOCATION__PARENT);
+		createEAttribute(locationEClass, LOCATION__LOCATION_SCOPE);
 
 		cloudEClass = createEClass(CLOUD);
 		createEAttribute(cloudEClass, CLOUD__TYPE);
@@ -1028,6 +1055,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		cloudTypeEEnum = createEEnum(CLOUD_TYPE);
 		osArchitectureEEnum = createEEnum(OS_ARCHITECTURE);
 		osFamilyEEnum = createEEnum(OS_FAMILY);
+		locationScopeEEnum = createEEnum(LOCATION_SCOPE);
 	}
 
 	/**
@@ -1103,6 +1131,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEReference(getLocation_GeoLocation(), this.getGeoLocation(), null, "geoLocation", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLocation_Assignable(), ecorePackage.getEBoolean(), "assignable", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLocation_Parent(), this.getLocation(), null, "parent", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLocation_LocationScope(), this.getLocationScope(), "locationScope", "UNKOWN", 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cloudEClass, Cloud.class, "Cloud", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCloud_Type(), this.getCloudType(), "type", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1186,6 +1215,13 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		addEEnumLiteral(osFamilyEEnum, OSFamily.CLOUD_LINUX);
 		addEEnumLiteral(osFamilyEEnum, OSFamily.UBUNTU);
 		addEEnumLiteral(osFamilyEEnum, OSFamily.WINDOWS);
+
+		initEEnum(locationScopeEEnum, LocationScope.class, "LocationScope");
+		addEEnumLiteral(locationScopeEEnum, LocationScope.HOST);
+		addEEnumLiteral(locationScopeEEnum, LocationScope.ZONE);
+		addEEnumLiteral(locationScopeEEnum, LocationScope.REGION);
+		addEEnumLiteral(locationScopeEEnum, LocationScope.PROVIDER);
+		addEEnumLiteral(locationScopeEEnum, LocationScope.UNKOWN);
 
 		// Create resource
 		createResource(eNS_URI);
