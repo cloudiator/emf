@@ -11,6 +11,7 @@ import cloudiator.CloudiatorFactory;
 import cloudiator.CloudiatorModel;
 import cloudiator.CloudiatorPackage;
 import cloudiator.Component;
+import cloudiator.Environment;
 import cloudiator.GeoLocation;
 import cloudiator.Hardware;
 import cloudiator.Image;
@@ -139,6 +140,13 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass environmentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum cloudTypeEEnum = null;
 
 	/**
@@ -161,6 +169,13 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * @generated
 	 */
 	private EEnum locationScopeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum runtimeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -347,6 +362,33 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 */
 	public EAttribute getNode_Price() {
 		return (EAttribute)nodeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNode_Environment() {
+		return (EReference)nodeEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNode_PricePerInvocation() {
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNode_MemoryPrice() {
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -885,6 +927,24 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEnvironment() {
+		return environmentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEnvironment_Runtime() {
+		return (EAttribute)environmentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getPrice_Location() {
 		return (EReference)priceEClass.getEStructuralFeatures().get(1);
 	}
@@ -939,6 +999,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getRuntime() {
+		return runtimeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CloudiatorFactory getCloudiatorFactory() {
 		return (CloudiatorFactory)getEFactoryInstance();
 	}
@@ -978,6 +1047,9 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEReference(nodeEClass, NODE__HARDWARE);
 		createEReference(nodeEClass, NODE__LOCATION);
 		createEAttribute(nodeEClass, NODE__PRICE);
+		createEReference(nodeEClass, NODE__ENVIRONMENT);
+		createEAttribute(nodeEClass, NODE__PRICE_PER_INVOCATION);
+		createEAttribute(nodeEClass, NODE__MEMORY_PRICE);
 
 		imageEClass = createEClass(IMAGE);
 		createEAttribute(imageEClass, IMAGE__NAME);
@@ -1051,11 +1123,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEAttribute(geoLocationEClass, GEO_LOCATION__LONGITUDE);
 		createEAttribute(geoLocationEClass, GEO_LOCATION__LATITUDE);
 
+		environmentEClass = createEClass(ENVIRONMENT);
+		createEAttribute(environmentEClass, ENVIRONMENT__RUNTIME);
+
 		// Create enums
 		cloudTypeEEnum = createEEnum(CLOUD_TYPE);
 		osArchitectureEEnum = createEEnum(OS_ARCHITECTURE);
 		osFamilyEEnum = createEEnum(OS_FAMILY);
 		locationScopeEEnum = createEEnum(LOCATION_SCOPE);
+		runtimeEEnum = createEEnum(RUNTIME);
 	}
 
 	/**
@@ -1104,6 +1180,9 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEReference(getNode_Hardware(), this.getHardware(), null, "hardware", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getNode_Location(), this.getLocation(), null, "location", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_Price(), ecorePackage.getEDoubleObject(), "price", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNode_Environment(), this.getEnvironment(), null, "environment", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNode_PricePerInvocation(), ecorePackage.getEDoubleObject(), "pricePerInvocation", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNode_MemoryPrice(), ecorePackage.getEDoubleObject(), "memoryPrice", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getImage_Name(), ecorePackage.getEString(), "name", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1177,6 +1256,9 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEAttribute(getGeoLocation_Longitude(), ecorePackage.getEDoubleObject(), "longitude", null, 0, 1, GeoLocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGeoLocation_Latitude(), ecorePackage.getEDoubleObject(), "latitude", null, 0, 1, GeoLocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(environmentEClass, Environment.class, "Environment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEnvironment_Runtime(), this.getRuntime(), "runtime", null, 0, 1, Environment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(cloudTypeEEnum, CloudType.class, "CloudType");
 		addEEnumLiteral(cloudTypeEEnum, CloudType.PUBLIC);
@@ -1222,6 +1304,13 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		addEEnumLiteral(locationScopeEEnum, LocationScope.REGION);
 		addEEnumLiteral(locationScopeEEnum, LocationScope.PROVIDER);
 		addEEnumLiteral(locationScopeEEnum, LocationScope.UNKOWN);
+
+		initEEnum(runtimeEEnum, cloudiator.Runtime.class, "Runtime");
+		addEEnumLiteral(runtimeEEnum, cloudiator.Runtime.NODEJS);
+		addEEnumLiteral(runtimeEEnum, cloudiator.Runtime.PYTHON);
+		addEEnumLiteral(runtimeEEnum, cloudiator.Runtime.JAVA);
+		addEEnumLiteral(runtimeEEnum, cloudiator.Runtime.DOTNET);
+		addEEnumLiteral(runtimeEEnum, cloudiator.Runtime.GO);
 
 		// Create resource
 		createResource(eNS_URI);

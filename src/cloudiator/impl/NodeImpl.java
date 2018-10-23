@@ -4,6 +4,7 @@ package cloudiator.impl;
 
 import cloudiator.Cloud;
 import cloudiator.CloudiatorPackage;
+import cloudiator.Environment;
 import cloudiator.Hardware;
 import cloudiator.Image;
 import cloudiator.Location;
@@ -30,6 +31,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.NodeImpl#getHardware <em>Hardware</em>}</li>
  *   <li>{@link cloudiator.impl.NodeImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link cloudiator.impl.NodeImpl#getPrice <em>Price</em>}</li>
+ *   <li>{@link cloudiator.impl.NodeImpl#getEnvironment <em>Environment</em>}</li>
+ *   <li>{@link cloudiator.impl.NodeImpl#getPricePerInvocation <em>Price Per Invocation</em>}</li>
+ *   <li>{@link cloudiator.impl.NodeImpl#getMemoryPrice <em>Memory Price</em>}</li>
  * </ul>
  *
  * @generated
@@ -94,6 +98,56 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @ordered
 	 */
 	protected Double price = PRICE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getEnvironment() <em>Environment</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEnvironment()
+	 * @generated
+	 * @ordered
+	 */
+	protected Environment environment;
+
+	/**
+	 * The default value of the '{@link #getPricePerInvocation() <em>Price Per Invocation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPricePerInvocation()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Double PRICE_PER_INVOCATION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPricePerInvocation() <em>Price Per Invocation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPricePerInvocation()
+	 * @generated
+	 * @ordered
+	 */
+	protected Double pricePerInvocation = PRICE_PER_INVOCATION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMemoryPrice() <em>Memory Price</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMemoryPrice()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Double MEMORY_PRICE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getMemoryPrice() <em>Memory Price</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMemoryPrice()
+	 * @generated
+	 * @ordered
+	 */
+	protected Double memoryPrice = MEMORY_PRICE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -292,6 +346,86 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Environment getEnvironment() {
+		if (environment != null && environment.eIsProxy()) {
+			InternalEObject oldEnvironment = (InternalEObject)environment;
+			environment = (Environment)eResolveProxy(oldEnvironment);
+			if (environment != oldEnvironment) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CloudiatorPackage.NODE__ENVIRONMENT, oldEnvironment, environment));
+			}
+		}
+		return environment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Environment basicGetEnvironment() {
+		return environment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEnvironment(Environment newEnvironment) {
+		Environment oldEnvironment = environment;
+		environment = newEnvironment;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.NODE__ENVIRONMENT, oldEnvironment, environment));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Double getPricePerInvocation() {
+		return pricePerInvocation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPricePerInvocation(Double newPricePerInvocation) {
+		Double oldPricePerInvocation = pricePerInvocation;
+		pricePerInvocation = newPricePerInvocation;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.NODE__PRICE_PER_INVOCATION, oldPricePerInvocation, pricePerInvocation));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Double getMemoryPrice() {
+		return memoryPrice;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMemoryPrice(Double newMemoryPrice) {
+		Double oldMemoryPrice = memoryPrice;
+		memoryPrice = newMemoryPrice;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.NODE__MEMORY_PRICE, oldMemoryPrice, memoryPrice));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -309,6 +443,13 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return basicGetLocation();
 			case CloudiatorPackage.NODE__PRICE:
 				return getPrice();
+			case CloudiatorPackage.NODE__ENVIRONMENT:
+				if (resolve) return getEnvironment();
+				return basicGetEnvironment();
+			case CloudiatorPackage.NODE__PRICE_PER_INVOCATION:
+				return getPricePerInvocation();
+			case CloudiatorPackage.NODE__MEMORY_PRICE:
+				return getMemoryPrice();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -335,6 +476,15 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return;
 			case CloudiatorPackage.NODE__PRICE:
 				setPrice((Double)newValue);
+				return;
+			case CloudiatorPackage.NODE__ENVIRONMENT:
+				setEnvironment((Environment)newValue);
+				return;
+			case CloudiatorPackage.NODE__PRICE_PER_INVOCATION:
+				setPricePerInvocation((Double)newValue);
+				return;
+			case CloudiatorPackage.NODE__MEMORY_PRICE:
+				setMemoryPrice((Double)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -363,6 +513,15 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 			case CloudiatorPackage.NODE__PRICE:
 				setPrice(PRICE_EDEFAULT);
 				return;
+			case CloudiatorPackage.NODE__ENVIRONMENT:
+				setEnvironment((Environment)null);
+				return;
+			case CloudiatorPackage.NODE__PRICE_PER_INVOCATION:
+				setPricePerInvocation(PRICE_PER_INVOCATION_EDEFAULT);
+				return;
+			case CloudiatorPackage.NODE__MEMORY_PRICE:
+				setMemoryPrice(MEMORY_PRICE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -385,6 +544,12 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return location != null;
 			case CloudiatorPackage.NODE__PRICE:
 				return PRICE_EDEFAULT == null ? price != null : !PRICE_EDEFAULT.equals(price);
+			case CloudiatorPackage.NODE__ENVIRONMENT:
+				return environment != null;
+			case CloudiatorPackage.NODE__PRICE_PER_INVOCATION:
+				return PRICE_PER_INVOCATION_EDEFAULT == null ? pricePerInvocation != null : !PRICE_PER_INVOCATION_EDEFAULT.equals(pricePerInvocation);
+			case CloudiatorPackage.NODE__MEMORY_PRICE:
+				return MEMORY_PRICE_EDEFAULT == null ? memoryPrice != null : !MEMORY_PRICE_EDEFAULT.equals(memoryPrice);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -401,6 +566,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (price: ");
 		result.append(price);
+		result.append(", pricePerInvocation: ");
+		result.append(pricePerInvocation);
+		result.append(", memoryPrice: ");
+		result.append(memoryPrice);
 		result.append(')');
 		return result.toString();
 	}

@@ -2,6 +2,22 @@
  */
 package cloudiator.util;
 
+import cloudiator.Api;
+import cloudiator.Cloud;
+import cloudiator.CloudConfiguration;
+import cloudiator.CloudCredential;
+import cloudiator.CloudiatorModel;
+import cloudiator.CloudiatorPackage;
+import cloudiator.Component;
+import cloudiator.Environment;
+import cloudiator.GeoLocation;
+import cloudiator.Hardware;
+import cloudiator.Image;
+import cloudiator.Location;
+import cloudiator.Node;
+import cloudiator.OperatingSystem;
+import cloudiator.Price;
+import cloudiator.Property;
 import cloudiator.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -147,6 +163,12 @@ public class CloudiatorSwitch<T> extends Switch<T> {
 			case CloudiatorPackage.GEO_LOCATION: {
 				GeoLocation geoLocation = (GeoLocation)theEObject;
 				T result = caseGeoLocation(geoLocation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CloudiatorPackage.ENVIRONMENT: {
+				Environment environment = (Environment)theEObject;
+				T result = caseEnvironment(environment);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -361,6 +383,21 @@ public class CloudiatorSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGeoLocation(GeoLocation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Environment</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Environment</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEnvironment(Environment object) {
 		return null;
 	}
 

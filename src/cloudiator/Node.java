@@ -18,6 +18,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Node#getHardware <em>Hardware</em>}</li>
  *   <li>{@link cloudiator.Node#getLocation <em>Location</em>}</li>
  *   <li>{@link cloudiator.Node#getPrice <em>Price</em>}</li>
+ *   <li>{@link cloudiator.Node#getEnvironment <em>Environment</em>}</li>
+ *   <li>{@link cloudiator.Node#getPricePerInvocation <em>Price Per Invocation</em>}</li>
+ *   <li>{@link cloudiator.Node#getMemoryPrice <em>Memory Price</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getNode()
@@ -154,5 +157,83 @@ public interface Node extends EObject {
 	 * @generated
 	 */
 	void setPrice(Double value);
+
+	/**
+	 * Returns the value of the '<em><b>Environment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Environment</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Environment</em>' reference.
+	 * @see #setEnvironment(Environment)
+	 * @see cloudiator.CloudiatorPackage#getNode_Environment()
+	 * @model
+	 * @generated
+	 */
+	Environment getEnvironment();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Node#getEnvironment <em>Environment</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Environment</em>' reference.
+	 * @see #getEnvironment()
+	 * @generated
+	 */
+	void setEnvironment(Environment value);
+
+	/**
+	 * Returns the value of the '<em><b>Price Per Invocation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Price Per Invocation</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Price Per Invocation</em>' attribute.
+	 * @see #setPricePerInvocation(Double)
+	 * @see cloudiator.CloudiatorPackage#getNode_PricePerInvocation()
+	 * @model
+	 * @generated
+	 */
+	Double getPricePerInvocation();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Node#getPricePerInvocation <em>Price Per Invocation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Price Per Invocation</em>' attribute.
+	 * @see #getPricePerInvocation()
+	 * @generated
+	 */
+	void setPricePerInvocation(Double value);
+
+	/**
+	 * Returns the value of the '<em><b>Memory Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Memory Price</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Memory Price</em>' attribute.
+	 * @see #setMemoryPrice(Double)
+	 * @see cloudiator.CloudiatorPackage#getNode_MemoryPrice()
+	 * @model
+	 * @generated
+	 */
+	Double getMemoryPrice();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Node#getMemoryPrice <em>Memory Price</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Memory Price</em>' attribute.
+	 * @see #getMemoryPrice()
+	 * @generated
+	 */
+	void setMemoryPrice(Double value);
 
 } // Node

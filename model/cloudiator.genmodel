@@ -50,6 +50,13 @@
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//LocationScope/PROVIDER"/>
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//LocationScope/UNKOWN"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cloudiator.ecore#//Runtime">
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//Runtime/NODEJS"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//Runtime/PYTHON"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//Runtime/JAVA"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//Runtime/DOTNET"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//Runtime/GO"/>
+    </genEnums>
     <genClasses ecoreClass="cloudiator.ecore#//CloudiatorModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/components"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/nodes"/>
@@ -66,6 +73,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Node/hardware"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Node/location"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/price"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Node/environment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/pricePerInvocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/memoryPrice"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Image">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Image/name"/>
@@ -138,6 +148,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//GeoLocation/city"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//GeoLocation/longitude"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//GeoLocation/latitude"/>
+    </genClasses>
+    <genClasses ecoreClass="cloudiator.ecore#//Environment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Environment/runtime"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

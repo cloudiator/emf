@@ -225,13 +225,40 @@ public interface CloudiatorPackage extends EPackage {
 	int NODE__PRICE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Environment</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__ENVIRONMENT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Price Per Invocation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__PRICE_PER_INVOCATION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Memory Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__MEMORY_PRICE = 7;
+
+	/**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = 5;
+	int NODE_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Node</em>' class.
@@ -1002,6 +1029,43 @@ public interface CloudiatorPackage extends EPackage {
 	int GEO_LOCATION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link cloudiator.impl.EnvironmentImpl <em>Environment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cloudiator.impl.EnvironmentImpl
+	 * @see cloudiator.impl.CloudiatorPackageImpl#getEnvironment()
+	 * @generated
+	 */
+	int ENVIRONMENT = 14;
+
+	/**
+	 * The feature id for the '<em><b>Runtime</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENVIRONMENT__RUNTIME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Environment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENVIRONMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Environment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENVIRONMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link cloudiator.CloudType <em>Cloud Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1009,7 +1073,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @see cloudiator.impl.CloudiatorPackageImpl#getCloudType()
 	 * @generated
 	 */
-	int CLOUD_TYPE = 14;
+	int CLOUD_TYPE = 15;
 
 
 	/**
@@ -1020,7 +1084,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @see cloudiator.impl.CloudiatorPackageImpl#getOSArchitecture()
 	 * @generated
 	 */
-	int OS_ARCHITECTURE = 15;
+	int OS_ARCHITECTURE = 16;
 
 	/**
 	 * The meta object id for the '{@link cloudiator.OSFamily <em>OS Family</em>}' enum.
@@ -1030,7 +1094,7 @@ public interface CloudiatorPackage extends EPackage {
 	 * @see cloudiator.impl.CloudiatorPackageImpl#getOSFamily()
 	 * @generated
 	 */
-	int OS_FAMILY = 16;
+	int OS_FAMILY = 17;
 
 
 	/**
@@ -1041,7 +1105,18 @@ public interface CloudiatorPackage extends EPackage {
 	 * @see cloudiator.impl.CloudiatorPackageImpl#getLocationScope()
 	 * @generated
 	 */
-	int LOCATION_SCOPE = 17;
+	int LOCATION_SCOPE = 18;
+
+
+	/**
+	 * The meta object id for the '{@link cloudiator.Runtime <em>Runtime</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cloudiator.Runtime
+	 * @see cloudiator.impl.CloudiatorPackageImpl#getRuntime()
+	 * @generated
+	 */
+	int RUNTIME = 19;
 
 
 	/**
@@ -1194,6 +1269,39 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getNode_Price();
+
+	/**
+	 * Returns the meta object for the reference '{@link cloudiator.Node#getEnvironment <em>Environment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Environment</em>'.
+	 * @see cloudiator.Node#getEnvironment()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EReference getNode_Environment();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Node#getPricePerInvocation <em>Price Per Invocation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Price Per Invocation</em>'.
+	 * @see cloudiator.Node#getPricePerInvocation()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EAttribute getNode_PricePerInvocation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Node#getMemoryPrice <em>Memory Price</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Memory Price</em>'.
+	 * @see cloudiator.Node#getMemoryPrice()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EAttribute getNode_MemoryPrice();
 
 	/**
 	 * Returns the meta object for class '{@link cloudiator.Image <em>Image</em>}'.
@@ -1834,6 +1942,27 @@ public interface CloudiatorPackage extends EPackage {
 	EAttribute getGeoLocation_Latitude();
 
 	/**
+	 * Returns the meta object for class '{@link cloudiator.Environment <em>Environment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Environment</em>'.
+	 * @see cloudiator.Environment
+	 * @generated
+	 */
+	EClass getEnvironment();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Environment#getRuntime <em>Runtime</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Runtime</em>'.
+	 * @see cloudiator.Environment#getRuntime()
+	 * @see #getEnvironment()
+	 * @generated
+	 */
+	EAttribute getEnvironment_Runtime();
+
+	/**
 	 * Returns the meta object for the reference '{@link cloudiator.Price#getLocation <em>Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1894,6 +2023,16 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getLocationScope();
+
+	/**
+	 * Returns the meta object for enum '{@link cloudiator.Runtime <em>Runtime</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Runtime</em>'.
+	 * @see cloudiator.Runtime
+	 * @generated
+	 */
+	EEnum getRuntime();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2035,6 +2174,30 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute NODE__PRICE = eINSTANCE.getNode_Price();
+
+		/**
+		 * The meta object literal for the '<em><b>Environment</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NODE__ENVIRONMENT = eINSTANCE.getNode_Environment();
+
+		/**
+		 * The meta object literal for the '<em><b>Price Per Invocation</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE__PRICE_PER_INVOCATION = eINSTANCE.getNode_PricePerInvocation();
+
+		/**
+		 * The meta object literal for the '<em><b>Memory Price</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE__MEMORY_PRICE = eINSTANCE.getNode_MemoryPrice();
 
 		/**
 		 * The meta object literal for the '{@link cloudiator.impl.ImageImpl <em>Image</em>}' class.
@@ -2531,6 +2694,24 @@ public interface CloudiatorPackage extends EPackage {
 		EAttribute GEO_LOCATION__LATITUDE = eINSTANCE.getGeoLocation_Latitude();
 
 		/**
+		 * The meta object literal for the '{@link cloudiator.impl.EnvironmentImpl <em>Environment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cloudiator.impl.EnvironmentImpl
+		 * @see cloudiator.impl.CloudiatorPackageImpl#getEnvironment()
+		 * @generated
+		 */
+		EClass ENVIRONMENT = eINSTANCE.getEnvironment();
+
+		/**
+		 * The meta object literal for the '<em><b>Runtime</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENVIRONMENT__RUNTIME = eINSTANCE.getEnvironment_Runtime();
+
+		/**
 		 * The meta object literal for the '<em><b>Location</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2585,6 +2766,16 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum LOCATION_SCOPE = eINSTANCE.getLocationScope();
+
+		/**
+		 * The meta object literal for the '{@link cloudiator.Runtime <em>Runtime</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cloudiator.Runtime
+		 * @see cloudiator.impl.CloudiatorPackageImpl#getRuntime()
+		 * @generated
+		 */
+		EEnum RUNTIME = eINSTANCE.getRuntime();
 
 	}
 

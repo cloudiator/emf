@@ -31,6 +31,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="hardware" eType="#//Hardware"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environment" eType="#//Environment"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pricePerInvocation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="memoryPrice"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Image">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -188,5 +191,15 @@
     <eLiterals name="REGION" value="2"/>
     <eLiterals name="PROVIDER" value="3"/>
     <eLiterals name="UNKOWN" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Runtime">
+    <eLiterals name="NODEJS"/>
+    <eLiterals name="PYTHON" value="1"/>
+    <eLiterals name="JAVA" value="2"/>
+    <eLiterals name="DOTNET" value="3"/>
+    <eLiterals name="GO" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Environment">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="runtime" eType="#//Runtime"/>
   </eClassifiers>
 </ecore:EPackage>

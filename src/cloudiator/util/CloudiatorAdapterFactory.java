@@ -2,6 +2,22 @@
  */
 package cloudiator.util;
 
+import cloudiator.Api;
+import cloudiator.Cloud;
+import cloudiator.CloudConfiguration;
+import cloudiator.CloudCredential;
+import cloudiator.CloudiatorModel;
+import cloudiator.CloudiatorPackage;
+import cloudiator.Component;
+import cloudiator.Environment;
+import cloudiator.GeoLocation;
+import cloudiator.Hardware;
+import cloudiator.Image;
+import cloudiator.Location;
+import cloudiator.Node;
+import cloudiator.OperatingSystem;
+import cloudiator.Price;
+import cloudiator.Property;
 import cloudiator.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -122,6 +138,10 @@ public class CloudiatorAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGeoLocation(GeoLocation object) {
 				return createGeoLocationAdapter();
+			}
+			@Override
+			public Adapter caseEnvironment(Environment object) {
+				return createEnvironmentAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -336,6 +356,20 @@ public class CloudiatorAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGeoLocationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cloudiator.Environment <em>Environment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cloudiator.Environment
+	 * @generated
+	 */
+	public Adapter createEnvironmentAdapter() {
 		return null;
 	}
 

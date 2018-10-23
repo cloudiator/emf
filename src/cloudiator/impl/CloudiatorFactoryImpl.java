@@ -2,6 +2,27 @@
  */
 package cloudiator.impl;
 
+import cloudiator.Api;
+import cloudiator.Cloud;
+import cloudiator.CloudConfiguration;
+import cloudiator.CloudCredential;
+import cloudiator.CloudType;
+import cloudiator.CloudiatorFactory;
+import cloudiator.CloudiatorModel;
+import cloudiator.CloudiatorPackage;
+import cloudiator.Component;
+import cloudiator.Environment;
+import cloudiator.GeoLocation;
+import cloudiator.Hardware;
+import cloudiator.Image;
+import cloudiator.Location;
+import cloudiator.LocationScope;
+import cloudiator.Node;
+import cloudiator.OSArchitecture;
+import cloudiator.OSFamily;
+import cloudiator.OperatingSystem;
+import cloudiator.Price;
+import cloudiator.Property;
 import cloudiator.*;
 
 import org.eclipse.emf.ecore.EClass;
@@ -71,6 +92,7 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 			case CloudiatorPackage.CLOUD_CONFIGURATION: return createCloudConfiguration();
 			case CloudiatorPackage.PROPERTY: return createProperty();
 			case CloudiatorPackage.GEO_LOCATION: return createGeoLocation();
+			case CloudiatorPackage.ENVIRONMENT: return createEnvironment();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -92,6 +114,8 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 				return createOSFamilyFromString(eDataType, initialValue);
 			case CloudiatorPackage.LOCATION_SCOPE:
 				return createLocationScopeFromString(eDataType, initialValue);
+			case CloudiatorPackage.RUNTIME:
+				return createRuntimeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -113,6 +137,8 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 				return convertOSFamilyToString(eDataType, instanceValue);
 			case CloudiatorPackage.LOCATION_SCOPE:
 				return convertLocationScopeToString(eDataType, instanceValue);
+			case CloudiatorPackage.RUNTIME:
+				return convertRuntimeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -263,6 +289,16 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Environment createEnvironment() {
+		EnvironmentImpl environment = new EnvironmentImpl();
+		return environment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CloudType createCloudTypeFromString(EDataType eDataType, String initialValue) {
 		CloudType result = CloudType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -335,6 +371,26 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 	 * @generated
 	 */
 	public String convertLocationScopeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public cloudiator.Runtime createRuntimeFromString(EDataType eDataType, String initialValue) {
+		cloudiator.Runtime result = cloudiator.Runtime.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertRuntimeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
