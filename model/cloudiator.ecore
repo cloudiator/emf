@@ -32,8 +32,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="location" eType="#//Location"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="environment" eType="#//Environment"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pricePerInvocation"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="memoryPrice"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pricePerInvocation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="memoryPrice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//NodeType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Image">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -201,5 +202,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Environment">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="runtime" eType="#//Runtime"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="NodeType">
+    <eLiterals name="IAAS"/>
+    <eLiterals name="PAAS" value="1"/>
+    <eLiterals name="FAAS" value="2"/>
+    <eLiterals name="BYON" value="3"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -18,6 +18,7 @@ import cloudiator.Image;
 import cloudiator.Location;
 import cloudiator.LocationScope;
 import cloudiator.Node;
+import cloudiator.NodeType;
 import cloudiator.OSArchitecture;
 import cloudiator.OSFamily;
 import cloudiator.OperatingSystem;
@@ -176,6 +177,13 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * @generated
 	 */
 	private EEnum runtimeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum nodeTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -389,6 +397,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 */
 	public EAttribute getNode_MemoryPrice() {
 		return (EAttribute)nodeEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNode_Type() {
+		return (EAttribute)nodeEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1008,6 +1025,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getNodeType() {
+		return nodeTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CloudiatorFactory getCloudiatorFactory() {
 		return (CloudiatorFactory)getEFactoryInstance();
 	}
@@ -1050,6 +1076,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEReference(nodeEClass, NODE__ENVIRONMENT);
 		createEAttribute(nodeEClass, NODE__PRICE_PER_INVOCATION);
 		createEAttribute(nodeEClass, NODE__MEMORY_PRICE);
+		createEAttribute(nodeEClass, NODE__TYPE);
 
 		imageEClass = createEClass(IMAGE);
 		createEAttribute(imageEClass, IMAGE__NAME);
@@ -1132,6 +1159,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		osFamilyEEnum = createEEnum(OS_FAMILY);
 		locationScopeEEnum = createEEnum(LOCATION_SCOPE);
 		runtimeEEnum = createEEnum(RUNTIME);
+		nodeTypeEEnum = createEEnum(NODE_TYPE);
 	}
 
 	/**
@@ -1183,6 +1211,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEReference(getNode_Environment(), this.getEnvironment(), null, "environment", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_PricePerInvocation(), ecorePackage.getEDoubleObject(), "pricePerInvocation", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNode_MemoryPrice(), ecorePackage.getEDoubleObject(), "memoryPrice", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNode_Type(), this.getNodeType(), "type", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getImage_Name(), ecorePackage.getEString(), "name", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1311,6 +1340,12 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		addEEnumLiteral(runtimeEEnum, cloudiator.Runtime.JAVA);
 		addEEnumLiteral(runtimeEEnum, cloudiator.Runtime.DOTNET);
 		addEEnumLiteral(runtimeEEnum, cloudiator.Runtime.GO);
+
+		initEEnum(nodeTypeEEnum, NodeType.class, "NodeType");
+		addEEnumLiteral(nodeTypeEEnum, NodeType.IAAS);
+		addEEnumLiteral(nodeTypeEEnum, NodeType.PAAS);
+		addEEnumLiteral(nodeTypeEEnum, NodeType.FAAS);
+		addEEnumLiteral(nodeTypeEEnum, NodeType.BYON);
 
 		// Create resource
 		createResource(eNS_URI);

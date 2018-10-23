@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Node#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link cloudiator.Node#getPricePerInvocation <em>Price Per Invocation</em>}</li>
  *   <li>{@link cloudiator.Node#getMemoryPrice <em>Memory Price</em>}</li>
+ *   <li>{@link cloudiator.Node#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getNode()
@@ -235,5 +236,34 @@ public interface Node extends EObject {
 	 * @generated
 	 */
 	void setMemoryPrice(Double value);
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link cloudiator.NodeType}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see cloudiator.NodeType
+	 * @see #setType(NodeType)
+	 * @see cloudiator.CloudiatorPackage#getNode_Type()
+	 * @model
+	 * @generated
+	 */
+	NodeType getType();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Node#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see cloudiator.NodeType
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(NodeType value);
 
 } // Node

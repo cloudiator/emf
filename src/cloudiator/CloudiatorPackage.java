@@ -252,13 +252,22 @@ public interface CloudiatorPackage extends EPackage {
 	int NODE__MEMORY_PRICE = 7;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__TYPE = 8;
+
+	/**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = 8;
+	int NODE_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Node</em>' class.
@@ -1120,6 +1129,17 @@ public interface CloudiatorPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link cloudiator.NodeType <em>Node Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cloudiator.NodeType
+	 * @see cloudiator.impl.CloudiatorPackageImpl#getNodeType()
+	 * @generated
+	 */
+	int NODE_TYPE = 20;
+
+
+	/**
 	 * Returns the meta object for class '{@link cloudiator.CloudiatorModel <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1302,6 +1322,17 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getNode_MemoryPrice();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Node#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see cloudiator.Node#getType()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EAttribute getNode_Type();
 
 	/**
 	 * Returns the meta object for class '{@link cloudiator.Image <em>Image</em>}'.
@@ -2035,6 +2066,16 @@ public interface CloudiatorPackage extends EPackage {
 	EEnum getRuntime();
 
 	/**
+	 * Returns the meta object for enum '{@link cloudiator.NodeType <em>Node Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Node Type</em>'.
+	 * @see cloudiator.NodeType
+	 * @generated
+	 */
+	EEnum getNodeType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2198,6 +2239,14 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute NODE__MEMORY_PRICE = eINSTANCE.getNode_MemoryPrice();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE__TYPE = eINSTANCE.getNode_Type();
 
 		/**
 		 * The meta object literal for the '{@link cloudiator.impl.ImageImpl <em>Image</em>}' class.
@@ -2776,6 +2825,16 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum RUNTIME = eINSTANCE.getRuntime();
+
+		/**
+		 * The meta object literal for the '{@link cloudiator.NodeType <em>Node Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cloudiator.NodeType
+		 * @see cloudiator.impl.CloudiatorPackageImpl#getNodeType()
+		 * @generated
+		 */
+		EEnum NODE_TYPE = eINSTANCE.getNodeType();
 
 	}
 

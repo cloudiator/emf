@@ -10,6 +10,7 @@ import cloudiator.Image;
 import cloudiator.Location;
 import cloudiator.Node;
 
+import cloudiator.NodeType;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -34,6 +35,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.NodeImpl#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link cloudiator.impl.NodeImpl#getPricePerInvocation <em>Price Per Invocation</em>}</li>
  *   <li>{@link cloudiator.impl.NodeImpl#getMemoryPrice <em>Memory Price</em>}</li>
+ *   <li>{@link cloudiator.impl.NodeImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -148,6 +150,26 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @ordered
 	 */
 	protected Double memoryPrice = MEMORY_PRICE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final NodeType TYPE_EDEFAULT = NodeType.IAAS;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected NodeType type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -426,6 +448,27 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NodeType getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(NodeType newType) {
+		NodeType oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.NODE__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -450,6 +493,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return getPricePerInvocation();
 			case CloudiatorPackage.NODE__MEMORY_PRICE:
 				return getMemoryPrice();
+			case CloudiatorPackage.NODE__TYPE:
+				return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -485,6 +530,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return;
 			case CloudiatorPackage.NODE__MEMORY_PRICE:
 				setMemoryPrice((Double)newValue);
+				return;
+			case CloudiatorPackage.NODE__TYPE:
+				setType((NodeType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -522,6 +570,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 			case CloudiatorPackage.NODE__MEMORY_PRICE:
 				setMemoryPrice(MEMORY_PRICE_EDEFAULT);
 				return;
+			case CloudiatorPackage.NODE__TYPE:
+				setType(TYPE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -550,6 +601,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return PRICE_PER_INVOCATION_EDEFAULT == null ? pricePerInvocation != null : !PRICE_PER_INVOCATION_EDEFAULT.equals(pricePerInvocation);
 			case CloudiatorPackage.NODE__MEMORY_PRICE:
 				return MEMORY_PRICE_EDEFAULT == null ? memoryPrice != null : !MEMORY_PRICE_EDEFAULT.equals(memoryPrice);
+			case CloudiatorPackage.NODE__TYPE:
+				return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -570,6 +623,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 		result.append(pricePerInvocation);
 		result.append(", memoryPrice: ");
 		result.append(memoryPrice);
+		result.append(", type: ");
+		result.append(type);
 		result.append(')');
 		return result.toString();
 	}

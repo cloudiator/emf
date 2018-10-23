@@ -57,6 +57,12 @@
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//Runtime/DOTNET"/>
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//Runtime/GO"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cloudiator.ecore#//NodeType">
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//NodeType/IAAS"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//NodeType/PAAS"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//NodeType/FAAS"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//NodeType/BYON"/>
+    </genEnums>
     <genClasses ecoreClass="cloudiator.ecore#//CloudiatorModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/components"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/nodes"/>
@@ -76,6 +82,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Node/environment"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/pricePerInvocation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/memoryPrice"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/type"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Image">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Image/name"/>

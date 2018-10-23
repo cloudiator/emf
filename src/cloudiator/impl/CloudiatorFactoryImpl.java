@@ -18,6 +18,7 @@ import cloudiator.Image;
 import cloudiator.Location;
 import cloudiator.LocationScope;
 import cloudiator.Node;
+import cloudiator.NodeType;
 import cloudiator.OSArchitecture;
 import cloudiator.OSFamily;
 import cloudiator.OperatingSystem;
@@ -116,6 +117,8 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 				return createLocationScopeFromString(eDataType, initialValue);
 			case CloudiatorPackage.RUNTIME:
 				return createRuntimeFromString(eDataType, initialValue);
+			case CloudiatorPackage.NODE_TYPE:
+				return createNodeTypeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -139,6 +142,8 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 				return convertLocationScopeToString(eDataType, instanceValue);
 			case CloudiatorPackage.RUNTIME:
 				return convertRuntimeToString(eDataType, instanceValue);
+			case CloudiatorPackage.NODE_TYPE:
+				return convertNodeTypeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -391,6 +396,26 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 	 * @generated
 	 */
 	public String convertRuntimeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NodeType createNodeTypeFromString(EDataType eDataType, String initialValue) {
+		NodeType result = NodeType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertNodeTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

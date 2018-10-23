@@ -18,8 +18,6 @@ import cloudiator.Node;
 import cloudiator.OperatingSystem;
 import cloudiator.Price;
 import cloudiator.Property;
-import cloudiator.*;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
