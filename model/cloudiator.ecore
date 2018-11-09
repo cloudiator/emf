@@ -102,6 +102,9 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" eType="#//CloudConfiguration"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" unique="false" eType="#//CloudState"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="diagnostic" unique="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperatingSystem">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="family" unique="false"
@@ -208,5 +211,9 @@
     <eLiterals name="PAAS" value="1"/>
     <eLiterals name="FAAS" value="2"/>
     <eLiterals name="BYON" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CloudState">
+    <eLiterals name="OK"/>
+    <eLiterals name="ERROR" value="1"/>
   </eClassifiers>
 </ecore:EPackage>

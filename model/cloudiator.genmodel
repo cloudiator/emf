@@ -63,6 +63,10 @@
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//NodeType/FAAS"/>
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//NodeType/BYON"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cloudiator.ecore#//CloudState">
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//CloudState/OK"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//CloudState/ERROR"/>
+    </genEnums>
     <genClasses ecoreClass="cloudiator.ecore#//CloudiatorModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/components"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cloudiator.ecore#//CloudiatorModel/nodes"/>
@@ -123,6 +127,8 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/api"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/cloudcredential"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Cloud/configuration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Cloud/state"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Cloud/diagnostic"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//OperatingSystem">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//OperatingSystem/family"/>

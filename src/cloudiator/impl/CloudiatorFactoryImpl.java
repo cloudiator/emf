@@ -6,6 +6,7 @@ import cloudiator.Api;
 import cloudiator.Cloud;
 import cloudiator.CloudConfiguration;
 import cloudiator.CloudCredential;
+import cloudiator.CloudState;
 import cloudiator.CloudType;
 import cloudiator.CloudiatorFactory;
 import cloudiator.CloudiatorModel;
@@ -119,6 +120,8 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 				return createRuntimeFromString(eDataType, initialValue);
 			case CloudiatorPackage.NODE_TYPE:
 				return createNodeTypeFromString(eDataType, initialValue);
+			case CloudiatorPackage.CLOUD_STATE:
+				return createCloudStateFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -144,6 +147,8 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 				return convertRuntimeToString(eDataType, instanceValue);
 			case CloudiatorPackage.NODE_TYPE:
 				return convertNodeTypeToString(eDataType, instanceValue);
+			case CloudiatorPackage.CLOUD_STATE:
+				return convertCloudStateToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -416,6 +421,26 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 	 * @generated
 	 */
 	public String convertNodeTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CloudState createCloudStateFromString(EDataType eDataType, String initialValue) {
+		CloudState result = CloudState.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertCloudStateToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

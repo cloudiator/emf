@@ -25,6 +25,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Cloud#getApi <em>Api</em>}</li>
  *   <li>{@link cloudiator.Cloud#getCloudcredential <em>Cloudcredential</em>}</li>
  *   <li>{@link cloudiator.Cloud#getConfiguration <em>Configuration</em>}</li>
+ *   <li>{@link cloudiator.Cloud#getState <em>State</em>}</li>
+ *   <li>{@link cloudiator.Cloud#getDiagnostic <em>Diagnostic</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getCloud()
@@ -224,6 +226,61 @@ public interface Cloud extends EObject {
 	 * @generated
 	 */
 	void setConfiguration(CloudConfiguration value);
+
+	/**
+	 * Returns the value of the '<em><b>State</b></em>' attribute.
+	 * The literals are from the enumeration {@link cloudiator.CloudState}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>State</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>State</em>' attribute.
+	 * @see cloudiator.CloudState
+	 * @see #setState(CloudState)
+	 * @see cloudiator.CloudiatorPackage#getCloud_State()
+	 * @model unique="false"
+	 * @generated
+	 */
+	CloudState getState();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Cloud#getState <em>State</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>State</em>' attribute.
+	 * @see cloudiator.CloudState
+	 * @see #getState()
+	 * @generated
+	 */
+	void setState(CloudState value);
+
+	/**
+	 * Returns the value of the '<em><b>Diagnostic</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Diagnostic</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Diagnostic</em>' attribute.
+	 * @see #setDiagnostic(String)
+	 * @see cloudiator.CloudiatorPackage#getCloud_Diagnostic()
+	 * @model unique="false"
+	 * @generated
+	 */
+	String getDiagnostic();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Cloud#getDiagnostic <em>Diagnostic</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Diagnostic</em>' attribute.
+	 * @see #getDiagnostic()
+	 * @generated
+	 */
+	void setDiagnostic(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Hardware List</b></em>' containment reference list.

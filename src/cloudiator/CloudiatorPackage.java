@@ -662,13 +662,31 @@ public interface CloudiatorPackage extends EPackage {
 	int CLOUD__CONFIGURATION = 9;
 
 	/**
+	 * The feature id for the '<em><b>State</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD__STATE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Diagnostic</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD__DIAGNOSTIC = 11;
+
+	/**
 	 * The number of structural features of the '<em>Cloud</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD_FEATURE_COUNT = 10;
+	int CLOUD_FEATURE_COUNT = 12;
 
 	/**
 	 * The number of operations of the '<em>Cloud</em>' class.
@@ -1137,6 +1155,17 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 */
 	int NODE_TYPE = 20;
+
+
+	/**
+	 * The meta object id for the '{@link cloudiator.CloudState <em>Cloud State</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cloudiator.CloudState
+	 * @see cloudiator.impl.CloudiatorPackageImpl#getCloudState()
+	 * @generated
+	 */
+	int CLOUD_STATE = 21;
 
 
 	/**
@@ -1705,6 +1734,28 @@ public interface CloudiatorPackage extends EPackage {
 	EReference getCloud_Configuration();
 
 	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Cloud#getState <em>State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>State</em>'.
+	 * @see cloudiator.Cloud#getState()
+	 * @see #getCloud()
+	 * @generated
+	 */
+	EAttribute getCloud_State();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Cloud#getDiagnostic <em>Diagnostic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Diagnostic</em>'.
+	 * @see cloudiator.Cloud#getDiagnostic()
+	 * @see #getCloud()
+	 * @generated
+	 */
+	EAttribute getCloud_Diagnostic();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link cloudiator.Cloud#getHardwareList <em>Hardware List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2074,6 +2125,16 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getNodeType();
+
+	/**
+	 * Returns the meta object for enum '{@link cloudiator.CloudState <em>Cloud State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Cloud State</em>'.
+	 * @see cloudiator.CloudState
+	 * @generated
+	 */
+	EEnum getCloudState();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2529,6 +2590,22 @@ public interface CloudiatorPackage extends EPackage {
 		EReference CLOUD__CONFIGURATION = eINSTANCE.getCloud_Configuration();
 
 		/**
+		 * The meta object literal for the '<em><b>State</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLOUD__STATE = eINSTANCE.getCloud_State();
+
+		/**
+		 * The meta object literal for the '<em><b>Diagnostic</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLOUD__DIAGNOSTIC = eINSTANCE.getCloud_Diagnostic();
+
+		/**
 		 * The meta object literal for the '<em><b>Hardware List</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2835,6 +2912,16 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum NODE_TYPE = eINSTANCE.getNodeType();
+
+		/**
+		 * The meta object literal for the '{@link cloudiator.CloudState <em>Cloud State</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cloudiator.CloudState
+		 * @see cloudiator.impl.CloudiatorPackageImpl#getCloudState()
+		 * @generated
+		 */
+		EEnum CLOUD_STATE = eINSTANCE.getCloudState();
 
 	}
 

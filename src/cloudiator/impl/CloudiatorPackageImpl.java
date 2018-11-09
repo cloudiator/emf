@@ -6,6 +6,7 @@ import cloudiator.Api;
 import cloudiator.Cloud;
 import cloudiator.CloudConfiguration;
 import cloudiator.CloudCredential;
+import cloudiator.CloudState;
 import cloudiator.CloudType;
 import cloudiator.CloudiatorFactory;
 import cloudiator.CloudiatorModel;
@@ -184,6 +185,13 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * @generated
 	 */
 	private EEnum nodeTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum cloudStateEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -719,6 +727,24 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getCloud_State() {
+		return (EAttribute)cloudEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCloud_Diagnostic() {
+		return (EAttribute)cloudEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getCloud_HardwareList() {
 		return (EReference)cloudEClass.getEStructuralFeatures().get(2);
 	}
@@ -1034,6 +1060,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getCloudState() {
+		return cloudStateEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CloudiatorFactory getCloudiatorFactory() {
 		return (CloudiatorFactory)getEFactoryInstance();
 	}
@@ -1117,6 +1152,8 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEReference(cloudEClass, CLOUD__API);
 		createEReference(cloudEClass, CLOUD__CLOUDCREDENTIAL);
 		createEReference(cloudEClass, CLOUD__CONFIGURATION);
+		createEAttribute(cloudEClass, CLOUD__STATE);
+		createEAttribute(cloudEClass, CLOUD__DIAGNOSTIC);
 
 		operatingSystemEClass = createEClass(OPERATING_SYSTEM);
 		createEAttribute(operatingSystemEClass, OPERATING_SYSTEM__FAMILY);
@@ -1160,6 +1197,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		locationScopeEEnum = createEEnum(LOCATION_SCOPE);
 		runtimeEEnum = createEEnum(RUNTIME);
 		nodeTypeEEnum = createEEnum(NODE_TYPE);
+		cloudStateEEnum = createEEnum(CLOUD_STATE);
 	}
 
 	/**
@@ -1252,6 +1290,8 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEReference(getCloud_Api(), this.getApi(), null, "api", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCloud_Cloudcredential(), this.getCloudCredential(), null, "cloudcredential", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCloud_Configuration(), this.getCloudConfiguration(), null, "configuration", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCloud_State(), this.getCloudState(), "state", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCloud_Diagnostic(), ecorePackage.getEString(), "diagnostic", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operatingSystemEClass, OperatingSystem.class, "OperatingSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOperatingSystem_Family(), this.getOSFamily(), "family", null, 0, 1, OperatingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1346,6 +1386,10 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		addEEnumLiteral(nodeTypeEEnum, NodeType.PAAS);
 		addEEnumLiteral(nodeTypeEEnum, NodeType.FAAS);
 		addEEnumLiteral(nodeTypeEEnum, NodeType.BYON);
+
+		initEEnum(cloudStateEEnum, CloudState.class, "CloudState");
+		addEEnumLiteral(cloudStateEEnum, CloudState.OK);
+		addEEnumLiteral(cloudStateEEnum, CloudState.ERROR);
 
 		// Create resource
 		createResource(eNS_URI);

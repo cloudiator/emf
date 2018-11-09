@@ -6,6 +6,7 @@ import cloudiator.Api;
 import cloudiator.Cloud;
 import cloudiator.CloudConfiguration;
 import cloudiator.CloudCredential;
+import cloudiator.CloudState;
 import cloudiator.CloudType;
 import cloudiator.CloudiatorPackage;
 import cloudiator.Hardware;
@@ -47,6 +48,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cloudiator.impl.CloudImpl#getApi <em>Api</em>}</li>
  *   <li>{@link cloudiator.impl.CloudImpl#getCloudcredential <em>Cloudcredential</em>}</li>
  *   <li>{@link cloudiator.impl.CloudImpl#getConfiguration <em>Configuration</em>}</li>
+ *   <li>{@link cloudiator.impl.CloudImpl#getState <em>State</em>}</li>
+ *   <li>{@link cloudiator.impl.CloudImpl#getDiagnostic <em>Diagnostic</em>}</li>
  * </ul>
  *
  * @generated
@@ -181,6 +184,46 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * @ordered
 	 */
 	protected CloudConfiguration configuration;
+
+	/**
+	 * The default value of the '{@link #getState() <em>State</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getState()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final CloudState STATE_EDEFAULT = CloudState.OK;
+
+	/**
+	 * The cached value of the '{@link #getState() <em>State</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getState()
+	 * @generated
+	 * @ordered
+	 */
+	protected CloudState state = STATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDiagnostic() <em>Diagnostic</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDiagnostic()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DIAGNOSTIC_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDiagnostic() <em>Diagnostic</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDiagnostic()
+	 * @generated
+	 * @ordered
+	 */
+	protected String diagnostic = DIAGNOSTIC_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -422,6 +465,48 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public CloudState getState() {
+		return state;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setState(CloudState newState) {
+		CloudState oldState = state;
+		state = newState == null ? STATE_EDEFAULT : newState;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__STATE, oldState, state));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDiagnostic() {
+		return diagnostic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDiagnostic(String newDiagnostic) {
+		String oldDiagnostic = diagnostic;
+		diagnostic = newDiagnostic;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__DIAGNOSTIC, oldDiagnostic, diagnostic));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -514,6 +599,10 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 				return getCloudcredential();
 			case CloudiatorPackage.CLOUD__CONFIGURATION:
 				return getConfiguration();
+			case CloudiatorPackage.CLOUD__STATE:
+				return getState();
+			case CloudiatorPackage.CLOUD__DIAGNOSTIC:
+				return getDiagnostic();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -561,6 +650,12 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 			case CloudiatorPackage.CLOUD__CONFIGURATION:
 				setConfiguration((CloudConfiguration)newValue);
 				return;
+			case CloudiatorPackage.CLOUD__STATE:
+				setState((CloudState)newValue);
+				return;
+			case CloudiatorPackage.CLOUD__DIAGNOSTIC:
+				setDiagnostic((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -603,6 +698,12 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 			case CloudiatorPackage.CLOUD__CONFIGURATION:
 				setConfiguration((CloudConfiguration)null);
 				return;
+			case CloudiatorPackage.CLOUD__STATE:
+				setState(STATE_EDEFAULT);
+				return;
+			case CloudiatorPackage.CLOUD__DIAGNOSTIC:
+				setDiagnostic(DIAGNOSTIC_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -635,6 +736,10 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 				return cloudcredential != null;
 			case CloudiatorPackage.CLOUD__CONFIGURATION:
 				return configuration != null;
+			case CloudiatorPackage.CLOUD__STATE:
+				return state != STATE_EDEFAULT;
+			case CloudiatorPackage.CLOUD__DIAGNOSTIC:
+				return DIAGNOSTIC_EDEFAULT == null ? diagnostic != null : !DIAGNOSTIC_EDEFAULT.equals(diagnostic);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -655,6 +760,10 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 		result.append(id);
 		result.append(", endpoint: ");
 		result.append(endpoint);
+		result.append(", state: ");
+		result.append(state);
+		result.append(", diagnostic: ");
+		result.append(diagnostic);
 		result.append(')');
 		return result.toString();
 	}
