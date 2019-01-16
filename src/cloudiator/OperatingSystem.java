@@ -61,12 +61,12 @@ public interface OperatingSystem extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Version</em>' attribute.
-	 * @see #setVersion(String)
+	 * @see #setVersion(int)
 	 * @see cloudiator.CloudiatorPackage#getOperatingSystem_Version()
 	 * @model unique="false"
 	 * @generated
 	 */
-	String getVersion();
+	int getVersion();
 
 	/**
 	 * Sets the value of the '{@link cloudiator.OperatingSystem#getVersion <em>Version</em>}' attribute.
@@ -76,7 +76,7 @@ public interface OperatingSystem extends EObject {
 	 * @see #getVersion()
 	 * @generated
 	 */
-	void setVersion(String value);
+	void setVersion(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Architecture</b></em>' attribute.

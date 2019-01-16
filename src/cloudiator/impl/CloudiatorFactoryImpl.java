@@ -25,8 +25,6 @@ import cloudiator.OSFamily;
 import cloudiator.OperatingSystem;
 import cloudiator.Price;
 import cloudiator.Property;
-import cloudiator.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;

@@ -58,7 +58,7 @@ public class OperatingSystemImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VERSION_EDEFAULT = null;
+	protected static final int VERSION_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
@@ -68,7 +68,7 @@ public class OperatingSystemImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected String version = VERSION_EDEFAULT;
+	protected int version = VERSION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getArchitecture() <em>Architecture</em>}' attribute.
@@ -135,7 +135,7 @@ public class OperatingSystemImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getVersion() {
+	public int getVersion() {
 		return version;
 	}
 
@@ -144,8 +144,8 @@ public class OperatingSystemImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVersion(String newVersion) {
-		String oldVersion = version;
+	public void setVersion(int newVersion) {
+		int oldVersion = version;
 		version = newVersion;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.OPERATING_SYSTEM__VERSION, oldVersion, version));
@@ -202,7 +202,7 @@ public class OperatingSystemImpl extends MinimalEObjectImpl.Container implements
 				setFamily((OSFamily)newValue);
 				return;
 			case CloudiatorPackage.OPERATING_SYSTEM__VERSION:
-				setVersion((String)newValue);
+				setVersion((Integer)newValue);
 				return;
 			case CloudiatorPackage.OPERATING_SYSTEM__ARCHITECTURE:
 				setArchitecture((OSArchitecture)newValue);
@@ -243,7 +243,7 @@ public class OperatingSystemImpl extends MinimalEObjectImpl.Container implements
 			case CloudiatorPackage.OPERATING_SYSTEM__FAMILY:
 				return family != FAMILY_EDEFAULT;
 			case CloudiatorPackage.OPERATING_SYSTEM__VERSION:
-				return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
+				return version != VERSION_EDEFAULT;
 			case CloudiatorPackage.OPERATING_SYSTEM__ARCHITECTURE:
 				return architecture != ARCHITECTURE_EDEFAULT;
 		}
