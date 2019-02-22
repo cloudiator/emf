@@ -69,6 +69,7 @@
         eType="#//Location"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//DiscoveryItemState"
         defaultValueLiteral="OK"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="owner" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Location">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

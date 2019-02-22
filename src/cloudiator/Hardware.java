@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Hardware#getProviderId <em>Provider Id</em>}</li>
  *   <li>{@link cloudiator.Hardware#getLocation <em>Location</em>}</li>
  *   <li>{@link cloudiator.Hardware#getState <em>State</em>}</li>
+ *   <li>{@link cloudiator.Hardware#getOwner <em>Owner</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getHardware()
@@ -257,5 +258,31 @@ public interface Hardware extends EObject {
 	 * @generated
 	 */
 	void setState(DiscoveryItemState value);
+
+	/**
+	 * Returns the value of the '<em><b>Owner</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owner</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owner</em>' attribute.
+	 * @see #setOwner(String)
+	 * @see cloudiator.CloudiatorPackage#getHardware_Owner()
+	 * @model
+	 * @generated
+	 */
+	String getOwner();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Hardware#getOwner <em>Owner</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owner</em>' attribute.
+	 * @see #getOwner()
+	 * @generated
+	 */
+	void setOwner(String value);
 
 } // Hardware

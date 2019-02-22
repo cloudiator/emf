@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.HardwareImpl#getProviderId <em>Provider Id</em>}</li>
  *   <li>{@link cloudiator.impl.HardwareImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link cloudiator.impl.HardwareImpl#getState <em>State</em>}</li>
+ *   <li>{@link cloudiator.impl.HardwareImpl#getOwner <em>Owner</em>}</li>
  * </ul>
  *
  * @generated
@@ -188,6 +189,26 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * @ordered
 	 */
 	protected DiscoveryItemState state = STATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getOwner() <em>Owner</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwner()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String OWNER_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getOwner() <em>Owner</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwner()
+	 * @generated
+	 * @ordered
+	 */
+	protected String owner = OWNER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -408,6 +429,27 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getOwner() {
+		return owner;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwner(String newOwner) {
+		String oldOwner = owner;
+		owner = newOwner;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.HARDWARE__OWNER, oldOwner, owner));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -475,6 +517,8 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 				return basicGetLocation();
 			case CloudiatorPackage.HARDWARE__STATE:
 				return getState();
+			case CloudiatorPackage.HARDWARE__OWNER:
+				return getOwner();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -512,6 +556,9 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 			case CloudiatorPackage.HARDWARE__STATE:
 				setState((DiscoveryItemState)newValue);
 				return;
+			case CloudiatorPackage.HARDWARE__OWNER:
+				setOwner((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -548,6 +595,9 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 			case CloudiatorPackage.HARDWARE__STATE:
 				setState(STATE_EDEFAULT);
 				return;
+			case CloudiatorPackage.HARDWARE__OWNER:
+				setOwner(OWNER_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -578,6 +628,8 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 				return location != null;
 			case CloudiatorPackage.HARDWARE__STATE:
 				return state != STATE_EDEFAULT;
+			case CloudiatorPackage.HARDWARE__OWNER:
+				return OWNER_EDEFAULT == null ? owner != null : !OWNER_EDEFAULT.equals(owner);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -606,6 +658,8 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 		result.append(providerId);
 		result.append(", state: ");
 		result.append(state);
+		result.append(", owner: ");
+		result.append(owner);
 		result.append(')');
 		return result.toString();
 	}

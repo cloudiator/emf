@@ -117,6 +117,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Hardware/providerId"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cloudiator.ecore#//Hardware/location"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Hardware/state"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Hardware/owner"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Location">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Location/name"/>

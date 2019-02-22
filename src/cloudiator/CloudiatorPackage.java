@@ -470,13 +470,22 @@ public interface CloudiatorPackage extends EPackage {
 	int HARDWARE__STATE = 8;
 
 	/**
+	 * The feature id for the '<em><b>Owner</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HARDWARE__OWNER = 9;
+
+	/**
 	 * The number of structural features of the '<em>Hardware</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_FEATURE_COUNT = 9;
+	int HARDWARE_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Hardware</em>' class.
@@ -1636,6 +1645,17 @@ public interface CloudiatorPackage extends EPackage {
 	EAttribute getHardware_State();
 
 	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Hardware#getOwner <em>Owner</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Owner</em>'.
+	 * @see cloudiator.Hardware#getOwner()
+	 * @see #getHardware()
+	 * @generated
+	 */
+	EAttribute getHardware_Owner();
+
+	/**
 	 * Returns the meta object for class '{@link cloudiator.Location <em>Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2605,6 +2625,14 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute HARDWARE__STATE = eINSTANCE.getHardware_State();
+
+		/**
+		 * The meta object literal for the '<em><b>Owner</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HARDWARE__OWNER = eINSTANCE.getHardware_Owner();
 
 		/**
 		 * The meta object literal for the '{@link cloudiator.impl.LocationImpl <em>Location</em>}' class.
