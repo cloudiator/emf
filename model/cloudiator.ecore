@@ -48,6 +48,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="location" unique="false"
         eType="#//Location"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//DiscoveryItemState"
+        defaultValueLiteral="OK"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Hardware">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cores" unique="false" lowerBound="1"
@@ -64,6 +66,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="providerId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="location" unique="false"
         eType="#//Location"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//DiscoveryItemState"
+        defaultValueLiteral="OK"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Location">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -81,6 +85,8 @@
         eType="#//Location"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="locationScope" eType="#//LocationScope"
         defaultValueLiteral="UNKOWN"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//DiscoveryItemState"
+        defaultValueLiteral="OK"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Cloud">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" unique="false" eType="#//CloudType"/>
@@ -215,5 +221,14 @@
   <eClassifiers xsi:type="ecore:EEnum" name="CloudState">
     <eLiterals name="OK"/>
     <eLiterals name="ERROR" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DiscoveryItemState">
+    <eLiterals name="NEW"/>
+    <eLiterals name="OK" value="1"/>
+    <eLiterals name="REMOTELY_DELETED" value="2"/>
+    <eLiterals name="LOCALLY_DELETED" value="3"/>
+    <eLiterals name="DISABLED" value="4"/>
+    <eLiterals name="DELETED" value="5"/>
+    <eLiterals name="UNKOWN" value="6"/>
   </eClassifiers>
 </ecore:EPackage>

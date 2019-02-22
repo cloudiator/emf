@@ -12,6 +12,7 @@ import cloudiator.CloudiatorFactory;
 import cloudiator.CloudiatorModel;
 import cloudiator.CloudiatorPackage;
 import cloudiator.Component;
+import cloudiator.DiscoveryItemState;
 import cloudiator.Environment;
 import cloudiator.GeoLocation;
 import cloudiator.Hardware;
@@ -192,6 +193,13 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * @generated
 	 */
 	private EEnum cloudStateEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum discoveryItemStateEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -484,6 +492,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getImage_State() {
+		return (EAttribute)imageEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getHardware() {
 		return hardwareEClass;
 	}
@@ -565,6 +582,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getHardware_State() {
+		return (EAttribute)hardwareEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLocation() {
 		return locationEClass;
 	}
@@ -639,6 +665,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 */
 	public EAttribute getLocation_LocationScope() {
 		return (EAttribute)locationEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLocation_State() {
+		return (EAttribute)locationEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1069,6 +1104,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getDiscoveryItemState() {
+		return discoveryItemStateEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CloudiatorFactory getCloudiatorFactory() {
 		return (CloudiatorFactory)getEFactoryInstance();
 	}
@@ -1120,6 +1164,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEReference(imageEClass, IMAGE__CLOUD);
 		createEAttribute(imageEClass, IMAGE__PROVIDER_ID);
 		createEReference(imageEClass, IMAGE__LOCATION);
+		createEAttribute(imageEClass, IMAGE__STATE);
 
 		hardwareEClass = createEClass(HARDWARE);
 		createEAttribute(hardwareEClass, HARDWARE__CORES);
@@ -1130,6 +1175,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEReference(hardwareEClass, HARDWARE__CLOUD);
 		createEAttribute(hardwareEClass, HARDWARE__PROVIDER_ID);
 		createEReference(hardwareEClass, HARDWARE__LOCATION);
+		createEAttribute(hardwareEClass, HARDWARE__STATE);
 
 		locationEClass = createEClass(LOCATION);
 		createEAttribute(locationEClass, LOCATION__NAME);
@@ -1140,6 +1186,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEAttribute(locationEClass, LOCATION__ASSIGNABLE);
 		createEReference(locationEClass, LOCATION__PARENT);
 		createEAttribute(locationEClass, LOCATION__LOCATION_SCOPE);
+		createEAttribute(locationEClass, LOCATION__STATE);
 
 		cloudEClass = createEClass(CLOUD);
 		createEAttribute(cloudEClass, CLOUD__TYPE);
@@ -1198,6 +1245,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		runtimeEEnum = createEEnum(RUNTIME);
 		nodeTypeEEnum = createEEnum(NODE_TYPE);
 		cloudStateEEnum = createEEnum(CLOUD_STATE);
+		discoveryItemStateEEnum = createEEnum(DISCOVERY_ITEM_STATE);
 	}
 
 	/**
@@ -1258,6 +1306,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEReference(getImage_Cloud(), this.getCloud(), this.getCloud_Images(), "cloud", null, 1, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImage_ProviderId(), ecorePackage.getEString(), "providerId", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImage_Location(), this.getLocation(), null, "location", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImage_State(), this.getDiscoveryItemState(), "state", "OK", 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hardwareEClass, Hardware.class, "Hardware", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHardware_Cores(), ecorePackage.getEIntegerObject(), "cores", null, 1, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1268,6 +1317,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEReference(getHardware_Cloud(), this.getCloud(), this.getCloud_HardwareList(), "cloud", null, 1, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getHardware_ProviderId(), ecorePackage.getEString(), "providerId", null, 0, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getHardware_Location(), this.getLocation(), null, "location", null, 0, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getHardware_State(), this.getDiscoveryItemState(), "state", "OK", 0, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationEClass, Location.class, "Location", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLocation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1278,6 +1328,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEAttribute(getLocation_Assignable(), ecorePackage.getEBoolean(), "assignable", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLocation_Parent(), this.getLocation(), null, "parent", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLocation_LocationScope(), this.getLocationScope(), "locationScope", "UNKOWN", 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLocation_State(), this.getDiscoveryItemState(), "state", "OK", 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cloudEClass, Cloud.class, "Cloud", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCloud_Type(), this.getCloudType(), "type", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1390,6 +1441,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEEnum(cloudStateEEnum, CloudState.class, "CloudState");
 		addEEnumLiteral(cloudStateEEnum, CloudState.OK);
 		addEEnumLiteral(cloudStateEEnum, CloudState.ERROR);
+
+		initEEnum(discoveryItemStateEEnum, DiscoveryItemState.class, "DiscoveryItemState");
+		addEEnumLiteral(discoveryItemStateEEnum, DiscoveryItemState.NEW);
+		addEEnumLiteral(discoveryItemStateEEnum, DiscoveryItemState.OK);
+		addEEnumLiteral(discoveryItemStateEEnum, DiscoveryItemState.REMOTELY_DELETED);
+		addEEnumLiteral(discoveryItemStateEEnum, DiscoveryItemState.LOCALLY_DELETED);
+		addEEnumLiteral(discoveryItemStateEEnum, DiscoveryItemState.DISABLED);
+		addEEnumLiteral(discoveryItemStateEEnum, DiscoveryItemState.DELETED);
+		addEEnumLiteral(discoveryItemStateEEnum, DiscoveryItemState.UNKOWN);
 
 		// Create resource
 		createResource(eNS_URI);

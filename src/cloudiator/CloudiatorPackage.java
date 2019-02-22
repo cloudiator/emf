@@ -343,13 +343,22 @@ public interface CloudiatorPackage extends EPackage {
 	int IMAGE__LOCATION = 5;
 
 	/**
+	 * The feature id for the '<em><b>State</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__STATE = 6;
+
+	/**
 	 * The number of structural features of the '<em>Image</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_FEATURE_COUNT = 6;
+	int IMAGE_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Image</em>' class.
@@ -443,13 +452,22 @@ public interface CloudiatorPackage extends EPackage {
 	int HARDWARE__LOCATION = 7;
 
 	/**
+	 * The feature id for the '<em><b>State</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HARDWARE__STATE = 8;
+
+	/**
 	 * The number of structural features of the '<em>Hardware</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HARDWARE_FEATURE_COUNT = 8;
+	int HARDWARE_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Hardware</em>' class.
@@ -543,13 +561,22 @@ public interface CloudiatorPackage extends EPackage {
 	int LOCATION__LOCATION_SCOPE = 7;
 
 	/**
+	 * The feature id for the '<em><b>State</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__STATE = 8;
+
+	/**
 	 * The number of structural features of the '<em>Location</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_FEATURE_COUNT = 8;
+	int LOCATION_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Location</em>' class.
@@ -1169,6 +1196,17 @@ public interface CloudiatorPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link cloudiator.DiscoveryItemState <em>Discovery Item State</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cloudiator.DiscoveryItemState
+	 * @see cloudiator.impl.CloudiatorPackageImpl#getDiscoveryItemState()
+	 * @generated
+	 */
+	int DISCOVERY_ITEM_STATE = 22;
+
+
+	/**
 	 * Returns the meta object for class '{@link cloudiator.CloudiatorModel <em>Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1440,6 +1478,17 @@ public interface CloudiatorPackage extends EPackage {
 	EReference getImage_Location();
 
 	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Image#getState <em>State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>State</em>'.
+	 * @see cloudiator.Image#getState()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EAttribute getImage_State();
+
+	/**
 	 * Returns the meta object for class '{@link cloudiator.Hardware <em>Hardware</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1538,6 +1587,17 @@ public interface CloudiatorPackage extends EPackage {
 	EReference getHardware_Location();
 
 	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Hardware#getState <em>State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>State</em>'.
+	 * @see cloudiator.Hardware#getState()
+	 * @see #getHardware()
+	 * @generated
+	 */
+	EAttribute getHardware_State();
+
+	/**
 	 * Returns the meta object for class '{@link cloudiator.Location <em>Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1634,6 +1694,17 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getLocation_LocationScope();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Location#getState <em>State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>State</em>'.
+	 * @see cloudiator.Location#getState()
+	 * @see #getLocation()
+	 * @generated
+	 */
+	EAttribute getLocation_State();
 
 	/**
 	 * Returns the meta object for class '{@link cloudiator.Cloud <em>Cloud</em>}'.
@@ -2137,6 +2208,16 @@ public interface CloudiatorPackage extends EPackage {
 	EEnum getCloudState();
 
 	/**
+	 * Returns the meta object for enum '{@link cloudiator.DiscoveryItemState <em>Discovery Item State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Discovery Item State</em>'.
+	 * @see cloudiator.DiscoveryItemState
+	 * @generated
+	 */
+	EEnum getDiscoveryItemState();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2368,6 +2449,14 @@ public interface CloudiatorPackage extends EPackage {
 		EReference IMAGE__LOCATION = eINSTANCE.getImage_Location();
 
 		/**
+		 * The meta object literal for the '<em><b>State</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE__STATE = eINSTANCE.getImage_State();
+
+		/**
 		 * The meta object literal for the '{@link cloudiator.impl.HardwareImpl <em>Hardware</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2442,6 +2531,14 @@ public interface CloudiatorPackage extends EPackage {
 		EReference HARDWARE__LOCATION = eINSTANCE.getHardware_Location();
 
 		/**
+		 * The meta object literal for the '<em><b>State</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HARDWARE__STATE = eINSTANCE.getHardware_State();
+
+		/**
 		 * The meta object literal for the '{@link cloudiator.impl.LocationImpl <em>Location</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2514,6 +2611,14 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LOCATION__LOCATION_SCOPE = eINSTANCE.getLocation_LocationScope();
+
+		/**
+		 * The meta object literal for the '<em><b>State</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOCATION__STATE = eINSTANCE.getLocation_State();
 
 		/**
 		 * The meta object literal for the '{@link cloudiator.impl.CloudImpl <em>Cloud</em>}' class.
@@ -2922,6 +3027,16 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum CLOUD_STATE = eINSTANCE.getCloudState();
+
+		/**
+		 * The meta object literal for the '{@link cloudiator.DiscoveryItemState <em>Discovery Item State</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cloudiator.DiscoveryItemState
+		 * @see cloudiator.impl.CloudiatorPackageImpl#getDiscoveryItemState()
+		 * @generated
+		 */
+		EEnum DISCOVERY_ITEM_STATE = eINSTANCE.getDiscoveryItemState();
 
 	}
 

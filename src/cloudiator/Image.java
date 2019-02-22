@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Image#getCloud <em>Cloud</em>}</li>
  *   <li>{@link cloudiator.Image#getProviderId <em>Provider Id</em>}</li>
  *   <li>{@link cloudiator.Image#getLocation <em>Location</em>}</li>
+ *   <li>{@link cloudiator.Image#getState <em>State</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getImage()
@@ -172,5 +173,35 @@ public interface Image extends EObject {
 	 * @generated
 	 */
 	void setLocation(Location value);
+
+	/**
+	 * Returns the value of the '<em><b>State</b></em>' attribute.
+	 * The default value is <code>"OK"</code>.
+	 * The literals are from the enumeration {@link cloudiator.DiscoveryItemState}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>State</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>State</em>' attribute.
+	 * @see cloudiator.DiscoveryItemState
+	 * @see #setState(DiscoveryItemState)
+	 * @see cloudiator.CloudiatorPackage#getImage_State()
+	 * @model default="OK"
+	 * @generated
+	 */
+	DiscoveryItemState getState();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Image#getState <em>State</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>State</em>' attribute.
+	 * @see cloudiator.DiscoveryItemState
+	 * @see #getState()
+	 * @generated
+	 */
+	void setState(DiscoveryItemState value);
 
 } // Image

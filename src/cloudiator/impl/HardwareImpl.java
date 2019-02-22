@@ -4,6 +4,7 @@ package cloudiator.impl;
 
 import cloudiator.Cloud;
 import cloudiator.CloudiatorPackage;
+import cloudiator.DiscoveryItemState;
 import cloudiator.Hardware;
 
 import cloudiator.Location;
@@ -32,6 +33,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.HardwareImpl#getCloud <em>Cloud</em>}</li>
  *   <li>{@link cloudiator.impl.HardwareImpl#getProviderId <em>Provider Id</em>}</li>
  *   <li>{@link cloudiator.impl.HardwareImpl#getLocation <em>Location</em>}</li>
+ *   <li>{@link cloudiator.impl.HardwareImpl#getState <em>State</em>}</li>
  * </ul>
  *
  * @generated
@@ -166,6 +168,26 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * @ordered
 	 */
 	protected Location location;
+
+	/**
+	 * The default value of the '{@link #getState() <em>State</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getState()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final DiscoveryItemState STATE_EDEFAULT = DiscoveryItemState.OK;
+
+	/**
+	 * The cached value of the '{@link #getState() <em>State</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getState()
+	 * @generated
+	 * @ordered
+	 */
+	protected DiscoveryItemState state = STATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -365,6 +387,27 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DiscoveryItemState getState() {
+		return state;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setState(DiscoveryItemState newState) {
+		DiscoveryItemState oldState = state;
+		state = newState == null ? STATE_EDEFAULT : newState;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.HARDWARE__STATE, oldState, state));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -430,6 +473,8 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 			case CloudiatorPackage.HARDWARE__LOCATION:
 				if (resolve) return getLocation();
 				return basicGetLocation();
+			case CloudiatorPackage.HARDWARE__STATE:
+				return getState();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -464,6 +509,9 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 			case CloudiatorPackage.HARDWARE__LOCATION:
 				setLocation((Location)newValue);
 				return;
+			case CloudiatorPackage.HARDWARE__STATE:
+				setState((DiscoveryItemState)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -497,6 +545,9 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 			case CloudiatorPackage.HARDWARE__LOCATION:
 				setLocation((Location)null);
 				return;
+			case CloudiatorPackage.HARDWARE__STATE:
+				setState(STATE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -525,6 +576,8 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 				return PROVIDER_ID_EDEFAULT == null ? providerId != null : !PROVIDER_ID_EDEFAULT.equals(providerId);
 			case CloudiatorPackage.HARDWARE__LOCATION:
 				return location != null;
+			case CloudiatorPackage.HARDWARE__STATE:
+				return state != STATE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -551,6 +604,8 @@ public class HardwareImpl extends MinimalEObjectImpl.Container implements Hardwa
 		result.append(id);
 		result.append(", providerId: ");
 		result.append(providerId);
+		result.append(", state: ");
+		result.append(state);
 		result.append(')');
 		return result.toString();
 	}

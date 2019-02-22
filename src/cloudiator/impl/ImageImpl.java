@@ -4,6 +4,7 @@ package cloudiator.impl;
 
 import cloudiator.Cloud;
 import cloudiator.CloudiatorPackage;
+import cloudiator.DiscoveryItemState;
 import cloudiator.Image;
 
 import cloudiator.Location;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.ImageImpl#getCloud <em>Cloud</em>}</li>
  *   <li>{@link cloudiator.impl.ImageImpl#getProviderId <em>Provider Id</em>}</li>
  *   <li>{@link cloudiator.impl.ImageImpl#getLocation <em>Location</em>}</li>
+ *   <li>{@link cloudiator.impl.ImageImpl#getState <em>State</em>}</li>
  * </ul>
  *
  * @generated
@@ -115,6 +117,26 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	 * @ordered
 	 */
 	protected Location location;
+
+	/**
+	 * The default value of the '{@link #getState() <em>State</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getState()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final DiscoveryItemState STATE_EDEFAULT = DiscoveryItemState.OK;
+
+	/**
+	 * The cached value of the '{@link #getState() <em>State</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getState()
+	 * @generated
+	 * @ordered
+	 */
+	protected DiscoveryItemState state = STATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -289,6 +311,27 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DiscoveryItemState getState() {
+		return state;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setState(DiscoveryItemState newState) {
+		DiscoveryItemState oldState = state;
+		state = newState == null ? STATE_EDEFAULT : newState;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.IMAGE__STATE, oldState, state));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -350,6 +393,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 			case CloudiatorPackage.IMAGE__LOCATION:
 				if (resolve) return getLocation();
 				return basicGetLocation();
+			case CloudiatorPackage.IMAGE__STATE:
+				return getState();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -376,6 +421,9 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 				return;
 			case CloudiatorPackage.IMAGE__LOCATION:
 				setLocation((Location)newValue);
+				return;
+			case CloudiatorPackage.IMAGE__STATE:
+				setState((DiscoveryItemState)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -404,6 +452,9 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 			case CloudiatorPackage.IMAGE__LOCATION:
 				setLocation((Location)null);
 				return;
+			case CloudiatorPackage.IMAGE__STATE:
+				setState(STATE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -428,6 +479,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 				return PROVIDER_ID_EDEFAULT == null ? providerId != null : !PROVIDER_ID_EDEFAULT.equals(providerId);
 			case CloudiatorPackage.IMAGE__LOCATION:
 				return location != null;
+			case CloudiatorPackage.IMAGE__STATE:
+				return state != STATE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -448,6 +501,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 		result.append(id);
 		result.append(", providerId: ");
 		result.append(providerId);
+		result.append(", state: ");
+		result.append(state);
 		result.append(')');
 		return result.toString();
 	}

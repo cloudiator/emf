@@ -12,6 +12,7 @@ import cloudiator.CloudiatorFactory;
 import cloudiator.CloudiatorModel;
 import cloudiator.CloudiatorPackage;
 import cloudiator.Component;
+import cloudiator.DiscoveryItemState;
 import cloudiator.Environment;
 import cloudiator.GeoLocation;
 import cloudiator.Hardware;
@@ -120,6 +121,8 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 				return createNodeTypeFromString(eDataType, initialValue);
 			case CloudiatorPackage.CLOUD_STATE:
 				return createCloudStateFromString(eDataType, initialValue);
+			case CloudiatorPackage.DISCOVERY_ITEM_STATE:
+				return createDiscoveryItemStateFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -147,6 +150,8 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 				return convertNodeTypeToString(eDataType, instanceValue);
 			case CloudiatorPackage.CLOUD_STATE:
 				return convertCloudStateToString(eDataType, instanceValue);
+			case CloudiatorPackage.DISCOVERY_ITEM_STATE:
+				return convertDiscoveryItemStateToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -439,6 +444,26 @@ public class CloudiatorFactoryImpl extends EFactoryImpl implements CloudiatorFac
 	 * @generated
 	 */
 	public String convertCloudStateToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DiscoveryItemState createDiscoveryItemStateFromString(EDataType eDataType, String initialValue) {
+		DiscoveryItemState result = DiscoveryItemState.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertDiscoveryItemStateToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

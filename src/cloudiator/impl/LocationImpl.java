@@ -4,6 +4,7 @@ package cloudiator.impl;
 
 import cloudiator.Cloud;
 import cloudiator.CloudiatorPackage;
+import cloudiator.DiscoveryItemState;
 import cloudiator.GeoLocation;
 import cloudiator.Location;
 
@@ -33,6 +34,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.LocationImpl#isAssignable <em>Assignable</em>}</li>
  *   <li>{@link cloudiator.impl.LocationImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link cloudiator.impl.LocationImpl#getLocationScope <em>Location Scope</em>}</li>
+ *   <li>{@link cloudiator.impl.LocationImpl#getState <em>State</em>}</li>
  * </ul>
  *
  * @generated
@@ -157,6 +159,26 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * @ordered
 	 */
 	protected LocationScope locationScope = LOCATION_SCOPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getState() <em>State</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getState()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final DiscoveryItemState STATE_EDEFAULT = DiscoveryItemState.OK;
+
+	/**
+	 * The cached value of the '{@link #getState() <em>State</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getState()
+	 * @generated
+	 * @ordered
+	 */
+	protected DiscoveryItemState state = STATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -378,6 +400,27 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DiscoveryItemState getState() {
+		return state;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setState(DiscoveryItemState newState) {
+		DiscoveryItemState oldState = state;
+		state = newState == null ? STATE_EDEFAULT : newState;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.LOCATION__STATE, oldState, state));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -444,6 +487,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return basicGetParent();
 			case CloudiatorPackage.LOCATION__LOCATION_SCOPE:
 				return getLocationScope();
+			case CloudiatorPackage.LOCATION__STATE:
+				return getState();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -476,6 +521,9 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return;
 			case CloudiatorPackage.LOCATION__LOCATION_SCOPE:
 				setLocationScope((LocationScope)newValue);
+				return;
+			case CloudiatorPackage.LOCATION__STATE:
+				setState((DiscoveryItemState)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -510,6 +558,9 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 			case CloudiatorPackage.LOCATION__LOCATION_SCOPE:
 				setLocationScope(LOCATION_SCOPE_EDEFAULT);
 				return;
+			case CloudiatorPackage.LOCATION__STATE:
+				setState(STATE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -538,6 +589,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return parent != null;
 			case CloudiatorPackage.LOCATION__LOCATION_SCOPE:
 				return locationScope != LOCATION_SCOPE_EDEFAULT;
+			case CloudiatorPackage.LOCATION__STATE:
+				return state != STATE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -562,6 +615,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 		result.append(assignable);
 		result.append(", locationScope: ");
 		result.append(locationScope);
+		result.append(", state: ");
+		result.append(state);
 		result.append(')');
 		return result.toString();
 	}
