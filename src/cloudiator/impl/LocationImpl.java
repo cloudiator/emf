@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.LocationImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link cloudiator.impl.LocationImpl#getLocationScope <em>Location Scope</em>}</li>
  *   <li>{@link cloudiator.impl.LocationImpl#getState <em>State</em>}</li>
+ *   <li>{@link cloudiator.impl.LocationImpl#getOwner <em>Owner</em>}</li>
  * </ul>
  *
  * @generated
@@ -179,6 +180,26 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * @ordered
 	 */
 	protected DiscoveryItemState state = STATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getOwner() <em>Owner</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwner()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String OWNER_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getOwner() <em>Owner</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwner()
+	 * @generated
+	 * @ordered
+	 */
+	protected String owner = OWNER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -421,6 +442,27 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getOwner() {
+		return owner;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwner(String newOwner) {
+		String oldOwner = owner;
+		owner = newOwner;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.LOCATION__OWNER, oldOwner, owner));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -489,6 +531,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return getLocationScope();
 			case CloudiatorPackage.LOCATION__STATE:
 				return getState();
+			case CloudiatorPackage.LOCATION__OWNER:
+				return getOwner();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -524,6 +568,9 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return;
 			case CloudiatorPackage.LOCATION__STATE:
 				setState((DiscoveryItemState)newValue);
+				return;
+			case CloudiatorPackage.LOCATION__OWNER:
+				setOwner((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -561,6 +608,9 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 			case CloudiatorPackage.LOCATION__STATE:
 				setState(STATE_EDEFAULT);
 				return;
+			case CloudiatorPackage.LOCATION__OWNER:
+				setOwner(OWNER_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -591,6 +641,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return locationScope != LOCATION_SCOPE_EDEFAULT;
 			case CloudiatorPackage.LOCATION__STATE:
 				return state != STATE_EDEFAULT;
+			case CloudiatorPackage.LOCATION__OWNER:
+				return OWNER_EDEFAULT == null ? owner != null : !OWNER_EDEFAULT.equals(owner);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -617,6 +669,8 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 		result.append(locationScope);
 		result.append(", state: ");
 		result.append(state);
+		result.append(", owner: ");
+		result.append(owner);
 		result.append(')');
 		return result.toString();
 	}

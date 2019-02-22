@@ -50,6 +50,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cloudiator.impl.CloudImpl#getConfiguration <em>Configuration</em>}</li>
  *   <li>{@link cloudiator.impl.CloudImpl#getState <em>State</em>}</li>
  *   <li>{@link cloudiator.impl.CloudImpl#getDiagnostic <em>Diagnostic</em>}</li>
+ *   <li>{@link cloudiator.impl.CloudImpl#getOwner <em>Owner</em>}</li>
  * </ul>
  *
  * @generated
@@ -224,6 +225,26 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * @ordered
 	 */
 	protected String diagnostic = DIAGNOSTIC_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getOwner() <em>Owner</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwner()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String OWNER_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getOwner() <em>Owner</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwner()
+	 * @generated
+	 * @ordered
+	 */
+	protected String owner = OWNER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -507,6 +528,27 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getOwner() {
+		return owner;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwner(String newOwner) {
+		String oldOwner = owner;
+		owner = newOwner;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.CLOUD__OWNER, oldOwner, owner));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -603,6 +645,8 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 				return getState();
 			case CloudiatorPackage.CLOUD__DIAGNOSTIC:
 				return getDiagnostic();
+			case CloudiatorPackage.CLOUD__OWNER:
+				return getOwner();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -656,6 +700,9 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 			case CloudiatorPackage.CLOUD__DIAGNOSTIC:
 				setDiagnostic((String)newValue);
 				return;
+			case CloudiatorPackage.CLOUD__OWNER:
+				setOwner((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -704,6 +751,9 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 			case CloudiatorPackage.CLOUD__DIAGNOSTIC:
 				setDiagnostic(DIAGNOSTIC_EDEFAULT);
 				return;
+			case CloudiatorPackage.CLOUD__OWNER:
+				setOwner(OWNER_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -740,6 +790,8 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 				return state != STATE_EDEFAULT;
 			case CloudiatorPackage.CLOUD__DIAGNOSTIC:
 				return DIAGNOSTIC_EDEFAULT == null ? diagnostic != null : !DIAGNOSTIC_EDEFAULT.equals(diagnostic);
+			case CloudiatorPackage.CLOUD__OWNER:
+				return OWNER_EDEFAULT == null ? owner != null : !OWNER_EDEFAULT.equals(owner);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -764,6 +816,8 @@ public class CloudImpl extends MinimalEObjectImpl.Container implements Cloud {
 		result.append(state);
 		result.append(", diagnostic: ");
 		result.append(diagnostic);
+		result.append(", owner: ");
+		result.append(owner);
 		result.append(')');
 		return result.toString();
 	}

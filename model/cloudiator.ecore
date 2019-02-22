@@ -50,6 +50,7 @@
         eType="#//Location"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//DiscoveryItemState"
         defaultValueLiteral="OK"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="owner" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Hardware">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cores" unique="false" lowerBound="1"
@@ -87,6 +88,7 @@
         defaultValueLiteral="UNKOWN"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="#//DiscoveryItemState"
         defaultValueLiteral="OK"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="owner" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Cloud">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" unique="false" eType="#//CloudType"/>
@@ -111,6 +113,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" unique="false" eType="#//CloudState"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="diagnostic" unique="false"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="owner" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OperatingSystem">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="family" unique="false"

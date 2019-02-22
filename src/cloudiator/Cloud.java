@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Cloud#getConfiguration <em>Configuration</em>}</li>
  *   <li>{@link cloudiator.Cloud#getState <em>State</em>}</li>
  *   <li>{@link cloudiator.Cloud#getDiagnostic <em>Diagnostic</em>}</li>
+ *   <li>{@link cloudiator.Cloud#getOwner <em>Owner</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getCloud()
@@ -281,6 +282,32 @@ public interface Cloud extends EObject {
 	 * @generated
 	 */
 	void setDiagnostic(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Owner</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owner</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owner</em>' attribute.
+	 * @see #setOwner(String)
+	 * @see cloudiator.CloudiatorPackage#getCloud_Owner()
+	 * @model
+	 * @generated
+	 */
+	String getOwner();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Cloud#getOwner <em>Owner</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Owner</em>' attribute.
+	 * @see #getOwner()
+	 * @generated
+	 */
+	void setOwner(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Hardware List</b></em>' containment reference list.

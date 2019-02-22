@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.ImageImpl#getProviderId <em>Provider Id</em>}</li>
  *   <li>{@link cloudiator.impl.ImageImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link cloudiator.impl.ImageImpl#getState <em>State</em>}</li>
+ *   <li>{@link cloudiator.impl.ImageImpl#getOwner <em>Owner</em>}</li>
  * </ul>
  *
  * @generated
@@ -137,6 +138,26 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	 * @ordered
 	 */
 	protected DiscoveryItemState state = STATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getOwner() <em>Owner</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwner()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String OWNER_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getOwner() <em>Owner</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwner()
+	 * @generated
+	 * @ordered
+	 */
+	protected String owner = OWNER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -332,6 +353,27 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getOwner() {
+		return owner;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOwner(String newOwner) {
+		String oldOwner = owner;
+		owner = newOwner;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.IMAGE__OWNER, oldOwner, owner));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -395,6 +437,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 				return basicGetLocation();
 			case CloudiatorPackage.IMAGE__STATE:
 				return getState();
+			case CloudiatorPackage.IMAGE__OWNER:
+				return getOwner();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -424,6 +468,9 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 				return;
 			case CloudiatorPackage.IMAGE__STATE:
 				setState((DiscoveryItemState)newValue);
+				return;
+			case CloudiatorPackage.IMAGE__OWNER:
+				setOwner((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -455,6 +502,9 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 			case CloudiatorPackage.IMAGE__STATE:
 				setState(STATE_EDEFAULT);
 				return;
+			case CloudiatorPackage.IMAGE__OWNER:
+				setOwner(OWNER_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -481,6 +531,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 				return location != null;
 			case CloudiatorPackage.IMAGE__STATE:
 				return state != STATE_EDEFAULT;
+			case CloudiatorPackage.IMAGE__OWNER:
+				return OWNER_EDEFAULT == null ? owner != null : !OWNER_EDEFAULT.equals(owner);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -503,6 +555,8 @@ public class ImageImpl extends MinimalEObjectImpl.Container implements Image {
 		result.append(providerId);
 		result.append(", state: ");
 		result.append(state);
+		result.append(", owner: ");
+		result.append(owner);
 		result.append(')');
 		return result.toString();
 	}

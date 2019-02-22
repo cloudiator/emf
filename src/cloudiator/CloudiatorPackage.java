@@ -352,13 +352,22 @@ public interface CloudiatorPackage extends EPackage {
 	int IMAGE__STATE = 6;
 
 	/**
+	 * The feature id for the '<em><b>Owner</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__OWNER = 7;
+
+	/**
 	 * The number of structural features of the '<em>Image</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_FEATURE_COUNT = 7;
+	int IMAGE_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Image</em>' class.
@@ -570,13 +579,22 @@ public interface CloudiatorPackage extends EPackage {
 	int LOCATION__STATE = 8;
 
 	/**
+	 * The feature id for the '<em><b>Owner</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__OWNER = 9;
+
+	/**
 	 * The number of structural features of the '<em>Location</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_FEATURE_COUNT = 9;
+	int LOCATION_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Location</em>' class.
@@ -707,13 +725,22 @@ public interface CloudiatorPackage extends EPackage {
 	int CLOUD__DIAGNOSTIC = 11;
 
 	/**
+	 * The feature id for the '<em><b>Owner</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLOUD__OWNER = 12;
+
+	/**
 	 * The number of structural features of the '<em>Cloud</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLOUD_FEATURE_COUNT = 12;
+	int CLOUD_FEATURE_COUNT = 13;
 
 	/**
 	 * The number of operations of the '<em>Cloud</em>' class.
@@ -1489,6 +1516,17 @@ public interface CloudiatorPackage extends EPackage {
 	EAttribute getImage_State();
 
 	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Image#getOwner <em>Owner</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Owner</em>'.
+	 * @see cloudiator.Image#getOwner()
+	 * @see #getImage()
+	 * @generated
+	 */
+	EAttribute getImage_Owner();
+
+	/**
 	 * Returns the meta object for class '{@link cloudiator.Hardware <em>Hardware</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1707,6 +1745,17 @@ public interface CloudiatorPackage extends EPackage {
 	EAttribute getLocation_State();
 
 	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Location#getOwner <em>Owner</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Owner</em>'.
+	 * @see cloudiator.Location#getOwner()
+	 * @see #getLocation()
+	 * @generated
+	 */
+	EAttribute getLocation_Owner();
+
+	/**
 	 * Returns the meta object for class '{@link cloudiator.Cloud <em>Cloud</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1825,6 +1874,17 @@ public interface CloudiatorPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCloud_Diagnostic();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Cloud#getOwner <em>Owner</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Owner</em>'.
+	 * @see cloudiator.Cloud#getOwner()
+	 * @see #getCloud()
+	 * @generated
+	 */
+	EAttribute getCloud_Owner();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link cloudiator.Cloud#getHardwareList <em>Hardware List</em>}'.
@@ -2457,6 +2517,14 @@ public interface CloudiatorPackage extends EPackage {
 		EAttribute IMAGE__STATE = eINSTANCE.getImage_State();
 
 		/**
+		 * The meta object literal for the '<em><b>Owner</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute IMAGE__OWNER = eINSTANCE.getImage_Owner();
+
+		/**
 		 * The meta object literal for the '{@link cloudiator.impl.HardwareImpl <em>Hardware</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2621,6 +2689,14 @@ public interface CloudiatorPackage extends EPackage {
 		EAttribute LOCATION__STATE = eINSTANCE.getLocation_State();
 
 		/**
+		 * The meta object literal for the '<em><b>Owner</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOCATION__OWNER = eINSTANCE.getLocation_Owner();
+
+		/**
 		 * The meta object literal for the '{@link cloudiator.impl.CloudImpl <em>Cloud</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2709,6 +2785,14 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CLOUD__DIAGNOSTIC = eINSTANCE.getCloud_Diagnostic();
+
+		/**
+		 * The meta object literal for the '<em><b>Owner</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLOUD__OWNER = eINSTANCE.getCloud_Owner();
 
 		/**
 		 * The meta object literal for the '<em><b>Hardware List</b></em>' containment reference list feature.

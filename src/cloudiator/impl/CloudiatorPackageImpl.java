@@ -501,6 +501,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getImage_Owner() {
+		return (EAttribute)imageEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getHardware() {
 		return hardwareEClass;
 	}
@@ -681,6 +690,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getLocation_Owner() {
+		return (EAttribute)locationEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCloud() {
 		return cloudEClass;
 	}
@@ -773,6 +791,15 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 	 */
 	public EAttribute getCloud_Diagnostic() {
 		return (EAttribute)cloudEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCloud_Owner() {
+		return (EAttribute)cloudEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -1165,6 +1192,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEAttribute(imageEClass, IMAGE__PROVIDER_ID);
 		createEReference(imageEClass, IMAGE__LOCATION);
 		createEAttribute(imageEClass, IMAGE__STATE);
+		createEAttribute(imageEClass, IMAGE__OWNER);
 
 		hardwareEClass = createEClass(HARDWARE);
 		createEAttribute(hardwareEClass, HARDWARE__CORES);
@@ -1187,6 +1215,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEReference(locationEClass, LOCATION__PARENT);
 		createEAttribute(locationEClass, LOCATION__LOCATION_SCOPE);
 		createEAttribute(locationEClass, LOCATION__STATE);
+		createEAttribute(locationEClass, LOCATION__OWNER);
 
 		cloudEClass = createEClass(CLOUD);
 		createEAttribute(cloudEClass, CLOUD__TYPE);
@@ -1201,6 +1230,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		createEReference(cloudEClass, CLOUD__CONFIGURATION);
 		createEAttribute(cloudEClass, CLOUD__STATE);
 		createEAttribute(cloudEClass, CLOUD__DIAGNOSTIC);
+		createEAttribute(cloudEClass, CLOUD__OWNER);
 
 		operatingSystemEClass = createEClass(OPERATING_SYSTEM);
 		createEAttribute(operatingSystemEClass, OPERATING_SYSTEM__FAMILY);
@@ -1307,6 +1337,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEAttribute(getImage_ProviderId(), ecorePackage.getEString(), "providerId", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getImage_Location(), this.getLocation(), null, "location", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getImage_State(), this.getDiscoveryItemState(), "state", "OK", 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getImage_Owner(), ecorePackage.getEString(), "owner", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hardwareEClass, Hardware.class, "Hardware", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getHardware_Cores(), ecorePackage.getEIntegerObject(), "cores", null, 1, 1, Hardware.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1329,6 +1360,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEReference(getLocation_Parent(), this.getLocation(), null, "parent", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLocation_LocationScope(), this.getLocationScope(), "locationScope", "UNKOWN", 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLocation_State(), this.getDiscoveryItemState(), "state", "OK", 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLocation_Owner(), ecorePackage.getEString(), "owner", null, 0, 1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cloudEClass, Cloud.class, "Cloud", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCloud_Type(), this.getCloudType(), "type", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1343,6 +1375,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEReference(getCloud_Configuration(), this.getCloudConfiguration(), null, "configuration", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCloud_State(), this.getCloudState(), "state", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCloud_Diagnostic(), ecorePackage.getEString(), "diagnostic", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCloud_Owner(), ecorePackage.getEString(), "owner", null, 0, 1, Cloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operatingSystemEClass, OperatingSystem.class, "OperatingSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOperatingSystem_Family(), this.getOSFamily(), "family", null, 0, 1, OperatingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
