@@ -120,7 +120,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="family" unique="false"
         eType="#//OSFamily"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" unique="false"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="architecture" unique="false"
         eType="#//OSArchitecture"/>
   </eClassifiers>

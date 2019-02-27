@@ -1424,7 +1424,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_krXTIVEHEeeYP7iySQILdA" name="version : EInt" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_krXTIVEHEeeYP7iySQILdA" name="version : EIntegerObject" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="cloudiator.ecore#//OperatingSystem/version"/>
         <semanticElements xmi:type="ecore:EAttribute" href="cloudiator.ecore#//OperatingSystem/version"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_krX6MFEHEeeYP7iySQILdA" labelAlignment="LEFT">
