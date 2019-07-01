@@ -303,6 +303,10 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_GM-oQYjlEeeO1_Y9YsMu1Q" fontName="Ubuntu" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_GM-oQojlEeeO1_Y9YsMu1Q"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_ccm6kJwLEem8BvxsRdq0Pw" type="3010" element="_cbkYwJwLEem8BvxsRdq0Pw">
+              <styles xmi:type="notation:FontStyle" xmi:id="_ccm6kZwLEem8BvxsRdq0Pw" fontName="Ubuntu" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_ccm6kpwLEem8BvxsRdq0Pw"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_ksJWQlEHEeeYP7iySQILdA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_ksJWQ1EHEeeYP7iySQILdA"/>
           </children>
@@ -1492,6 +1496,14 @@
         <target xmi:type="ecore:EEnumLiteral" href="cloudiator.ecore#//OSArchitecture/UNKOWN"/>
         <semanticElements xmi:type="ecore:EEnumLiteral" href="cloudiator.ecore#//OSArchitecture/UNKOWN"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_GM3TgYjlEeeO1_Y9YsMu1Q" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_cbkYwJwLEem8BvxsRdq0Pw" name="ARM" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="cloudiator.ecore#//OSArchitecture/ARM"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="cloudiator.ecore#//OSArchitecture/ARM"/>
+        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_cbk_0JwLEem8BvxsRdq0Pw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
