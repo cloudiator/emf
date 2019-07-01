@@ -1432,6 +1432,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		addEEnumLiteral(osArchitectureEEnum, OSArchitecture.AMD64);
 		addEEnumLiteral(osArchitectureEEnum, OSArchitecture.I368);
 		addEEnumLiteral(osArchitectureEEnum, OSArchitecture.UNKOWN);
+		addEEnumLiteral(osArchitectureEEnum, OSArchitecture.ARM);
 
 		initEEnum(osFamilyEEnum, OSFamily.class, "OSFamily");
 		addEEnumLiteral(osFamilyEEnum, OSFamily.UNKNOWN);

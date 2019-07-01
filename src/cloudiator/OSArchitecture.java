@@ -44,7 +44,15 @@ public enum OSArchitecture implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	UNKOWN(0, "UNKOWN", "UNKOWN");
+	UNKOWN(0, "UNKOWN", "UNKOWN"), /**
+	 * The '<em><b>ARM</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ARM_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ARM(3, "ARM", "ARM");
 
 	/**
 	 * The '<em><b>AMD64</b></em>' literal value.
@@ -92,6 +100,21 @@ public enum OSArchitecture implements Enumerator {
 	public static final int UNKOWN_VALUE = 0;
 
 	/**
+	 * The '<em><b>ARM</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>ARM</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #ARM
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ARM_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>OS Architecture</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -102,6 +125,7 @@ public enum OSArchitecture implements Enumerator {
 			AMD64,
 			I368,
 			UNKOWN,
+			ARM,
 		};
 
 	/**
@@ -161,6 +185,7 @@ public enum OSArchitecture implements Enumerator {
 			case AMD64_VALUE: return AMD64;
 			case I368_VALUE: return I368;
 			case UNKOWN_VALUE: return UNKOWN;
+			case ARM_VALUE: return ARM;
 		}
 		return null;
 	}
