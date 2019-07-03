@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link cloudiator.Node#getPricePerInvocation <em>Price Per Invocation</em>}</li>
  *   <li>{@link cloudiator.Node#getMemoryPrice <em>Memory Price</em>}</li>
  *   <li>{@link cloudiator.Node#getType <em>Type</em>}</li>
+ *   <li>{@link cloudiator.Node#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see cloudiator.CloudiatorPackage#getNode()
@@ -265,5 +266,20 @@ public interface Node extends EObject {
 	 * @generated
 	 */
 	void setType(NodeType value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see cloudiator.CloudiatorPackage#getNode_Id()
+	 * @model id="true" dataType="org.eclipse.emf.ecore.xml.type.String" changeable="false"
+	 * @generated
+	 */
+	String getId();
 
 } // Node

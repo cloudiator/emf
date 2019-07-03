@@ -97,6 +97,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/pricePerInvocation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/memoryPrice"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/id"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Image">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Image/name"/>
