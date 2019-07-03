@@ -499,6 +499,18 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.NODE__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -566,6 +578,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 			case CloudiatorPackage.NODE__TYPE:
 				setType((NodeType)newValue);
 				return;
+			case CloudiatorPackage.NODE__ID:
+				setId((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -604,6 +619,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return;
 			case CloudiatorPackage.NODE__TYPE:
 				setType(TYPE_EDEFAULT);
+				return;
+			case CloudiatorPackage.NODE__ID:
+				setId(ID_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);

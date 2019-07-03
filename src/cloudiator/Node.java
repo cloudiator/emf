@@ -276,10 +276,21 @@ public interface Node extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
 	 * @see cloudiator.CloudiatorPackage#getNode_Id()
-	 * @model id="true" dataType="org.eclipse.emf.ecore.xml.type.String" changeable="false"
+	 * @model id="true" dataType="org.eclipse.emf.ecore.xml.type.String"
 	 * @generated
 	 */
 	String getId();
+
+	/**
+	 * Sets the value of the '{@link cloudiator.Node#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
 
 } // Node
