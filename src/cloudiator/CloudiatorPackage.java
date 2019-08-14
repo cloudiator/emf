@@ -261,13 +261,22 @@ public interface CloudiatorPackage extends EPackage {
 	int NODE__TYPE = 8;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__ID = 9;
+
+	/**
 	 * The number of structural features of the '<em>Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FEATURE_COUNT = 9;
+	int NODE_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Node</em>' class.
@@ -1438,6 +1447,17 @@ public interface CloudiatorPackage extends EPackage {
 	EAttribute getNode_Type();
 
 	/**
+	 * Returns the meta object for the attribute '{@link cloudiator.Node#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see cloudiator.Node#getId()
+	 * @see #getNode()
+	 * @generated
+	 */
+	EAttribute getNode_Id();
+
+	/**
 	 * Returns the meta object for class '{@link cloudiator.Image <em>Image</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2469,6 +2489,14 @@ public interface CloudiatorPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute NODE__TYPE = eINSTANCE.getNode_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE__ID = eINSTANCE.getNode_Id();
 
 		/**
 		 * The meta object literal for the '{@link cloudiator.impl.ImageImpl <em>Image</em>}' class.

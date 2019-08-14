@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link cloudiator.impl.NodeImpl#getPricePerInvocation <em>Price Per Invocation</em>}</li>
  *   <li>{@link cloudiator.impl.NodeImpl#getMemoryPrice <em>Memory Price</em>}</li>
  *   <li>{@link cloudiator.impl.NodeImpl#getType <em>Type</em>}</li>
+ *   <li>{@link cloudiator.impl.NodeImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -170,6 +171,26 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @ordered
 	 */
 	protected NodeType type = TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -469,6 +490,27 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CloudiatorPackage.NODE__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -495,6 +537,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return getMemoryPrice();
 			case CloudiatorPackage.NODE__TYPE:
 				return getType();
+			case CloudiatorPackage.NODE__ID:
+				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -533,6 +577,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return;
 			case CloudiatorPackage.NODE__TYPE:
 				setType((NodeType)newValue);
+				return;
+			case CloudiatorPackage.NODE__ID:
+				setId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -573,6 +620,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 			case CloudiatorPackage.NODE__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
+			case CloudiatorPackage.NODE__ID:
+				setId(ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -603,6 +653,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 				return MEMORY_PRICE_EDEFAULT == null ? memoryPrice != null : !MEMORY_PRICE_EDEFAULT.equals(memoryPrice);
 			case CloudiatorPackage.NODE__TYPE:
 				return type != TYPE_EDEFAULT;
+			case CloudiatorPackage.NODE__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -625,6 +677,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 		result.append(memoryPrice);
 		result.append(", type: ");
 		result.append(type);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

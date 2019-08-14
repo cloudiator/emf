@@ -13,6 +13,7 @@
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSArchitecture/AMD64"/>
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSArchitecture/I368"/>
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSArchitecture/UNKOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSArchitecture/ARM"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="cloudiator.ecore#//OSFamily">
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSFamily/UNKNOWN"/>
@@ -96,6 +97,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/pricePerInvocation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/memoryPrice"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Node/id"/>
     </genClasses>
     <genClasses ecoreClass="cloudiator.ecore#//Image">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cloudiator.ecore#//Image/name"/>

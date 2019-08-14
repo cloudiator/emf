@@ -35,6 +35,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pricePerInvocation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="memoryPrice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//NodeType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"
+        iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Image">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -132,6 +134,7 @@
     <eLiterals name="AMD64" value="1"/>
     <eLiterals name="I368" value="2"/>
     <eLiterals name="UNKOWN"/>
+    <eLiterals name="ARM" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="OSFamily">
     <eLiterals name="UNKNOWN"/>
