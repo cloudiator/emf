@@ -8,6 +8,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="cloudiator.ecore#//CloudType">
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//CloudType/PUBLIC"/>
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//CloudType/PRIVATE"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//CloudType/SIMULATION"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="cloudiator.ecore#//OSArchitecture">
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//OSArchitecture/AMD64"/>
@@ -63,6 +64,7 @@
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//NodeType/PAAS"/>
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//NodeType/FAAS"/>
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//NodeType/BYON"/>
+      <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//NodeType/SIMULATION"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="cloudiator.ecore#//CloudState">
       <genEnumLiterals ecoreEnumLiteral="cloudiator.ecore#//CloudState/OK"/>
