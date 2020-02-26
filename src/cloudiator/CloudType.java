@@ -36,7 +36,15 @@ public enum CloudType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PRIVATE(1, "PRIVATE", "PRIVATE");
+	PRIVATE(1, "PRIVATE", "PRIVATE"), /**
+	 * The '<em><b>SIMULATION</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SIMULATION_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SIMULATION(2, "SIMULATION", "SIMULATION");
 
 	/**
 	 * The '<em><b>PUBLIC</b></em>' literal value.
@@ -69,6 +77,21 @@ public enum CloudType implements Enumerator {
 	public static final int PRIVATE_VALUE = 1;
 
 	/**
+	 * The '<em><b>SIMULATION</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>SIMULATION</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #SIMULATION
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SIMULATION_VALUE = 2;
+
+	/**
 	 * An array of all the '<em><b>Cloud Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -78,6 +101,7 @@ public enum CloudType implements Enumerator {
 		new CloudType[] {
 			PUBLIC,
 			PRIVATE,
+			SIMULATION,
 		};
 
 	/**
@@ -136,6 +160,7 @@ public enum CloudType implements Enumerator {
 		switch (value) {
 			case PUBLIC_VALUE: return PUBLIC;
 			case PRIVATE_VALUE: return PRIVATE;
+			case SIMULATION_VALUE: return SIMULATION;
 		}
 		return null;
 	}

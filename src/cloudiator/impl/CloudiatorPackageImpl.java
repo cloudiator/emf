@@ -1445,6 +1445,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		initEEnum(cloudTypeEEnum, CloudType.class, "CloudType");
 		addEEnumLiteral(cloudTypeEEnum, CloudType.PUBLIC);
 		addEEnumLiteral(cloudTypeEEnum, CloudType.PRIVATE);
+		addEEnumLiteral(cloudTypeEEnum, CloudType.SIMULATION);
 
 		initEEnum(osArchitectureEEnum, OSArchitecture.class, "OSArchitecture");
 		addEEnumLiteral(osArchitectureEEnum, OSArchitecture.AMD64);
@@ -1500,6 +1501,7 @@ public class CloudiatorPackageImpl extends EPackageImpl implements CloudiatorPac
 		addEEnumLiteral(nodeTypeEEnum, NodeType.PAAS);
 		addEEnumLiteral(nodeTypeEEnum, NodeType.FAAS);
 		addEEnumLiteral(nodeTypeEEnum, NodeType.BYON);
+		addEEnumLiteral(nodeTypeEEnum, NodeType.SIMULATION);
 
 		initEEnum(cloudStateEEnum, CloudState.class, "CloudState");
 		addEEnumLiteral(cloudStateEEnum, CloudState.OK);

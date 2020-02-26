@@ -129,6 +129,7 @@
   <eClassifiers xsi:type="ecore:EEnum" name="CloudType">
     <eLiterals name="PUBLIC"/>
     <eLiterals name="PRIVATE" value="1"/>
+    <eLiterals name="SIMULATION" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="OSArchitecture">
     <eLiterals name="AMD64" value="1"/>
@@ -224,6 +225,7 @@
     <eLiterals name="PAAS" value="1"/>
     <eLiterals name="FAAS" value="2"/>
     <eLiterals name="BYON" value="3"/>
+    <eLiterals name="SIMULATION" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CloudState">
     <eLiterals name="OK"/>

@@ -56,7 +56,15 @@ public enum NodeType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BYON(3, "BYON", "BYON");
+	BYON(3, "BYON", "BYON"), /**
+	 * The '<em><b>SIMULATION</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SIMULATION_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SIMULATION(4, "SIMULATION", "SIMULATION");
 
 	/**
 	 * The '<em><b>IAAS</b></em>' literal value.
@@ -119,6 +127,21 @@ public enum NodeType implements Enumerator {
 	public static final int BYON_VALUE = 3;
 
 	/**
+	 * The '<em><b>SIMULATION</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>SIMULATION</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #SIMULATION
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SIMULATION_VALUE = 4;
+
+	/**
 	 * An array of all the '<em><b>Node Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -130,6 +153,7 @@ public enum NodeType implements Enumerator {
 			PAAS,
 			FAAS,
 			BYON,
+			SIMULATION,
 		};
 
 	/**
@@ -190,6 +214,7 @@ public enum NodeType implements Enumerator {
 			case PAAS_VALUE: return PAAS;
 			case FAAS_VALUE: return FAAS;
 			case BYON_VALUE: return BYON;
+			case SIMULATION_VALUE: return SIMULATION;
 		}
 		return null;
 	}
